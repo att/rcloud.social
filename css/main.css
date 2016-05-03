@@ -41,6 +41,87 @@ a.footr {
 }
 
 /* ==============
+    DOCUMENTATION
+   ============== */ 
+
+.open > .dropdown-menu {
+	top: 80%;
+	display: block;
+	background-color: #262626;
+}
+
+.dropdown-menu > li > a.dropdown-toggle:visited, .dropdown-menu > li > a.dropdown-toggle:hover, .dropdown-menu > li > a.dropdown-toggle:focus {
+color: #fff;
+}
+a.dropdown-toggle:visited{
+color: #fff;
+}
+
+a.dropdown-toggle {
+display: block;
+}
+.dropdown-submenu{
+	position:relative;
+	display: block;
+	height: 40px;
+}
+.dropdown-submenu>.dropdown-menu{
+top:0;
+left:100%;
+margin-top:-6px;
+margin-left:-1px;
+-webkit-border-radius:0 6px 6px 6px;
+-moz-border-radius:0 6px 6px 6px;
+border-radius:0 6px 6px 6px;
+}
+.dropdown-submenu>a:after{
+display:block;
+content:" ";
+float:right;
+width:0;
+height:0;
+border-color:transparent;
+border-style:solid;
+border-width:5px 0 5px 5px;
+border-left-color:#cccccc;
+margin-top:5px;
+margin-right:-10px;
+}
+.dropdown-submenu:hover>a:after{border-left-color:#555;}
+.dropdown-submenu.pull-left{float:none;}.dropdown-submenu.pull-left>.dropdown-menu{left:-100%;margin-left:10px;-webkit-border-radius:6px 0 6px 6px;-moz-border-radius:6px 0 6px 6px;border-radius:6px 0 6px 6px;}
+
+.nv {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
+
+a.plain,
+a.plain:hover, 
+a.plain:visited, 
+a.plain:focus {
+	outline: 0;
+	border: 0px;
+	text-decoration: none;
+	color: #262626;
+	font-size: 30px;
+}
+
+/* ==============
+    DOCUMENTATION PANDOC
+   ============== */ 
+
+.formatting {
+    display:none;
+}
+
+.yaml
+{
+    display:none;
+}
+
+
+/* ==============
    GALLERY PAGE
    ============== */ 
 div, p.gallery-desc {
@@ -635,10 +716,10 @@ header .menu-button .icon-bar {
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+/* changed; deleted overflow: hidden; */
 nav {
 	background-color: #333;
     position: fixed;
-    overflow: hidden;
 	z-index: 9999999;
     width: 270px;
     height: 100%;
@@ -1237,9 +1318,9 @@ footer #footer-wrap ul li a {
 
     /* Nav Bar */
 
+	/* changed overflow: hidden; height: auto;*/
 	nav {
 		background-color: transparent;
-	    overflow: hidden;
 	    text-align: center;
 	    height: 42px;
 	    left: 0px;
