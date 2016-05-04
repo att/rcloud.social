@@ -5,7 +5,7 @@ DOC_DIR = ../../../rcloud-docs/rcloud/doc
 OUT_DIR = documentation/doc
 
 # Pandoc compile options 
-PANDOC_OPTS= --from=markdown_strict --to=html  --template=pandoc_html.template
+PANDOC_OPTS= --from=markdown --to=html  --template=pandoc_html.template
 
 # Get a list of the directories rooted on $(DOC_DIR)
 DIRS  = $(shell find $(DOC_DIR) -type d)

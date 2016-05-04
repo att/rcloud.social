@@ -25,15 +25,14 @@ $endif$
     <meta property="og:description" content="RCloud is a social coding environment, designed to jumpstart your work allowing you to rate and share code with other developers. RCloud will allow developers to dynamically manage content and link together various elements of an analysis with other developers.">
     <meta property="og:site_name" content="RCloud">
 
-    <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
-    
-    <link rel="stylesheet" href="../../../css/normalize.min.css" type="text/css">
-    <link rel="stylesheet" href="../../css/bootstrap.css" type="text/css">
-    <link rel="stylesheet" href="../../css/main.css" type="text/css">
-    <script type="text/javascript" src="../../js/vendor/jquery.min.js"></script>
-    <script type="text/javascript" src="../../js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-    <script type="text/javascript" src="../../js/vendor/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../../js/main.js"></script>
+    <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>    
+    <link rel="stylesheet" href="../../../../css/normalize.min.css" type="text/css">
+    <link rel="stylesheet" href="../../../../css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="../../../../css/main.css" type="text/css">
+    <script type="text/javascript" src="../../../../js/vendor/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../../js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    <script type="text/javascript" src="../../../../js/vendor/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../../js/main.js"></script>
     
   
   <style type="text/css">code{white-space: pre;}</style>
@@ -64,9 +63,9 @@ $endfor$
 <div id="wrapper"> 
   <nav class="clearfix">
     <ul>
-      <li><a href="../" title="RCloud"><img class="homelogo" src="../../images/logo_rcloud.png" alt="RCloud"/></a></li>
-      <li><a class="no-img" href="../gallery/" title="Gallery">Gallery</a></li>
-      <li><a href="../tutorials/" title="Tutorials">Tutorials</a></li>                                                
+      <li><a href="../../../../../" title="RCloud"><img class="homelogo" src="../../../../images/logo_rcloud.png" alt="RCloud"/></a></li>
+      <li><a class="no-img" href="../../../../../gallery/" title="Gallery">Gallery</a></li>
+      <li><a href="../../../../../tutorials/" title="Tutorials">Tutorials</a></li>                                                
       <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation<b class="caret"></b></a>
         <ul class="dropdown-menu">
           <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Version 1.5</a>
@@ -89,15 +88,15 @@ $endfor$
           </li>
         </ul>
       </li>                
-      <li><a href="../community/" title="Community">Community</a></li>
-      <li><a href="../tryit/" title="Try It" class="blue">Try It</a></li>
-      <li><a href="https://github.com/att/rcloud" target="_blank"><img class="ghlogo" src="../../images/Octocat.png" alt="GitHub"></a></li>
+      <li><a href="../../../../../community/" title="Community">Community</a></li>
+      <li><a href="../../../../../tryit/" title="Try It" class="blue">Try It</a></li>
+      <li><a href="https://github.com/att/rcloud" target="_blank"><img class="ghlogo" src="../../../../images/Octocat.png" alt="GitHub"></a></li>
       </ul>
     </nav>
     <header>
       <div id="header-wrap">
         <a class="trial" href="tryit/" title="Try RCloud" target="_blank">Try It</a>
-        <a class="logo" href="/" title="RCloud"><img src="../../images/logo_rcloud.png" alt="RCloud"/></a>
+        <a class="logo" href="/" title="RCloud"><img src="../../../../images/logo_rcloud.png" alt="RCloud"/></a>
         <a class="menu-button clearfix">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
@@ -106,15 +105,9 @@ $endfor$
       </div>
     </header>
     
-    <!----DOCUMENTATION 1.5 GUIDOCS----->
+    <!----DOCUMENTATION----->
     <div id="inner-wrapper">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <h1><a class="plain" name="ftrdocs">Version 1.5 </a><small>GUI Documentation</small></h1>
-          </div>
-        </div><!-- /.row -->
-        
         <div class="row">
           <div class="col-lg-12">
 
@@ -133,16 +126,16 @@ $body$
       </div><!--/.container--> 
       <footer>
         <div id="footer-wrap">
-          <p class="copyright clearfix"><img src="../../images/logo_att_globe.png" alt="AT&amp;T" />&copy;Copyright <script>document.write(new Date().getFullYear())</script> RCloud</p>
+          <p class="copyright clearfix"><img src="../../../../images/logo_att_globe.png" alt="AT&amp;T" />&copy;Copyright <script>document.write(new Date().getFullYear())</script> RCloud</p>
 
           <ul id="footer-nav">
             <li><a href="../" title="RCloud"><img class="ftrhomelogo" src="../../../../images/logo_rcloud.png" alt="RCloud"></a></li>
-            <li><a href="../gallery/" title="Gallery">Gallery</a></li>
-            <li><a href="../tutorials/" title="Tutorials">Tutorials</a></li>
+            <li><a href="../../../../gallery/" title="Gallery">Gallery</a></li>
+            <li><a href="../../../../tutorials/" title="Tutorials">Tutorials</a></li>
             <li><a href="#ftrdocs" title="Documentation">Documentation</a></li>                                                                         
-            <li><a href="../community/" title="Community">Community</a></li>
-            <li><a href="../tryit/" title="Try It" class="blue">Try It</a></li>
-            <li class="ftr"><a class="footr" href="https://github.com/att/rcloud" target="_blank"><img  class="ghlogo" alt="GitHub" src="../../images/Octocat.png"></a></li>
+            <li><a href="../../../../community/" title="Community">Community</a></li>
+            <li><a href="../../../../tryit/" title="Try It" class="blue">Try It</a></li>
+            <li class="ftr"><a class="footr" href="https://github.com/att/rcloud" target="_blank"><img  class="ghlogo" alt="GitHub" src="../../../../images/Octocat.png"></a></li>
             </ul>
             </div>
           </footer>             

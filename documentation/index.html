@@ -26,9 +26,9 @@
 	<link rel="stylesheet" href="../css/bootstrap.css" type="text/css">
     <link rel="stylesheet" href="../css/main.css" type="text/css">
 
-    <script type="text/javascript" src="../js/vendor/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/vendor/1.12.0/jquery.min.js"></script>
     <script type="text/javascript" src="../js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-    <script type="text/javascript" src="../js/vendor/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/vendor/3.3.6/bootstrap.min.js"></script>
 	<script type="text/javascript" src="../js/main.js"></script>
 
 </head>
@@ -70,7 +70,7 @@
        <header>
             <div id="header-wrap">
                 <a class="trial" href="../tryit/" title="Try RCloud">Try It</a>
-                <a class="logo" href="/" title="RCloud"><img src="images/logo_rcloud.png" alt="RCloud"/></a>
+                <a class="logo" href="/" title="RCloud"><img src="../images/logo_rcloud.png" alt="RCloud"/></a>
                 <a class="menu-button clearfix">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -79,69 +79,70 @@
             </div>
         </header>
 		
-		<!----DOCUMENTATION----->
-		<div id="inner-wrapper">
-			<div class="container">
-				<div class="row">
-        		    <div class="col-lg-12">
-                		<h1><a class="plain" name="ftrdocs">Documentation </a><small>Introduction</small></h1>
- 					</div>
-		        </div><!-- /.row -->
-        
-			    <div class="row">
-        		    <div class="col-lg-12">
-        		    				    	      <p>
-	RCloud is an environment for collaboratively creating and sharing data
-	analysis scripts in R. Much like <a href="http://www.sagemath.org/">Sage</a>,
-	<a href="http://ipython.org/ipython-doc/stable/interactive/notebook.html">iPython notebooks</a>
+
+	<!----ABOUT---->
+	<div id="inner-wrapper">
+		<div class="container">
+
+	        <!-- Title -->
+	        <div class="row">
+	            <div class="col-lg-12">
+	                <h1 class="page-title-header">Documentation <small>About</small></h1>                
+	            </div>
+	        </div><!-- /.row -->
+    
+	        <!-- Feature Row -->
+	        <div class="row">
+				 <div class="col-lg-12">
+				 	<div class="clrfx">
+				 		<p class="gallery-desc"><img src="../images/logo_att_globe.png" class="img1">
+	<p>RCloud is <a href="http://github.com/att/rcloud">open-source software</a> developed primarily by <a href="http://urbanek.info/">Simon Urbanek</a> and <a href="http://gordon.woodhull.com/">Gordon Woodhull</a> of
+						<a href="http://www.research.att.com">AT&amp;T Research</a>, and <a href="http://cscheid.net">Carlos Scheidegger</a>&nbsp; which generates an environment for collaboratively creating and sharing data
+	analysis scripts. Much like <a href="http://www.sagemath.org/">Sage</a>,
+	<a href="http://jupyter.org/">Jupyter notebooks</a>
 	and <a href="http://www.wolfram.com/mathematica/">Mathematica</a>, RCloud
-	provides a notebook interface that lets you easily record a session
-	and annotate it with text, equations, and supporting images.
-      </p>
-
-      <p>Unlike these other systems, RCloud: lets you easily browse other users's notebooks, comment on
-	  notebooks, fork notebooks, star notebooks, and use them as function
-	  calls in your own notebooks.
-	provides an environment in which R packages can create rich HTML
-	  content (using, for example, <a href="http://d3js.org">d3</a> and
-	  <a href="http://nickqizhu.github.io/dc.js/">dc.js</a>).
-	provides a transparent, integrated version control system. In
-	  essence, RCloud never forgets what you did. If you need low-level
-	  access to RCloud notebooks, you can simply clone the associated git
-	  repository. This is because RCloud notebooks are
-	  <a href="https://gist.github.com">Github gists</a>.
-	
-      </p>
-
-			<p>Here's a screenshot:</p>
-
-			<a href="../images/screenshot.png"><img width="640px" border="0" src="../images/screenshot.png" /></a>
-
-			<p>&nbsp;</p>
-			<p>&nbsp;</p>
-			<p>You might also want to take a look at <a href="http://att.github.io/rcloud/screencasts.html">these RCloud screencasts</a>.</p>
-			</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
-				
-				</div><!--/.col-lg-12-->
-           </div><!-- /.row --> 
-		</div><!--/.container-->   
-		   <footer>
+	provides a notebook interface that lets you easily generate a web-based session, annotate it with text, equations, and supporting images and share it with others; a notebook holds a sequence of cells, each of which is a snippet of code or hypertext in Markdown.</p>
+	      <p>Unlike these other systems, RCloud: 
+		  <ul>
+		  	<li>lets you easily browse other users's notebooks, comment on notebooks, fork notebooks, star notebooks, and use them as function
+	  calls in your own notebooks.</li>
+			<li>provides an environment in which R packages can create rich HTML
+	  content (using, for example, <a href="http://d3js.org">d3</a> and <a href="http://nickqizhu.github.io/dc.js/">dc.js</a>), and</li>
+	  <li>provides a transparent, integrated version control system.</li>
+		  </ul> 
+	 </p><p>In essence, RCloud never forgets what you did. If you need low-level access to RCloud notebooks, you can simply clone the associated git repository. This is because RCloud notebooks are <a href="https://gist.github.com">Github gists</a>.
+	</p>
+       RCloud was created to solve the problem of the discontinuity of performing exploratory data analysis (EDA) using one set of tools, and automated reports and deployments with another.  In addition, these environments often assume a single-developer perspective, while data scientist teams could get much benefit from easier sharing of scripts and data feeds, experiments, annotations, and automated recommendations, which are well beyond what traditional version control systems provide. </p>
+						<p class="gallery-desc">In the RCloud environment, developers and scripters solve problems in data and visual analytics and create web applications and services <img src="../images/about1.png" class="img2">in a shared environment in which discoverability is a concern. RCloud supports search, annotation, recommendation, and commenting for all notebooks, and provides an overview where users can browse popular and recent analyses. When problems and data sources change frequently, deployment can become very costly; RCloud supports transparent and automatic deployment of analyses as web pages and web services, allowing a seamless transition from data exploration to production.</p>	</br>	
+	            	
+					<p>RCloud was specifically designed to leverage existing systems and standards, and so communication between most parts of the system happens through HTTP. <img src="../images/about2.png" class="img3">As a result, some desirable features of RCloud become natural, such as native support for RCloud notebooks as web services. Every notebook in RCloud is named by a URL, and notebooks by default are visible in the entire organization. This is deliberate as broad access to analysis outputs increases long-term engagement in part through cross-references on the web. The main creation workflow involves editing notebooks, which are transparently stored as git repositories in GitHub, providing us with easy access to primitives for version tracking.</p>
+					<p>
+Notebooks can be executed one cell at a time in an interactive session, similar to traditional read-eval-print loops, or can all be executed concurrently, similar to running a shell script.<img src="../images/about3.png" class="img4">
+One of the main contributions of RCloud is the notion that notebooks are “always deployed”. In other words, the most recent version of a notebook is immediately available to all other users of the system. Another way to describe this is that RCloud lacks a “save” button: any notebook cell that runs is always associated to a notebook version serialized to disk. Although this sometimes leads to an excessively fine-grained sequence of versions, losing information that could be shared is worse. In this design, we get notebooks that are always live, but sometimes broken. Because stability is important, we also allow any previous version of a notebook to be tagged and referenced. </p>
+<p><strong> RCloud is a step toward practical “DevOps for data science” and reproducible, publishable data science experiments.</strong>
+<a href="../images/screenshot.png"><img width="640px" border="0" src="../images/screenshot.png" /></a></p>
+					</div>
+				</div>						
+			</div><!-- /.row -->
+		</div><!--/.container--> 
+	 	</br></br></br></br>
+		    <footer>
                 <div id="footer-wrap">
                     <p class="copyright clearfix"><img src="../images/logo_att_globe.png" alt="AT&amp;T" />&copy;Copyright <script>document.write(new Date().getFullYear())</script> RCloud</p>
 
                     <ul id="footer-nav">
                 		<li><a href="../" title="RCloud"><img class="ftrhomelogo" src="../images/logo_rcloud.png" alt="RCloud"></a></li>
-		                <li><a href="../gallery/" title="Gallery">Gallery</a></li>
+		               	<li><a href="#" title="About">About</a></li>
+					    <li><a href="../gallery/" title="Gallery">Gallery</a></li>
 		                <li><a href="../tutorials/" title="Tutorials">Tutorials</a></li>
-		                <li><a href="#ftrdocs" title="Documentation">Documentation</a></li>							
+		                <li><a href="http://att.github.io/rcloud/" title="Documentation">Documentation</a></li>							
 		                <li><a href="../community/" title="Community">Community</a></li>
 		                <li><a href="../tryit/" title="Try It" class="blue">Try It</a></li>
 						<li class="ftr"><a class="footr" href="https://github.com/att/rcloud" target="_blank"><img  class="ghlogo" alt="GitHub" src="../images/Octocat.png"></a></li>
                     </ul>
                 </div>
-            </footer>		
-
+            </footer>	
 		</div><!--/.inner-wrapper-->		
 	</div> <!--"wrapper"-->
-</body>
+  </body>
 </html>

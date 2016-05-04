@@ -16,17 +16,14 @@
     <meta property="og:description" content="RCloud is a social coding environment, designed to jumpstart your work allowing you to rate and share code with other developers. RCloud will allow developers to dynamically manage content and link together various elements of an analysis with other developers.">
     <meta property="og:site_name" content="RCloud">
 
-    <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
-    
-    <link rel="stylesheet" href="../../../css/normalize.min.css" type="text/css">
-    <link rel="stylesheet" href="../../css/bootstrap.css" type="text/css">
-    <link rel="stylesheet" href="../../css/main.css" type="text/css">
-    <link rel="stylesheet" href="../../css/pandoc.css" type="text/css" />
-
-    <script type="text/javascript" src="../../js/vendor/1.12.0/jquery.min.js"></script>
-    <script type="text/javascript" src="../../js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-    <script type="text/javascript" src="../../js/vendor/3.3.6/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../../js/main.js"></script>
+    <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>    
+    <link rel="stylesheet" href="../../../../css/normalize.min.css" type="text/css">
+    <link rel="stylesheet" href="../../../../css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="../../../../css/main.css" type="text/css">
+    <script type="text/javascript" src="../../../../js/vendor/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../../js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    <script type="text/javascript" src="../../../../js/vendor/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../../js/main.js"></script>
     
   
   <style type="text/css">code{white-space: pre;}</style>
@@ -37,9 +34,9 @@
 <div id="wrapper"> 
   <nav class="clearfix">
     <ul>
-      <li><a href="../" title="RCloud"><img class="homelogo" src="../../images/logo_rcloud.png" alt="RCloud"/></a></li>
-      <li><a class="no-img" href="../gallery/" title="Gallery">Gallery</a></li>
-      <li><a href="../tutorials/" title="Tutorials">Tutorials</a></li>                                                
+      <li><a href="../../../../../" title="RCloud"><img class="homelogo" src="../../../../images/logo_rcloud.png" alt="RCloud"/></a></li>
+      <li><a class="no-img" href="../../../../../gallery/" title="Gallery">Gallery</a></li>
+      <li><a href="../../../../../tutorials/" title="Tutorials">Tutorials</a></li>                                                
       <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation<b class="caret"></b></a>
         <ul class="dropdown-menu">
           <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Version 1.5</a>
@@ -62,15 +59,15 @@
           </li>
         </ul>
       </li>                
-      <li><a href="../community/" title="Community">Community</a></li>
-      <li><a href="../tryit/" title="Try It" class="blue">Try It</a></li>
-      <li><a href="https://github.com/att/rcloud" target="_blank"><img class="ghlogo" src="../../images/Octocat.png" alt="GitHub"></a></li>
+      <li><a href="../../../../../community/" title="Community">Community</a></li>
+      <li><a href="../../../../../tryit/" title="Try It" class="blue">Try It</a></li>
+      <li><a href="https://github.com/att/rcloud" target="_blank"><img class="ghlogo" src="../../../../images/Octocat.png" alt="GitHub"></a></li>
       </ul>
     </nav>
     <header>
       <div id="header-wrap">
         <a class="trial" href="tryit/" title="Try RCloud" target="_blank">Try It</a>
-        <a class="logo" href="/" title="RCloud"><img src="../../images/logo_rcloud.png" alt="RCloud"/></a>
+        <a class="logo" href="/" title="RCloud"><img src="../../../../images/logo_rcloud.png" alt="RCloud"/></a>
         <a class="menu-button clearfix">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
@@ -79,28 +76,24 @@
       </div>
     </header>
     
-    <!----DOCUMENTATION 1.5 GUIDOCS----->
+    <!----DOCUMENTATION----->
     <div id="inner-wrapper">
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
-            <h1><a class="plain" name="ftrdocs">Version 1.5 </a><small>GUI Documentation</small></h1>
-          </div>
-        </div><!-- /.row -->
-        
-        <div class="row">
-          <div class="col-lg-12">
 
 
 
 
-<hr />
-<p>title: RCloud: 1.4 What's New layout: default ---</p>
 <p><a name="top"></a></p>
-<h1>{{page.title}}</h1>
+<div class="frmttng">
+<h1>
+{{page.title}}
+</h1>
+</div>
 <p>Created: 2015-07-03. RCloud documentation is currently maintained by <a target="_blank" href="http://www.spencerseidel.com">Spencer Seidel</a> on a voluntary basis.</p>
-<h2>Table of Contents</h2>
-<ol>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol style="list-style-type: decimal">
 <li><a href="#functional">Functional Enhancements</a></li>
 </ol>
 <ul>
@@ -111,7 +104,7 @@
 <li><a href="#headerbarcustomization">Header Bar Customization</a></li>
 <li><a href="#notebookprefix">Notebook Prefix</a></li>
 </ul>
-<ol>
+<ol style="list-style-type: decimal">
 <li><a href="#gui">GUI Enhancements</a></li>
 </ol>
 <ul>
@@ -121,105 +114,132 @@
 <li><a href="#multilinecommandinput">Multi-Line Command Input</a></li>
 <li><a href="#htmlsyntax">HTML Syntax</a></li>
 </ul>
-<ol>
+<ol style="list-style-type: decimal">
 <li><a href="#tech">Technical Enhancements and Notes</a></li>
 </ol>
 <ul>
 <li><a href="#workspacepanel">Workspace Panel</a></li>
 </ul>
-<ol>
+<ol style="list-style-type: decimal">
 <li><a href="#plugins">Plugins</a></li>
 </ol>
 <ul>
 <li><a href="#workspaceviewer">Workspace Viewer</a></li>
 </ul>
-<ol>
+<ol style="list-style-type: decimal">
 <li><a href="#bugfixes">Bug Fixes</a></li>
 </ol>
 <p><a href="#top">Top</a></p>
 <p><a name="functional" /></p>
-<h2>Functional Enhancements</h2>
+<h2 id="functional-enhancements">1. Functional Enhancements</h2>
 <p><a name="protectednotebooks" /></p>
-<h3>Protected Notebooks</h3>
+<h3 id="protected-notebooks">Protected Notebooks</h3>
 <p>Protected notebooks are readable only by the owner and (optionally) a select group of users and will not show up in search results (although previously unprotected versions might).</p>
 <p>View or modify notebook protection by clicking the notebook &quot;info&quot; button next to the notebook name in the notebooks tree:</p>
-<p><img src="img/notebookinfo.png" alt="notebookinfo" /></p>
+<div class="figure">
+<img src="img/notebookinfo.png" alt="notebookinfo" />
+<p class="caption">notebookinfo</p>
+</div>
 <p>If you own the notebook, click the &quot;no group&quot; link (or a group name if one exists):</p>
-<p><img src="img/nogroup.png" alt="protectiondialog" /></p>
+<div class="figure">
+<img src="img/nogroup.png" alt="protectiondialog" />
+<p class="caption">protectiondialog</p>
+</div>
 <p>This opens the notebook protection dialog:</p>
-<p><img src="img/notebookperms.png" alt="protectiondialog" /></p>
+<div class="figure">
+<img src="img/notebookperms.png" alt="protectiondialog" />
+<p class="caption">protectiondialog</p>
+</div>
 <p>Here, you can assign the notebook to any group you are a member of or make it entirely private (readable only by you).</p>
 <p>Use the second tab of the protection dialog to create/rename groups and/or assign other users as administrators/members of groups you administrate.</p>
-<p><img src="img/groupman.png" alt="protectiondialog2" /></p>
+<div class="figure">
+<img src="img/groupman.png" alt="protectiondialog2" />
+<p class="caption">protectiondialog2</p>
+</div>
 <p><a href="#top">Top</a></p>
 <p><a name="remoteinstances" /></p>
-<h3>Remote Instances</h3>
+<h3 id="remote-instances">Remote Instances</h3>
 <p>View notebooks stored on other git/GitHub-based RCloud instances by configuring RCloud with multiple <code>gist.source</code> names. Specifying a name in a notebook URL (<code>&amp;source=name</code>) loads the notebook from another instance. Search has an option to search all sources.</p>
 <p>In this release, all notebooks are displayed in the same notebook tree. Non-local notebooks are displayed in green and are read-only. You can, however, fork and star non-local notebooks. Commenting is disabled for non-local notebooks.</p>
 <p><a href="#top">Top</a></p>
 <p><a name="cellexecution" /></p>
-<h3>Cell Execution</h3>
+<h3 id="cell-execution">Cell Execution</h3>
 <p>Clicking the stop button in the header bar sends an interrupt to the R process and terminates execution if possible.</p>
-<p><img src="img/stop.png" alt="stop" /></p>
+<div class="figure">
+<img src="img/stop.png" alt="stop" />
+<p class="caption">stop</p>
+</div>
 <p><a href="#top">Top</a></p>
 <p><a name="binaryassets" /></p>
-<h3>Binary Assets</h3>
+<h3 id="binary-assets">Binary Assets</h3>
 <p>Assets can be binary (i.e. not text based). RCloud auto-detects content format and transparently encodes and decodes using base-64 encoding. When possible, the content is displayed in its native format in the asset panel (e.g. images). Asset size is limited to 750KB.</p>
 <p><a href="#top">Top</a></p>
 <p><a name="headerbarcustomization" /></p>
-<h3>Header Bar Customization</h3>
+<h3 id="header-bar-customization">Header Bar Customization</h3>
 <p>Header bar menus are customizable in order to display, for example, help or other resources in the area around the Advanced menu.</p>
 <p><a href="#top">Top</a></p>
 <p><a name="notebookprefix" /></p>
-<h3>Notebook Prefix</h3>
+<h3 id="notebook-prefix">Notebook Prefix</h3>
 <p>New RCloud notebook names default to &quot;Notebook&quot; in the root of your user ID notebook tree. Use the Notebook Prefix setting to change the prefix for new notebooks. For example, change this setting to put all new notebooks in a particular folder.</p>
 <p><a href="#top">Top</a></p>
 <p><a name="gui" /></p>
-<h2>GUI Enhancements</h2>
+<h2 id="gui-enhancements">2. GUI Enhancements</h2>
 <p><a name="toggleresults" /></p>
-<h3>Toggle Results</h3>
+<h3 id="toggle-results">Toggle Results</h3>
 <p>When cell output is long and it's difficult to find the next cell, you can toggle the results of individual cells.</p>
 <p><a href="#top">Top</a></p>
 <p><a name="hideuielements" /></p>
-<h3>Hiding UI Elements</h3>
+<h3 id="hiding-ui-elements">Hiding UI Elements</h3>
 <p>Use <code>&amp;quiet=1</code> in view.html notebook URLs to hide all UI elements, including cell-status.</p>
 <p><a href="#top">Top</a></p>
 <p><a name="cellstates" /></p>
-<h3>Cell States</h3>
+<h3 id="cell-states">Cell States</h3>
 <p>If you change a cell in a notebook <em>after</em> initiating a notebook run, the state of the cell will turn into a purple question mark:</p>
-<p><img src="img/cellstatequestion1.png" alt="cellstatequestion1" /></p>
+<div class="figure">
+<img src="img/cellstatequestion1.png" alt="cellstatequestion1" />
+<p class="caption">cellstatequestion1</p>
+</div>
 <p>This indicates that the result after running may not be in sync with the newly modified code in the cell. When the cell runs, RCloud displays a spinning question mark:</p>
-<p><img src="img/cellstatequestion2.png" alt="cellstatequestion2" /></p>
+<div class="figure">
+<img src="img/cellstatequestion2.png" alt="cellstatequestion2" />
+<p class="caption">cellstatequestion2</p>
+</div>
 <p>After the cell runs, the status will change to the &quot;ready&quot; state instead of the complete state (a solid green circle):</p>
-<p><img src="img/opencircle.png" alt="cellstateready" /></p>
+<div class="figure">
+<img src="img/opencircle.png" alt="cellstateready" />
+<p class="caption">cellstateready</p>
+</div>
 <p>This indicates that the cell needs to run again for the modified code and displayed results to sync.</p>
 <p><a href="#top">Top</a></p>
 <p><a name="multilinecommandinput" /></p>
-<h3>Multi-Line Command Input</h3>
+<h3 id="multi-line-command-input">Multi-Line Command Input</h3>
 <p>Multi-line command input is indicated with a <code>+</code> to emulate command-line R.</p>
-<p><img src="img/multiline.png" alt="multilinecommandinput" /></p>
+<div class="figure">
+<img src="img/multiline.png" alt="multilinecommandinput" />
+<p class="caption">multilinecommandinput</p>
+</div>
 <p><a href="#top">Top</a></p>
 <p><a name="htmlsyntax" /></p>
-<h3>HTML Syntax</h3>
+<h3 id="html-syntax">HTML Syntax</h3>
 <p>RCloud highlights and checks HTML syntax.</p>
 <p><a href="#top">Top</a></p>
 <p><a name="tech" /></p>
-<h2>Technical Enhancements and Notes</h2>
+<h2 id="technical-enhancements-and-notes">3. Technical Enhancements and Notes</h2>
 <p><a name="workspacepanel" /></p>
-<h3>Workspace Panel</h3>
+<h3 id="workspace-panel">Workspace Panel</h3>
 <p>The workspace panel is not updated if it is closed.</p>
 <p><a href="#top">Top</a></p>
 <p><a name="plugins" /></p>
-<h2>Plugins</h2>
+<h2 id="plugins">4. Plugins</h2>
 <p><a name="workspaceviewer" /></p>
-<h3>Workspace Viewer</h3>
+<h3 id="workspace-viewer">Workspace Viewer</h3>
 <ul>
 <li>The dimensions of the data frames are shown in the overview.</li>
 <li>Function arguments are shown without the preceding function keyword to save space.</li>
 </ul>
 <p><a href="#top">Top</a></p>
 <p><a name="bugfixes" /></p>
-<h2>Bug Fixes</h2>
+<h2 id="bug-fixes">5. Bug Fixes</h2>
 <ul>
 <li>In OS X, Ctrl-A and Ctrl-E positions the curser at the beginning and end of the current line and not the wrapped line.</li>
 <li>Improved markdown formatting.</li>
@@ -247,16 +267,16 @@
       </div><!--/.container--> 
       <footer>
         <div id="footer-wrap">
-          <p class="copyright clearfix"><img src="../../images/logo_att_globe.png" alt="AT&amp;T" />&copy;Copyright <script>document.write(new Date().getFullYear())</script> RCloud</p>
+          <p class="copyright clearfix"><img src="../../../../images/logo_att_globe.png" alt="AT&amp;T" />&copy;Copyright <script>document.write(new Date().getFullYear())</script> RCloud</p>
 
           <ul id="footer-nav">
-            <li><a href="../" title="RCloud"><img class="ftrhomelogo" src="../../images/logo_rcloud.png" alt="RCloud"></a></li>
-            <li><a href="../gallery/" title="Gallery">Gallery</a></li>
-            <li><a href="../tutorials/" title="Tutorials">Tutorials</a></li>
+            <li><a href="../" title="RCloud"><img class="ftrhomelogo" src="../../../../images/logo_rcloud.png" alt="RCloud"></a></li>
+            <li><a href="../../../../gallery/" title="Gallery">Gallery</a></li>
+            <li><a href="../../../../tutorials/" title="Tutorials">Tutorials</a></li>
             <li><a href="#ftrdocs" title="Documentation">Documentation</a></li>                                                                         
-            <li><a href="../community/" title="Community">Community</a></li>
-            <li><a href="../tryit/" title="Try It" class="blue">Try It</a></li>
-            <li class="ftr"><a class="footr" href="https://github.com/att/rcloud" target="_blank"><img  class="ghlogo" alt="GitHub" src="../../images/Octocat.png"></a></li>
+            <li><a href="../../../../community/" title="Community">Community</a></li>
+            <li><a href="../../../../tryit/" title="Try It" class="blue">Try It</a></li>
+            <li class="ftr"><a class="footr" href="https://github.com/att/rcloud" target="_blank"><img  class="ghlogo" alt="GitHub" src="../../../../images/Octocat.png"></a></li>
             </ul>
             </div>
           </footer>             

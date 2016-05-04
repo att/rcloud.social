@@ -108,14 +108,10 @@ a.plain:focus {
 }
 
 /* ==============
-    DOCUMENTATION PANDOC
+    DOCUMENTATION: PANDOC
    ============== */ 
-
-.formatting {
-    display:none;
-}
-
-.yaml
+   
+.frmttng
 {
     display:none;
 }
@@ -1322,7 +1318,7 @@ footer #footer-wrap ul li a {
 	nav {
 		background-color: transparent;
 	    text-align: center;
-	    height: 42px;
+	    height: auto;
 	    left: 0px;
 	    width: 100%;
 	    height: auto;

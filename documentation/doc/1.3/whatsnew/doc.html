@@ -16,17 +16,14 @@
     <meta property="og:description" content="RCloud is a social coding environment, designed to jumpstart your work allowing you to rate and share code with other developers. RCloud will allow developers to dynamically manage content and link together various elements of an analysis with other developers.">
     <meta property="og:site_name" content="RCloud">
 
-    <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
-    
-    <link rel="stylesheet" href="../../../css/normalize.min.css" type="text/css">
-    <link rel="stylesheet" href="../../css/bootstrap.css" type="text/css">
-    <link rel="stylesheet" href="../../css/main.css" type="text/css">
-    <link rel="stylesheet" href="../../css/pandoc.css" type="text/css" />
-
-    <script type="text/javascript" src="../../js/vendor/1.12.0/jquery.min.js"></script>
-    <script type="text/javascript" src="../../js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-    <script type="text/javascript" src="../../js/vendor/3.3.6/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../../js/main.js"></script>
+    <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>    
+    <link rel="stylesheet" href="../../../../css/normalize.min.css" type="text/css">
+    <link rel="stylesheet" href="../../../../css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="../../../../css/main.css" type="text/css">
+    <script type="text/javascript" src="../../../../js/vendor/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../../js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    <script type="text/javascript" src="../../../../js/vendor/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../../js/main.js"></script>
     
   
   <style type="text/css">code{white-space: pre;}</style>
@@ -37,9 +34,9 @@
 <div id="wrapper"> 
   <nav class="clearfix">
     <ul>
-      <li><a href="../" title="RCloud"><img class="homelogo" src="../../images/logo_rcloud.png" alt="RCloud"/></a></li>
-      <li><a class="no-img" href="../gallery/" title="Gallery">Gallery</a></li>
-      <li><a href="../tutorials/" title="Tutorials">Tutorials</a></li>                                                
+      <li><a href="../../../../../" title="RCloud"><img class="homelogo" src="../../../../images/logo_rcloud.png" alt="RCloud"/></a></li>
+      <li><a class="no-img" href="../../../../../gallery/" title="Gallery">Gallery</a></li>
+      <li><a href="../../../../../tutorials/" title="Tutorials">Tutorials</a></li>                                                
       <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation<b class="caret"></b></a>
         <ul class="dropdown-menu">
           <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Version 1.5</a>
@@ -62,15 +59,15 @@
           </li>
         </ul>
       </li>                
-      <li><a href="../community/" title="Community">Community</a></li>
-      <li><a href="../tryit/" title="Try It" class="blue">Try It</a></li>
-      <li><a href="https://github.com/att/rcloud" target="_blank"><img class="ghlogo" src="../../images/Octocat.png" alt="GitHub"></a></li>
+      <li><a href="../../../../../community/" title="Community">Community</a></li>
+      <li><a href="../../../../../tryit/" title="Try It" class="blue">Try It</a></li>
+      <li><a href="https://github.com/att/rcloud" target="_blank"><img class="ghlogo" src="../../../../images/Octocat.png" alt="GitHub"></a></li>
       </ul>
     </nav>
     <header>
       <div id="header-wrap">
         <a class="trial" href="tryit/" title="Try RCloud" target="_blank">Try It</a>
-        <a class="logo" href="/" title="RCloud"><img src="../../images/logo_rcloud.png" alt="RCloud"/></a>
+        <a class="logo" href="/" title="RCloud"><img src="../../../../images/logo_rcloud.png" alt="RCloud"/></a>
         <a class="menu-button clearfix">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
@@ -79,27 +76,23 @@
       </div>
     </header>
     
-    <!----DOCUMENTATION 1.5 GUIDOCS----->
+    <!----DOCUMENTATION----->
     <div id="inner-wrapper">
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
-            <h1><a class="plain" name="ftrdocs">Version 1.5 </a><small>GUI Documentation</small></h1>
-          </div>
-        </div><!-- /.row -->
-        
-        <div class="row">
-          <div class="col-lg-12">
 
 
 
 
-<hr />
-<p>title: RCloud: 1.3 What's New! layout: default ---</p>
-<h1>{{page.title}}</h1>
+<div class="frmttng">
+<h1>
+{{page.title}}
+</h1>
+</div>
 <p>2015-02-14</p>
-<h2>Table of Contents</h2>
-<ol>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol style="list-style-type: decimal">
 <li><a href="#functional">Functional Enhancements</a></li>
 </ol>
 <ul>
@@ -112,7 +105,7 @@
 <li><a href="#visitlogo">visit.html Logo</a></li>
 <li><a href="#linebreaks">Line Breaks</a></li>
 </ul>
-<ol>
+<ol style="list-style-type: decimal">
 <li><a href="#gui">GUI Enhancements</a></li>
 </ol>
 <ul>
@@ -138,7 +131,7 @@
 <li><a href="#reorderingcells">Reordering Cells</a></li>
 <li><a href="#clickingineditcells">Clicking in Edit Cells</a></li>
 </ul>
-<ol>
+<ol style="list-style-type: decimal">
 <li><a href="#tech">Technical Enhancements and Notes</a></li>
 </ol>
 <ul>
@@ -147,51 +140,51 @@
 <li><a href="#sharedr">shared.R</a></li>
 <li><a href="#redisdatabasenumberandpassword">Redis Database Number and Password</a></li>
 </ul>
-<ol>
+<ol style="list-style-type: decimal">
 <li><a href="#bugfixes">Bug Fixes/Improvements</a></li>
 </ol>
 <p><a name="functional" /></p>
-<h2>Functional Enhancements</h2>
+<h2 id="functional-enhancements">1. Functional Enhancements</h2>
 <p><a name="efficientloading" /></p>
-<h2>Efficient Loading</h2>
+<h3 id="efficient-loading">Efficient Loading</h3>
 <p>After loading a notebook, cells do not activate the editor until they are clicked on. This makes loading notebooks with a large number of cells more efficient and therefore faster.</p>
 <p><a href="#top">Top</a></p>
 <p><a name="rmarkdowncells" /></p>
-<h2>Experimental Support for RMarkdown Cells</h2>
+<h3 id="rmarkdown-cells-experimental-support">RMarkdown Cells; Experimental Support</h3>
 <p>Experimental support for RMarkdown cells is included. Old Markdown cells use the <a href="http://cran.r-project.org/web/packages/markdown/index.html">markdown</a> and <a href="http://yihui.name/knitr/">knitr</a> packages directly for output; RMarkdown cells use <a href="http://rmarkdown.rstudio.com/">rmarkdown</a> (a.k.a. R Markdown v2).</p>
 <p><a href="#top">Top</a></p>
 <p><a name="failedsearches" /></p>
-<h2>Failed Searches</h2>
+<h3 id="failed-searches">Failed Searches</h3>
 <p>If you enter a search term that contains a SOLR/Lucene syntax error, for example, &quot;bad:&quot;, RCloud will output a message about syntax and include a link to Lucene query parser syntax.</p>
 <p><a href="#top">Top</a></p>
 <p><a name="shareablelinks" /></p>
-<h2>Shareable Links</h2>
+<h3 id="shareable-links">Shareable Links</h3>
 <p>If you tag a version of your notebook, load it, and then select one of the shareable links, RCloud will populate the URL with the tag instead of the version. This is beneficial because then you can tag a different version of the same notebook and pre-existing URLs won't point to the wrong version of the notebook.</p>
 <p><a href="#top">Top</a></p>
 <p><a name="betterworkspacevaluedisplay" /></p>
-<h2>Better Workspace Value Display</h2>
+<h3 id="better-workspace-value-display">Better Workspace Value Display</h3>
 <p>Workspace values are displayed simply and more accurately.</p>
 <p><a href="#top">Top</a></p>
 <p><a name="pagereloads" /></p>
-<h2>Page Reloads</h2>
+<h3 id="page-reloads">Page Reloads</h3>
 <p>If a change in settings requires a reload, RCloud will indicate that a reload is necessary.</p>
 <p><a href="#top">Top</a></p>
 <p><a name="visitlogo" /></p>
-<h2>visit.html Logo</h2>
+<h3 id="visit.html-logo">visit.html Logo</h3>
 <p>The logo used in visit.html is customizable.</p>
 <p><a href="#top">Top</a></p>
 <p><a name="linebreaks" /></p>
-<h2>Line Breaks</h2>
+<h3 id="line-breaks">Line Breaks</h3>
 <p>When displaying R stack traces, RCloud uses line breaks.</p>
 <p><a href="#top">Top</a></p>
 <p><a name="gui" /></p>
-<h2>GUI Enhancement</h2>
+<h2 id="gui-enhancement">2. GUI Enhancement</h2>
 <p><a name="cleanerinterface" /></p>
-<h2>New Cleaner Interface</h2>
+<h3 id="cleaner-interface">Cleaner Interface</h3>
 <p>The RCloud team has put a lot of work into creating a new cleaner interface, reducing visual clutter. Please, let us know what you think!</p>
 <p><a href="#top">Top</a></p>
 <p><a name="cellrunstateindicator" /></p>
-<h2>Cell Run-State Indicator</h2>
+<h3 id="cell-run-state-indicator">Cell Run-State Indicator</h3>
 <p>The run-state of each cell is displayed via an icon in between the gutter and cell name:</p>
 <p><img src="img/opencircle.png" alt="opencircle" />: Cell has not been run</p>
 <p><img src="img/bluearrow.png" alt="bluearrow" />: Cell is scheduled to be run</p>
@@ -201,127 +194,175 @@
 <p><img src="img/splatcircle.png" alt="splatcircle" />: Cell's run was cancelled</p>
 <p><a href="#top">Top</a></p>
 <p><a name="nonpreemptivestop" /></p>
-<h2>Non-Preemptive Stop</h2>
+<h3 id="non-preemptive-stop">Non-Preemptive Stop</h3>
 <p>When you run a notebook, you can prevent scheduled cells from running by pressing the stop button, located in the header at the top of the screen:</p>
-<p><img src="img/stop.png" alt="nonpreemptivestop" /></p>
+<div class="figure">
+<img src="img/stop.png" alt="nonpreemptivestop" />
+<p class="caption">nonpreemptivestop</p>
+</div>
 <p>Note that this will not interrupt currently running cells (<img src="img/runningcircle.png" alt="runningcircle" />). It will only prevent scheduled cells from running.</p>
 <p><a href="#top">Top</a></p>
 <p><a name="editablecellcolor" /></p>
-<h2>Editable Cell Color</h2>
+<h3 id="editable-cell-color">Editable Cell Color</h3>
 <p>Editable cells are lightly colored.</p>
 <p><a href="#top">Top</a></p>
 <p><a name="autoindentation" /></p>
-<h2>Auto Indentation</h2>
+<h3 id="auto-indentation">Auto Indentation</h3>
 <p>R and Python cells have automatic indentation.</p>
 <p><a href="#top">Top</a></p>
 <p><a name="codeandoutput" /></p>
-<h2>Code and Output</h2>
+<h3 id="code-and-output">Code and Output</h3>
 <p>Most cells show both the code and the output. Output is shown when the cell is run. Click on the code or the edit code icon in cell's status bar to activate the cell's edit mode.</p>
-<p><img src="img/codeandoutput.png" alt="codeandoutput" /></p>
+<div class="figure">
+<img src="img/codeandoutput.png" alt="codeandoutput" />
+<p class="caption">codeandoutput</p>
+</div>
 <p>Markdown cells behave slightly differently - since the markdown output already contains the code, the code editor is hidden when the markdown is run. Click on any code (not markdown) within the markdown output, or click on the edit code icon in the status bar to activate it.</p>
 <p><a href="#top">Top</a></p>
 <p><a name="directinputandoutput" /></p>
-<h2>Direct Input and Output</h2>
+<h3 id="direct-input-and-output">Direct Input and Output</h3>
 <p>When you execute a notebook, cells are executed asynchronously, so output for individual cells will appear as it becomes available.</p>
 <p>Code can also request lines of input. E.g. <code>readline</code> works - as does <code>browser</code> and <code>debug</code> for debugging purposes. Ordinary code cells do not use knitr/markdown for output but send images, pre-formatted, and html output separately.</p>
 <p>E.g.</p>
-<p><img src="img/readline.png" alt="readline" /></p>
+<div class="figure">
+<img src="img/readline.png" alt="readline" />
+<p class="caption">readline</p>
+</div>
 <p>And the result:</p>
-<p><img src="img/readline_results.png" alt="readline_results" /></p>
+<div class="figure">
+<img src="img/readline_results.png" alt="readline_results" />
+<p class="caption">readline_results</p>
+</div>
 <p>For debugging:</p>
 <p><img src="img/browse.png" alt="browse" /> <a href="#top">Top</a></p>
 <p><a name="savingplots" /></p>
-<h2>Saving Plots</h2>
+<h3 id="saving-plots">Saving Plots</h3>
 <p>Hover the mouse over a plot created in an R cell to make the disk icon appear in the upper right corner (see 1), which contains a list of available image formats. A widget at the lower-right corner can be used to resize the image (see 2).</p>
-<p><img src="img/saveresize.png" alt="saveresize" /></p>
+<div class="figure">
+<img src="img/saveresize.png" alt="saveresize" />
+<p class="caption">saveresize</p>
+</div>
 <p><a href="#top">Top</a></p>
 <p><a name="bigplots" /></p>
-<h2>Big Plots</h2>
+<h3 id="big-plots">Big Plots</h3>
 <p>RCloud displays a horizontal scrollbar when plots that are too wide to display completely in the middle column.</p>
 <p><a href="#top">Top</a></p>
 <p><a name="searchandreplace" /></p>
-<h2>Search and Replace</h2>
+<h3 id="search-and-replace">Search and Replace</h3>
 <p>Users can search/search-place across all cells in a notebook.</p>
 <p>Ctrl/Cmd-F opens the find bar at the top of the notebook. Type to search incrementally.</p>
-<p><img src="img/find.png" alt="find" /></p>
+<div class="figure">
+<img src="img/find.png" alt="find" />
+<p class="caption">find</p>
+</div>
 <p>Ctrl-H (Win, Linux), Cmd-Option-H (Mac) opens the replace bar.</p>
-<p><img src="img/find_replace.png" alt="find_replace" /></p>
+<div class="figure">
+<img src="img/find_replace.png" alt="find_replace" />
+<p class="caption">find_replace</p>
+</div>
 <p><a href="#top">Top</a></p>
 <p><a name="notebookinformationicon" /></p>
-<h2>Notebook Information Icon</h2>
+<h3 id="notebook-information-icon">Notebook Information Icon</h3>
 <p>Clicking the notebook information icon shows which users have starred a notebook.</p>
-<p><img src="img/notebookinfo.png" alt="notebookinfo" /></p>
+<div class="figure">
+<img src="img/notebookinfo.png" alt="notebookinfo" />
+<p class="caption">notebookinfo</p>
+</div>
 <p><a href="#top">Top</a></p>
 <p><a name="startupanimation" /></p>
-<h2>Startup Animation</h2>
+<h3 id="startup-animation">Startup Animation</h3>
 <p>RCloud displays an animated icon when first loading a notebook.</p>
-<p><img src="img/notebook_loading.png" alt="notebook_loading" /></p>
+<div class="figure">
+<img src="img/notebook_loading.png" alt="notebook_loading" />
+<p class="caption">notebook_loading</p>
+</div>
 <p><a href="#top">Top</a></p>
 <p><a name="years" /></p>
-<h2>Years</h2>
+<h3 id="years">Years</h3>
 <p>When versions are more than a year old, the year is displayed in the notebook version dates.</p>
 <p><a href="#top">Top</a></p>
 <p><a name="rightclickingsearchresults" /></p>
-<h2>Right-Clicking Search Results</h2>
+<h3 id="right-clicking-search-results">Right-Clicking Search Results</h3>
 <p>Users can right click on search results to open results a new tab.</p>
 <p><a href="#top">Top</a></p>
 <p><a name="argumentsforuserdefinedfunctions" /></p>
-<h2>Arguments for User-Defined Functions</h2>
+<h3 id="arguments-for-user-defined-functions">Arguments for User-Defined Functions</h3>
 <p>Function arguments are shown in the Workspace panel.</p>
 <p>Given the following user defined function:</p>
-<p><img src="img/function.png" alt="function" /></p>
+<div class="figure">
+<img src="img/function.png" alt="function" />
+<p class="caption">function</p>
+</div>
 <p>The arguments are displayed in the Workspace panel:</p>
-<p><img src="img/functionargsinworkspace.png" alt="functionargsinworkspace" /></p>
+<div class="figure">
+<img src="img/functionargsinworkspace.png" alt="functionargsinworkspace" />
+<p class="caption">functionargsinworkspace</p>
+</div>
 <p><a href="#top">Top</a></p>
 <p><a name="tersedates" /></p>
-<h2>Terse Dates</h2>
+<h3 id="terse-dates">Terse Dates</h3>
 <p>There is an option to turn off &quot;terse dates&quot; in the Options panel.</p>
-<p><img src="img/settings.png" alt="settings" /></p>
+<div class="figure">
+<img src="img/settings.png" alt="settings" />
+<p class="caption">settings</p>
+</div>
 <p><a href="#top">Top</a></p>
 <p><a name="extensions" /></p>
-<h2>Extensions</h2>
+<h3 id="extensions">Extensions</h3>
 <p>You can enable and disable per-user extensions using the &quot;Enable Extensions&quot; and &quot;Disable Extensions&quot; text boxes. These set the user options <code>addons</code> and <code>skip-addons</code>, respectively. On starting the session, any extensions listed in <code>skip-addons</code> are not loaded.</p>
-<p><img src="img/settings.png" alt="settings" /></p>
+<div class="figure">
+<img src="img/settings.png" alt="settings" />
+<p class="caption">settings</p>
+</div>
 <p><a href="#top">Top</a></p>
 <p><a name="commentssubscription" /></p>
-<h2>Comments Subscription</h2>
+<h3 id="comments-subscription">Comments Subscription</h3>
 <p>If your server is set up to allow subscribing to comments, the Subscribe to Comments option will appear in the settings panel:</p>
-<p><img src="img/commentsubscribe.png" alt="commentsubscribe" /></p>
+<div class="figure">
+<img src="img/commentsubscribe.png" alt="commentsubscribe" />
+<p class="caption">commentsubscribe</p>
+</div>
 <p><a href="#top">Top</a> <a name="cellnumbers" /></p>
-<h2>Cell Numbers</h2>
+<h3 id="cell-numbers">Cell Numbers</h3>
 <p>Cell number is shown above each cell in its status area.</p>
-<p><img src="img/cellnumbers.png" alt="cellnumbers" /></p>
+<div class="figure">
+<img src="img/cellnumbers.png" alt="cellnumbers" />
+<p class="caption">cellnumbers</p>
+</div>
 <p>You can turn off this feature in the settings panel:</p>
-<p><img src="img/settings.png" alt="settings" /></p>
+<div class="figure">
+<img src="img/settings.png" alt="settings" />
+<p class="caption">settings</p>
+</div>
 <p><a href="#top">Top</a></p>
 <p><a name="reorderingcells" /></p>
-<h2>Reordering Cells</h2>
+<h3 id="reordering-cells">Reordering Cells</h3>
 <p>Users can grab the status area above cell as well as the gutter area (<img src="img/dragcell.png" alt="dragcell" />) in order to reorder cells. This allows users to move cells when not editing them.</p>
 <p><a href="#top">Top</a></p>
 <p><a name="clickingineditcells" /></p>
-<h2>Clicking in Edit Cells</h2>
+<h3 id="clicking-in-edit-cells">Clicking in Edit Cells</h3>
 <p>Clicking into an edit cell sets the cursor position to the clicked location.</p>
 <p><a href="#top">Top</a></p>
 <p><a name="tech" /></p>
-<h2>Technical Enhancements and Notes</h2>
+<h2 id="technical-enhancements-and-notes">3. Technical Enhancements and Notes</h2>
 <p><a name="extensionstorclouduserinterface" /></p>
-<h2>Extensions to RCloud User Interface</h2>
+<h3 id="extensions-to-rcloud-user-interface">Extensions to RCloud User Interface</h3>
 <p>There are many ways to write extensions to the RCloud user interface. For more information, see <a href="https://github.com/att/rcloud/wiki/RCloud-UI-Extensions">the wiki</a>.</p>
 <p><a href="#top">Top</a></p>
 <p><a name="rcloudlanguageaddons" /></p>
-<h2>RCloud Language Add-Ons</h2>
+<h3 id="rcloud-language-add-ons">RCloud Language Add-Ons</h3>
 <p>Administrators can add cell languages. R, RMarkdown, and Python evaluation is performed by language add-ons. For more information see <a href="https://github.com/att/rcloud/wiki/RCloud-Language-extensions">the wiki</a>.</p>
 <p><a href="#top">Top</a></p>
 <p><a name="sharedr" /></p>
-<h2>shared.R</h2>
+<h3 id="shared.r">shared.R</h3>
 <p>'shared.R' can be used to serve static content out of of the 'www/' folder of any installed R package. This enables many Shiny packages, which can include javascript, css, and images.</p>
 <p><a href="#top">Top</a></p>
 <p><a name="redisdatabasenumberandpassword" /></p>
-<h2>Redis Database Number and Password</h2>
+<h3 id="redis-database-number-and-password">Redis Database Number and Password</h3>
 <p>redis database number and password can be set.</p>
 <p><a href="#top">Top</a></p>
 <p><a name="bugfixes" /></p>
-<h2>Bug Fixes</h2>
+<h2 id="bug-fixes">4. Bug Fixes</h2>
 <ul>
 <li>Unauthenticated login functionality with view.html, shiny.html, notebook.R is working correctly.</li>
 <li><code>fork_of</code> is not missing.</li>
@@ -347,16 +388,16 @@
       </div><!--/.container--> 
       <footer>
         <div id="footer-wrap">
-          <p class="copyright clearfix"><img src="../../images/logo_att_globe.png" alt="AT&amp;T" />&copy;Copyright <script>document.write(new Date().getFullYear())</script> RCloud</p>
+          <p class="copyright clearfix"><img src="../../../../images/logo_att_globe.png" alt="AT&amp;T" />&copy;Copyright <script>document.write(new Date().getFullYear())</script> RCloud</p>
 
           <ul id="footer-nav">
-            <li><a href="../" title="RCloud"><img class="ftrhomelogo" src="../../images/logo_rcloud.png" alt="RCloud"></a></li>
-            <li><a href="../gallery/" title="Gallery">Gallery</a></li>
-            <li><a href="../tutorials/" title="Tutorials">Tutorials</a></li>
+            <li><a href="../" title="RCloud"><img class="ftrhomelogo" src="../../../../images/logo_rcloud.png" alt="RCloud"></a></li>
+            <li><a href="../../../../gallery/" title="Gallery">Gallery</a></li>
+            <li><a href="../../../../tutorials/" title="Tutorials">Tutorials</a></li>
             <li><a href="#ftrdocs" title="Documentation">Documentation</a></li>                                                                         
-            <li><a href="../community/" title="Community">Community</a></li>
-            <li><a href="../tryit/" title="Try It" class="blue">Try It</a></li>
-            <li class="ftr"><a class="footr" href="https://github.com/att/rcloud" target="_blank"><img  class="ghlogo" alt="GitHub" src="../../images/Octocat.png"></a></li>
+            <li><a href="../../../../community/" title="Community">Community</a></li>
+            <li><a href="../../../../tryit/" title="Try It" class="blue">Try It</a></li>
+            <li class="ftr"><a class="footr" href="https://github.com/att/rcloud" target="_blank"><img  class="ghlogo" alt="GitHub" src="../../../../images/Octocat.png"></a></li>
             </ul>
             </div>
           </footer>             
