@@ -104,7 +104,6 @@ a.plain:focus {
 	border: 0px;
 	text-decoration: none;
 	color: #262626;
-	font-size: 30px;
 }
 
 /* ==============
@@ -135,14 +134,7 @@ h2.gallery-header {
   	border-bottom: 1px solid #eee;
   	color: #337ab7;
 }
-a.plain,
-a.plain:hover, 
-a.plain:visited, 
-a.plain:focus {
-	outline: 0;
-	border: 0px;
-	text-decoration: none;
-}
+
 
 h3.image-subtitles {
 	text-align: center;
@@ -218,9 +210,6 @@ margin: 0 auto;
    COMMUNITY PAGE
    ============== */ 
    
-/* ================
- *  COMMUNITY PAGE 
- * ================ */
 h3.gallery-header {
 	padding-bottom: 9px;
   	margin: 40px 0 20px;
@@ -235,8 +224,6 @@ padding-right: 10px;
 }
 
 
-
-
 /* ==============
    TRYIT PAGE
    ============== */ 
@@ -249,7 +236,7 @@ padding-right: 10px;
 	position: relative;
     display: inline-block;
 	margin-top: 50px;
-	padding: 12px 24px;
+	padding: 6px 12px;
     font-size: 17px;
     font-weight: bold;
     line-height: 20px;
