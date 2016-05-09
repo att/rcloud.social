@@ -1321,6 +1321,7 @@ footer #footer-wrap ul li a {
 	#wrapper.shrink-off.completed nav,
 	#wrapper.shrink-off.completed nav li {
 	    height: 55px;
+		
 	}
 	#wrapper.shrink-off.completed nav li a {
 		line-height: 56px;
