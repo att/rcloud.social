@@ -41,16 +41,38 @@
                 <li><a href="../" title="RCloud"><img class="homelogo" src="../images/logo_rcloud.png" alt="RCloud"/></a></li>
                 <li><a class="no-img" href="../gallery/" title="Gallery">Gallery</a></li>
                 <li><a href="../tutorials/" title="Tutorials">Tutorials</a></li>
-                <li><a href="http://att.github.io/rcloud/" title="Documentation">Documentation</a></li>							
+                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    	<li class="drpdwn"><a href="../documentation/">Introduction</a></li>
+                        <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Version 1.5</a>
+							<ul class="dropdown-menu">
+								<li class="drpdwn"><a href="../documentation/doc/1.5/whatsnew/doc.html">What's New</a></li>
+								<li class="drpdwn"><a href="../documentation/doc/1.5/guidoc/doc.html">GUI Documentation</a></li>
+							</ul>
+						</li>
+                        <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Version 1.4</a>
+							<ul class="dropdown-menu">
+								<li class="drpdwn"><a href="../documentation/doc/1.4/whatsnew/doc.html">What's New</a></li>
+								<li class="drpdwn"><a href="../documentation/doc/1.4/guidoc/doc.html">GUI Documentation</a></li>
+							</ul>
+						</li>
+                        <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Version 1.3</a>
+							<ul class="dropdown-menu">
+								<li class="drpdwn"><a href="../documentation/doc/1.3/whatsnew/doc.html">What's New</a></li>
+								<li class="drpdwn" ><a href="../documentation/doc/1.3/guidoc/doc.html">GUI Documentation</a></li>
+							</ul>
+						</li>
+                    </ul>
+                </li>               
                 <li><a href="../community/" title="Community">Community</a></li>
                 <li><a href="#" title="Try It" class="blue">Try It</a></li>
-				<li><a href="https://github.com/att/rcloud" target="_blank"><img class="ghlogo" src="../images/Octocat.png" alt="GitHub"></a></li>
+				<li><a class="no-img" href="https://github.com/att/rcloud" target="_blank"><img class="ghlogo" src="../images/Octocat.png" alt="GitHub"></a></li>
              </ul>
         </nav>
        <header>
             <div id="header-wrap">
                 <a class="trial" href="#" title="Try RCloud">Try It</a>
-                <a href="/" title="RCloud"><img class="logo" src="images/logo_rcloud.png" alt="RCloud"/></a>
+                <a href="/" title="RCloud"><img class="logo" src="../images/logo_rcloud.png" alt="RCloud"/></a>
                 <a class="menu-button clearfix">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -66,8 +88,8 @@
 		        <!-- Title -->
 		        <div class="row">
         		    <div class="col-lg-12">
-                		<h1>Try It <small>Online</small></h1>
-                		<p class="gallery-desc">There are two methods of using the public instance of RCloud; as a <span class="intro">Guest</span> with read only access or as an <span class="intro">Data Scientist</span> with developer capabilities; the following sections describe the requirements for each profile.</p>
+                		<h1>Try It <small>&nbsp;&nbsp;&nbsp;Online or Locally</small></h1>
+                		<p class="gallery-desc">There are two methods of using the <strong>public instance of RCloud</strong>; as a <span class="intro">Guest</span> with read only access or as an <span class="intro">Data Scientist</span> with developer capabilities; the following sections describe the requirements for each profile. &nbsp;&nbsp;Alternatively, a local <strong>private instance</strong> of RCloud may be set up so that analyses are only shared within an organization; see the <a href="#dwnld">Download</a> section for more details.</p>
 					</div>
 		        </div><!-- /.row -->
         
@@ -75,10 +97,10 @@
 			  		<div class="col-md-6">
 			  			<div class="block">
 			  				<h2 class="gallery-header">Guest <small>&nbsp;&nbsp;&nbsp;&nbsp;Read Only</small></h3>
-							<p class="gallery-desc">Guests may view and interact with RCloud notebook analyses or dashboards without having to set up an RClound account.  Click on an image below or visit our <a href="https://rcloud.research.att.com/test/gallery/index.html">Gallery</a> for additional examples.</p></br>
+							<p class="gallery-desc">Guests may view and interact with RCloud notebooks without having to set up an RClound account.  This "view only mode" allows Data Scientists to share their completed work as a web page with non-developers.  Click on an image below or visit our <a href="../gallery/index.html">Gallery</a> for additional examples.</p></br>
 					        	<div class="row">			 	
 									<div class="col-md-6">
-						                <div class="gallery1 btn"><a href="http://rcloud.social/mini.html?notebook=d56a9c0c3a3790a1a1db3eae36b1ddf3" class="btn btn-small btn-primary shdw">View Notebook</a></div>							            
+						                <div class="gallery1 btn"><a href="http://rcloud.social/view.html?notebook=927b867ad0fbbb5c64a60c87eba14aed" class="btn btn-small btn-primary shdw">View Notebook</a></div>							            
 						                <h3 class="image-subtitles"><small>Read a Binary Asset</small></h3></br>
 									</div>	
 									<div class="col-md-6">
@@ -97,8 +119,7 @@
 						                <h3 class="image-subtitles"><small>Interactive Plots</small></h3></br>	
 					 			 	</div>
 
-								</div><!-- /.row -->
-								<p class="gallery-desc">Using this permission structure, Data Scientists may share their completed with the public.  Alternatively, <a href="#dwnld">private RClouds</a> may be set up so that analyses are only shared within an organization.</p>
+								</div><!-- /.row -->   
 						 </div><!-- block -->
 					 </div><!-- col-xs-12 col-md-6 -->
 					
@@ -111,10 +132,10 @@
 									<div class="sprite btn"><a href="http:/rcloud.social/login.R" class="btn btn-primary shdw">Log In</a></div>
 								</div>
 							</div><!-- /.row -->
-							</br><p class="gallery-desc">For help getting started, run <a class="plain" href="http://rcloud.social/login.R"><span style="color:red">RCloud Sample Notebooks</span> </a>which may be found in the notebook information panel in RCloud; to run a notebook, select the notebook name and then click the "play" triangle in the navigation bar.</p>
+							</br><p class="gallery-desc">For help getting started, run <a class="plain" href="http://rcloud.social/login.R"><span style="color:red">RCloud Sample Notebooks</span> </a>which may be found in the notebook information panel that may be seen after logging into RCloud; to run a notebook, select the notebook name and then click the "run" button in the navigation bar.</p>
 							<div class="row">
 							<div class="col-lg-12">
-					        		<img class="img-responsive img-rounded" src="../images/sampleN.png" alt="">
+					        		<img class="img-responsive img-rounded img-responsive-medium" src="../images/sampleN.png" alt="">
 							    </br><p class="gallery-desc">Create your own notebook using the "+" key, fork notebooks using the fork icon in the navigation bar, share notebooks using the share icon (arrow in square) or begin editing by typing code in a cell; additional details are provided in the <a href="../documentation/">Documentation</a> and <a href="../tutorials/">Tutorials</a> pages.</p>
 							</div>								
 							</div><!-- /.row -->
@@ -125,8 +146,8 @@
 		        <div class="row">
 				</br></br>   
 		           <div class="col-lg-12">
-		                <h1 class="page-title-header" id="dwnld">Download <small>Local Installation</small></h1>
-						<p class="gallery-desc">Private RClouds may be created to facilitate collaboration and sharing <strong>within</strong> an organization. Set up a private RCloud by checking out these <a href="https://github.com/att/rcloud/blob/develop/doc/INSTALL.md" title="prerequisistes">prerequisites</a> and <a href="https://github.com/att/rcloud/blob/develop/doc/INSTALL.md" title="installation">local installation instructions</a> on GitHub.</p>
+		                <h2 class="gallery-header" id="dwnld">Download <small>&nbsp;&nbsp;Local Installation</small></h1>
+						<p class="gallery-desc"><strong>Private RClouds</strong> may be created to facilitate collaboration and sharing <strong>within an organization</strong>. Local installations of RCloud have all the functionality of the public instance, including Guest and Data Scientist access permission structures.  Access, sharing and security may be limited and implemented through an organization's virtual private network (VPN). Set up a private RCloud by checking out these <a href="https://github.com/att/rcloud/blob/develop/doc/INSTALL.md" title="prerequisistes">prerequisites</a> and <a href="https://github.com/att/rcloud/blob/develop/doc/INSTALL.md" title="installation">local installation instructions</a> on GitHub.</p>
 		            </div><!--/.col-lg-12-->
 				</div><!-- /.row --> 
 	
@@ -135,16 +156,16 @@
 
            <footer>
                 <div id="footer-wrap">
-                    <p class="copyright clearfix"><img src="images/logo_att_globe.png" alt="AT&amp;T" />&copy;Copyright <script>document.write(new Date().getFullYear())</script> RCloud</p>
+                    <p class="copyright clearfix"><img src="../images/logo_att_globe.png" alt="AT&amp;T" />&copy;Copyright <script>document.write(new Date().getFullYear())</script> RCloud</p>
 
                     <ul id="footer-nav">
-                		<li><a href="../" title="RCloud"><img class="ftrhomelogo" src="images/logo_rcloud.png" alt="RCloud"></a></li>
-		                <li><a href="../gallery/" title="Gallery">Gallery</a></li>
+                		<li><a href="../" title="RCloud"><img class="ftrhomelogo" src="../images/logo_rcloud.png" alt="RCloud"></a></li>
+		                <li class="ftr"><a href="../gallery/" title="Gallery">Gallery</a></li>
 		                <li><a href="../tutorials/" title="Tutorials">Tutorials</a></li>
-		                <li><a href="http://att.github.io/rcloud/" title="Documentation">Documentation</a></li>							
+		                <li><a href="#wrapper" title="Documentation">Documentation</a></li>							
 		                <li><a href="../community/" title="Community">Community</a></li>
 		                <li><a href="../tryit/" title="Try It" class="blue">Try It</a></li>
-						<li class="ftr"><a class="footr" href="https://github.com/att/rcloud" target="_blank"><img  class="ghlogo" alt="GitHub" src="images/Octocat.png"></a></li>
+						<li class="ftr"><a class="footr" href="https://github.com/att/rcloud" target="_blank"><img  class="ghlogo" alt="GitHub" src="../images/Octocat.png"></a></li>
                     </ul>
                 </div>
             </footer>		
