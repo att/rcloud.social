@@ -94,34 +94,31 @@
     
 	        <!-- Feature Row -->
 	        <div class="row">
-				 <div class="col-lg-12"><h2 class="gallery-header">History</h2></div>
+				 <div class="col-lg-12"><h2 class="gallery-header">Introduction</h2></div>
 				 <div class="col-lg-12">
-				 	<div class="clrfx">
 				 	  <p class="gallery-desc"><img src="../images/logo_att_globe.png"class="img1"></p>
 				
-					  <p>RCloud is <a href="http://github.com/att/rcloud">open-source software</a> developed primarily by <a href="http://urbanek.info/">Simon Urbanek</a> and <a href="http://gordon.woodhull.com/">Gordon Woodhull</a> of <a href="http://www.research.att.com">AT&amp;T Research</a> and <a href="http://cscheid.net">Carlos Scheidegger</a>, <a href="The University of Arizona"> University of Arizona</a> to solve the problem of performing exploratory data analysis (EDA) using one set of tools and generating reports and deploying results using another.  In addition, traditional Data Scientist environments often assume a single-developer perspective, while data scientist teams could get much benefit from easier sharing of scripts, data, experiments, annotations, and automated recommendations and built-in version control. 
-	Much like <a href="http://jupyter.org/">Jupyter</a> and <a href="http://zeppelin-project.org/">Zeppelin</a>, RCloud
-	provides a notebook interface that lets you easily generate a web-based session, annotate it with text, equations, and supporting images so that teams can work interactively with large complex datasets and easily share the results with others.</p>
-					  <p>
-					</div>
+					  <p>RCloud is <a href="http://github.com/att/rcloud">open-source software</a> developed primarily by <a href="http://urbanek.info/">Simon Urbanek</a> and <a href="http://gordon.woodhull.com/">Gordon Woodhull</a> of <a href="http://www.research.att.com">AT&amp;T Research</a> and <a href="http://cscheid.net">Carlos Scheidegger</a>, <a href="The University of Arizona"> University of Arizona</a> to solve the problem of performing exploratory data analysis (EDA) using one set of tools and generating reports and deploying results using another.  In addition, traditional Data Scientist environments often assume a single-developer perspective, while data scientist teams could get much benefit from easier sharing of code, data, analyses, annotations, automated recommendations and built-in version control. 
+	RCloud provides a notebook interface that lets you easily generate a web-based session, annotate it with text, equations, supporting images and web page layout so that teams can convert collaborative work on large complex datasets into web pages which may easily be shared with others.</p>
 				</div>
 			</div><!-- row -->
 			<div class="row">		  	
-				<div class="col-lg-12"><h2 class="gallery-header">Introduction</h2></div>
+				<div id="docdiv1">
+                <div class="col-lg-12"><h3 class="docheader1">Technical Overview</h3></div>
 				 <div class="col-lg-12">
-				 	<div class="clrfx">
-The RCloud ecosystem is a organized around <i>notebooks</i>.
-A notebook is a collection of R or Python scripts together with data and code <i>assets</i> which the scripts may
-rely on. Assets may be data files, like CSV or Hierarchical Data Format (HDF) files, image files which
+				 	
+<p>The RCloud ecosystem is a organized around <strong><i>notebooks</i></strong>.
+A notebook is a collection of R or Python scripts together with data and code <strong><i>assets</i></strong> which the scripts may
+rely on. Assets may be data files, like CSV or Hierarchical Data Format (HDF) files, image files, which
 are displayed as part of a user-interface,
-or HTML and/or Javascript code used for generating custom user interface controls.
+or HTML and/or Javascript code which may be used for generating custom user interface controls.
 					  </p>
 
 					  <p>
 All of the elements of the notebook are stored on a Github server.
 The Github server supports continual and automatic background
 versioning of notebooks as they are developed and modified.  This feature
-provides the benefits of basic git version control for casual users and the option to use more sophisticated git features for
+provides the benefits of basic Git version control for casual users and the option to use more sophisticated git features for
 advanced users. </p>
 					    
 					  <p>
@@ -129,21 +126,22 @@ The RCloud editor is designed as an integrated development environment (IDE)
 for creating scripts to be executed and shared by internal
 Data Scientists and potentially deployed for execution by any web user.
 The basic architecture of the system is shown in the figure
-below. The the system back-end depicts an RCloud server which
-executes code entered at the web-browser and communicates 
-the result back to the browser.					    
-					  </p>
+below. <img src="../images/about2.png" class="img3"></p> 
 
-					  <img src="../images/about2.png" class="img3">
+<p>The the system back-end depicts an RCloud server which executes code entered at the web-browser and communicates the result back to the browser.</p>	  
 					  
-					  <p>
-RCloud was specifically designed to leverage existing systems and standards, and so communication between most parts of the system happens through HTTP. <img src="../images/about2.png" class="img3">As a result, some desirable features of RCloud become natural, such as native support for RCloud notebooks as web services. Every notebook in RCloud is named by a URL, and notebooks by default are visible in the entire organization. This is deliberate as broad access to analysis outputs increases long-term engagement in part through cross-references on the web.  The security challenge in a system like this is to allow a given internal
+<p>RCloud was specifically designed to leverage existing systems and standards so communication between most parts of the system happens through HTTP. As a result, some desirable features of RCloud become natural, such as native support for RCloud notebooks as web services.</p> <p>Every notebook in RCloud is named by a URL and notebooks by default are visible in the entire organization. This is deliberate as broad access to analysis outputs increases long-term engagement in part through cross-references on the web.</p>
+</div></div>
+<div class="docdiv2">
+<div class="col-lg-12"><h3 class="docheader2">Security Controls</h3></div>
+	<div class="col-lg-12">
+		<div class="clrfx">
+<p>The security challenge in a system like this is to allow a given internal
 Data Scientist access to the full power of the R interpreter on the server
 while preventing external users from executing their own arbitrary
 code.  RCloud has adopted the discipline known as
 <i>Object-Capabilities</i> as outlined by <a href="http://www.erights.org/talks/thesis/markm-thesis.pdf">
-Mark Miller, Robust Composition:
-Towards a Unified Approach to Access Control and Concurrency Control (2006) [PDF]</a>
+Mark Miller, Robust Composition: Towards a Unified Approach to Access Control and Concurrency Control (2006) [PDF]</a>
 to arbitrate the communication of functional information between the
 web-browser and the R interpreter.  Object-capabilities support the
 notion of mapping language functions to cryptographic hashes which act
@@ -154,9 +152,14 @@ from submitting arbitrary code to the server.
 					  
 					  <p>
 RCloud uses the <a href="https://github.com/cscheid/rserve-js">RServe protocol</a> 
-to implement the Object-Capabilities methodology and the client-server communication. An RCloud session runs on both client and server, and it is possible for R functions on the server to call JavaScript functions on the client, and vice versa; see <a href=" https://github.com/att/rcloud/wiki/R-JavaScript-binding">RCloud application program interface (API) and R and Javascript binding</a> for a detailed description of the browser/server interaction.					    
-					  </p>
-					  
+to implement the Object-Capabilities methodology and the client-server communication. An RCloud session runs on both client and server and it is possible for R functions on the server to call JavaScript functions on the client and vice versa; see <a href=" https://github.com/att/rcloud/wiki/R-JavaScript-binding">RCloud application program interface (API) and R and Javascript binding</a> for a detailed description of the browser/server interaction.</p>
+<p>Individual notebooks are protected with privacy controls.  Notebooks may be protected through group assignments, made entirely private (readable only by you), or made public (readable by anyone). Unlike a hidden notebook, protected notebooks are not readable by anyone without permission, even within your GitHub instance.</p>
+					  </div>
+					  </div>
+					  </div>
+	<div class="col-lg-12"><h3 class="docheader1">Unique Advantages</h3></div>
+	<div class="col-lg-12">
+		<div class="clrfx">
 					  <p>
 RCloud notebooks may also be deployed as a web-service provider
 via the <a href="http://att.github.io/rcloud/doc/1.5/guidoc/doc.html#notebookrurls">
@@ -190,15 +193,14 @@ PNG graphics file, which will be displayed at the location of the &ltimg&gt elem
 The <code>WebPlot()</code> function used in this example is from the
 <a href="https://cran.r-project.org/web/packages/FastRWeb/FastRWeb.pdf">FastRWeb [PDF]</a>
 R package which includes several other useful functions for creating
-web content with R.
+web content with R. Our <a href="http://rcloud.social/notebook.R/rclouddocs/Dashboarding/RCloud%20notebook.R/Weather/main">Weather Dashboard</a> illustrates how the output from individual <strong>notebook.R</strong> RCloud notebooks may be used to create dashboards.
 					  </p>
 					  
 					  <p>
 Notebooks can be executed one cell at a time in an interactive session, similar to traditional read-eval-print loops, or can all be executed concurrently, similar to running a shell script.<img src="../images/about3.png" class="img4">
 One of the main contributions of RCloud is the notion that notebooks are “always deployed”. In other words, the most recent version of a notebook is immediately available to all other users of the system. Another way to describe this is that RCloud lacks a “save” button: any notebook cell that runs is always associated to a notebook version serialized to disk.  For more about the goals, architecture and design of RCloud see
 <a href="http://www.research.att.com/export/sites/att_labs/techdocs/TD_101623.pdf">
-Stephen North, et. al., Collaborative Visual Analysis with RCloud (2013) [PDF]</a>.					    
-					  </p>
+Stephen North, et. al., Collaborative Visual Analysis with RCloud (2013) [PDF]</a>.</p><p class="docheader3" >RCloud is a step toward practical “DevOps for Data Science” and reproducible, publishable data science experiments.</p>
 					 </div>
 				</div>						
 			</div><!-- /.row -->
