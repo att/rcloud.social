@@ -10,7 +10,7 @@
 	max-width: 105px;
 	padding-bottom: 5px;
 	vertical-align: middle;
-
+	height: auto;  
 }
 
 .ghlogo {
@@ -1317,7 +1317,7 @@ footer #footer-wrap ul li a {
 	/* Change */
 	    #wrapper.shrink-off .homelogo {
         top: -55px;
-		opacity: 0;
+		opacity: 1;
 	}
 		#wrapper.shrink-off nav {
 		top: -42px;
