@@ -1179,6 +1179,19 @@ section.tutortial-div.show {
     display: block !important;
 }
 
+section.tutortial-div.show > ol > li {
+	font-weight: 900;
+	color: #777;
+	font-size: 1em;
+}
+section.tutortial-div.show > ol > li > h3 {
+	font-weight: 900;
+	color: #777;
+	font-size: 1.5em;
+}
+
+
+.datagrid table { border-collapse: collapse; text-align: left; width: 100%; } .datagrid {font: normal 12px/150% Arial, Helvetica, sans-serif; background: #fff; overflow: hidden; border: 1px solid #000000; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; }.datagrid table td, .datagrid table th { padding: 3px 10px; }.datagrid table thead th {background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #BDBDBD), color-stop(1, #777777) );background:-moz-linear-gradient( center top, #BDBDBD 5%, #777777 100% );filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#BDBDBD', endColorstr='#777777');background-color:#BDBDBD; color:#000000; font-size: 15px; font-weight: bold; border-left: 1px solid #00070A; } .datagrid table thead th:first-child { border: none; }.datagrid table tbody td { color: #00496B; border-left: 1px solid #010405;font-size: 15px;font-weight: normal; }.datagrid table tbody .alt td { background: #8DDDF9; color: #333333; }.datagrid table tbody td:first-child { border-left: none; }.datagrid table tbody tr:last-child td { border-bottom: none; }
 
 /* Videos */
 
@@ -1516,7 +1529,7 @@ footer #footer-wrap ul li a {
 
 	/* changed overflow: hidden; height: auto;*/
 	nav {
-		background-color: #303030;
+		background-color: #333;
 	    text-align: center;
 	    height: auto;
 	    left: 0px;
