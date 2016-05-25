@@ -95,32 +95,38 @@
 		<section id="tutorial-lessons">
         <div class="tutorials-accordion clearfix">
 
-                    <h4>Getting Started</h4>
+                    <h4>The Big Picture</h4>
                     <div> 
 					  <ul class="accdn">
                     	<li class="accrdn">Why RCloud?</li>
 							<section class="tutortial-div">
 							  <ol>
-							  	<li><h3>Build Confidence in Data Analysis Output</h3></li>
-							  	  <p>RCloud is an integrated computing environment (ICE) for R / Python programming which enables Data Scientists to author analyses in <i><strong>notebooks</strong></i>.  Notebooks are project containers that include all the components of an analysis, including code, data, charts, technical documentation and deployment capabilities.  Therefore, data analysis results may be verified simply by viewing the contents of the notebook and executing (running) the notebook.  This increases user confidence in the analysis output since "black boxes" may be eliminated and results may be reproduced.</p>
-								<li><h3>Minimize Development to Deployment Effort</h3></li>
-							      <p>Standard analytic workflows often involve performing a data science experiment using one set of tools and deploying the results using other tools.  Rather than stitching pipelines together and/or dealing with inconsistences between development and production environments, every notebook in RCloud is named by a URL so analyses may easily be transformed from code and technical documenation to rich web-based dashboards.</p>
-							<li><h3>Increase Long-term Engagement</h3></li>
-							<p>As opposed to analysis which are stored locally, desktops or laptops for example, web-based contents allows for broad access which fosters knowledge and understanding.  Data science analyses created in the RCloud environment may be accessed from anywhere as long as there is an internet connection - which could be thought of as a "social network for data science".  In addition, since user access and controls remain constant, users become comfortable with navigating the environment which increases user confidence which in turn promotes user engagement.</p>
+							  	<li><h3>Gain Greater Insights and Reduce Processing Time on Big Data Analyses through Collaboration</h3></li>
+							  	  <p><img src="../images/rcloud_search.png"class="img2">RCloud enables Data Scientists to find value in data by sharing ideas and techniques with each other and interactive data analysis results with any user in the community through a conveniently accessible cloud computing platform.</p>
+								  <p>RCloud employs <i><strong>notebooks</strong></i> composed of <i><strong>cells</strong></i> where topics may easily be broken up into concepts and where the relationship between the concepts can be easily understood.</p>
+								  <p> In this environment, data scientist teams benefit from easier sharing of scripts and data feeds, experiments, annotations, and automated recommendations which are well beyond what traditional individual or locally based development environments provide.  Rather than spending time "recreating the wheel", RCloud users may reuse parts of existing analyses which are recorded using built-in version control.  Each analysis benefits from an ongoing iterative process to ensure accurate and appropriate techniques are being applied to move analyses forward.</p>
+								  <p> Additional functionality in RCloud notebooks versus other notebook environments includes authenticated security, built-in version control and the ability to search, comment and "like" (star) notebooks.</p>
+								  <li><h3>Build Confidence with Reproducible Results</h3></li>
+							  	  <p>Notebooks are project packages which contain all the components and dependencies of an analysis, including code, data, comments and other technical documentation, charts and deployment capabilities. User confidence is increased since results may be be verified and reproduced by anyone with access to the notebook.</p>
+							<li><h3>Increase Development Capabilities and User Engagement through the Cloud Platform</h3></li>
+							<p>As opposed to analysis which are stored locally, web-based content allows Data Scientists to collaborate over the Internet without concern for code or data becoming out of sync.  An RCloud session runs on both client and server, so it is possible for R functions on the server to call JavaScript functions on the client, and vice versa.  This means rich web-based content through easy integration of custom Javascript user interface (UI) and Javascript libraries such as JQuery and D3.  In addition, since RCloud is platform independent and user access and controls remain constant, local development environment parameters no longer create hurdles for viewing and running analyses promoting user confidence and engagement.</p>
+							<li><h3>Scalable Architecture</h3></li>
+							<p>RCloud is an ideal environment for research and data analysis departments who commonly use R and/or Python to share, publish and archive their code and data. RCloud is roughly the same in terms of compute efficiency as in memory Business Intelligence (BI) tools like Tableau and Qlikview, but unlike these systems, RCloud is open-source software that may be installed locally to create private clouds where additional users may be added without licensing concerns. RCloud supports efficient, secure, client/server connections via the FastRWeb package and the "Object Capabilities" model, maintains an automatic git based trail of code modifications which document the development history of an RCloud based project, and it can also handle processing large data files in R via the <a href="https://github.com/s-u/iotools">iotools package</a>. RCloud is an ideal platform to quickly develop interactive web based R and/or Python programs (especially if you are already an R/Python programmer) which may easily be shared with others.</p>
 							<li><h3>Transform Knowledge into Assets</h3></li>
-							<p>With the creation of RCloud notebooks (on the public instance or in private clouds), comes the creation of code, widget, dashboard and analysis libraries which may be reused on similar projects or to train new employees, for example. RCloud notebooks are searchable and forkable (sharable), so anyone with access to the notebooks may view and reuse a notebook or various parts of its content.  Rather than spending time "recreating the wheel", RCloud users can move analyses forward by sharing relevant work within an organization or community and by adding commentary and ideas.</p>
-							<li><h3>Additional Functionality Includes Built-in Security</h3></li>
-							<p>RCloud has adopted the discipline known as <i><strong>Object-Capabilities (ocap)</strong></i> which creates a built-in security for client-server communication; read more about ocap in our <a href="../documentation">Documentation</a> or in <a href="https://en.wikipedia.org/wiki/Object-capability_model">Wikipedia</a>.  In addition, RCloud notebooks may be encrypted for added security.  Additional functionality in RCloud notebooks versus other notebooks and integrated development/computing environments includes the ability to search, fork (share) and add comments to notebooks, built-in version control and multi-language support.
-							<div class="datagrid"><table>
-<thead><tr><th>System</th><th>Versioning/Forking</th><th>Collaboration</th><th>Deployment</th><th>Multi-language Support</th><th>Integrated Reports</th><th>Integrated Analysis</th></tr></thead>
-<tbody><tr><td>RCloud</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
-<tr class="alt"><td>RStudio</td><td></td><td></td><td></td><td></td><td>X</td><td>X</td></tr>
-<tr><td>JSFiddle</td><td>X</td><td>X</td><td></td><td></td><td></td><td></td></tr>
-<tr class="alt"><td>bl.ocks</td><td>X</td><td>X</td><td></td><td></td><td>X</td><td></td></tr>
-<tr><td>RStudio Shiny</td><td></td><td></td><td>X</td><td></td><td>X</td><td>X</td></tr>
-<tr class="alt"><td>Jupyter</td><td></td><td></td><td></td><td>X</td><td>X</td><td>X</td></tr>
-<tr><td>Tableau</td><td></td><td>X</td><td>X</td><td></td><td>X</td><td></td></tr>
-<tr class="alt"><td>Many Eyes</td><td></td><td>X</td><td>X</td><td></td><td></td><td></td></tr>
+							<p>Code, widget, dashboard and analysis libraries are ancillary benefit that comes with the creation of every RCloud notebook (on the public instance or in private clouds).  These knowledge assets may used on similar projects or to train new employees, for example. RCloud notebooks are searchable and forkable (sharable), so anyone with access to the notebooks may view and reuse various parts of a notebook and its content.  </p>
+							<li><h3>Built-in Security</h3></li>
+							<p>RCloud has adopted the discipline known as <i><strong>Object-Capabilities (ocap)</strong></i> which creates a built-in security for client-server communication.  This means that web browsers never directly instruct the RCloud backend to execute arbitrary code which prevents unauthenticated clients from making unauthorized calls to the RCloud runtime environment; read more about ocap in our <a href="../documentation">Documentation</a> or in <a href="https://en.wikipedia.org/wiki/Object-capability_model">Wikipedia</a>.  In addition, RCloud notebooks may be encrypted for added security.  In the notebook product space, authenticated client-server channeling and notebook encryption are unique to RCloud.</p>
+							<li><h3>Minimize Development to Deployment Effort</h3></li>
+							<p>Standard analytic workflows often involve performing a data science experiment using one set of tools and deploying the results using other tools.  Rather than stitching pipelines together and/or dealing with inconsistences between development and production environments, every RCloud notebook is named by a URL so analyses may easily be transformed from code and technical documenation to rich web-based dashboards.</p>
+								  <div class="datagrid"><table>
+<thead><tr><th>System</th><th>Collaboration</th><th>Built-in Security</th><th>No-cost User Scalibility</th><th>Versioning / Forking</th><th>Dashboards</th><th>Multi-language Support</th><th>Integrated Reports</th><th>Integrated Analysis</th></tr></thead>
+<tbody><tr><td>RCloud</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+<tr class="alt"><td>RStudio</td><td></td><td></td><td>X</td><td></td><td></td><td></td><td>X</td><td>X</td></tr>
+<tr><td>JSFiddle</td><td></td><td></td><td>X</td><td>X</td><td>X</td><td></td><td></td><td></td></tr>
+<tr class="alt"><td>bl.ocks</td><td>X</td><td></td><td>X</td><td></td><td></td><td></td><td>X</td><td>X</td></tr>
+<tr><td>RStudio Shiny</td><td></td><td></td><td></td><td></td><td>X</td><td></td><td>X</td><td>X</td></tr>
+<tr class="alt"><td>Jupyter</td><td></td><td></td><td>X</td><td></td><td></td><td>X</td><td>X</td><td>X</td></tr>
+<tr><td>Tableau</td><td></td><td>X</td><td></td><td></td><td>X</td><td></td><td>X</td><td>X</td></tr>
 </tbody>
 </table></div> 
 							</p>
@@ -130,29 +136,90 @@
 								</p>
 								</br><p><a href="#TOP">Top</a></p></br></p>
 							</section>
-						<li class="accrdn">Introduction to the RCloud Environment</li>
+						<li class="accrdn">Public versus Private RClouds (or <a href="http://rcloud.social/login.R">RCloud.Social</a> versus Download / Local Installation)</li>
 							<section class="tutortial-div">
-								<p class="col-md-4">
-                					<a href="#"><div style="width: 100%" id="ytplayer-5"></div></a>
-								</p>
+								<p><strong>Public RCloud Instance</strong></p>
+<p>The public RCloud instance is the perfect place to test drive RCloud. Anyone with a GitHub account can have full user access to this instance. If you don't already have a GitHub account you can create one at the <a href="https://github.com">GitHub login page</a>; see the next section <a class="blk" href="#DSAccess">Data Scientist Access (or Logging in)</a> for details.</p>
+<p><strong>Private RClouds</strong></p>
+<p>The RCloud server program can easily be installed locally on any Linux machine or on OSX via MacPorts. A local instance has the advantage of granting you complete control of your notebooks and data. Local instances also afford the opportunity to evaluate and experiment with the RCloud infrastructure.</p>
+<p>By default your local RCloud instance will still use GitHub for authentication. Before proceeding with an installation you will need to setup up a new 'OAuth' application in your GitHub profile. Here's how:</p>
+<ol style="list-style-type: decimal">
+<li>Go to your GitHub profile page and select 'Edit Profile'.</li>
+<li>In the personal settings menu select 'OAuth applicatoins'.</li>
+<li>Select the 'Developer applications' tab.</li>
+<li>Press the 'Register a new application' button.</li>
+<li>Assuming that you are testing on your local IP address 127.0.0.1 and the default RCloud port (8080) is available fill in the OAuth application form like this:</li>
+</ol>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left">Application Name:</td>
+<td align="left">My RCloud Instance</td>
+</tr>
+<tr class="even">
+<td align="left">Homepage URL:</td>
+<td align="left">http://127.0.0.1:8080</td>
+</tr>
+<tr class="odd">
+<td align="left">Application Description:</td>
+<td align="left">My very own RCloud instance</td>
+</tr>
+<tr class="even">
+<td align="left">Authorization callback URL:</td>
+<td align="left">http://127.0.0.1:8080/login_successful.R</td>
+</tr>
+</tbody>
+</table>
+<p>RCloud uses GitHub for both authentication and for automatic version control of notebooks via <a href="https://help.github.com/articles/about-gists/">GitHub 'gists'</a>. The 'OAuth' applciation authentication process gives the application owner the ability to grant access to new RCloud users but this still implies that notebook code and assets reside on public GitHub servers. For improved privacy and security you may want to consider using <a href="https://enterprise.github.com/home">GitHub Enterprise</a> with your private (local) RCloud instance.</p>
+<p>Complete detailed instructions for installing a local RCloud instance can be found on the <a href="https://github.com/att/rcloud/blob/develop/doc/INSTALL.md">RCloud Installation Wiki</a>.</p>
 							</section>
-						<li class="accrdn">Access; Guest versus Data Scientist (aka Logging in)</li>
+						<li class="accrdn"><a class="plain" name="DSAccess">Data Scientist Access (or Logging in)</a></li>
 							<section class="tutortial-div">
+								<p>As indicated in the previous section, private instances of RCloud may be setup which limit access to members of a particular community or organization. The public instance of RCloud is open to everyone. Both the public and any private installation of RCloud come with two methods for accessing notebooks: as a <i><strong>Guest</strong></i> or as a <i><strong>Data Scientist</strong></i>. Guest access is for users who are only interested in viewing and interacting with notebooks - Guests are not able to create notebooks. The purpose of Guest access is to allow Data Scientists to share their completed work as a web page (hyperlink) with users who do not have an RCloud account. Guests may view and interact with RCloud notebooks without having an RCloud account by navigating to the RCloud notebook web page using the shared hyperlink.</p>
+								<p>Hyperlinks to individual notebooks are automatically created when a notebook is created.  To create a notebook, you must first login to RCloud by clicking on the green "Log In" button on the <a href="../tryit/">TryIt</a> page.</p>
+								<img src="../images/RCloud_login.png" alt="RCloud Login"></br>
+								<p>Since RCloud stores notebooks as Github gists in order to provide automatic version control, logging into RCloud requires a Github account. If you are not already logged in to your Github account or if you don't already have one, you will be redirected to Github where you can login (Github Sign in) or set one up (Github Sign up).</p>
+								<div class="row">
+									<div class="col-md-6">
+									<p><strong>Github Sign in:</strong></p>
+									<img src="../images/RCloud_GithubSignIn.png" alt="RCloud Github Sign In">
+								</div>
+								<div class="col-md-6">
+									<p><strong>Github Sign up:</strong></p>
+									<img src="../images/RCloud_GithubSignUp.png" alt="RCloud Github Sign In">
+								</div>
+								</div>
+								<p>After signing into or registering for a Github account, as a final step you have to authorize RCloud app so that gists may be created in your account.</p>
+								<img src="../images/RCloud_GithubAuth.png" alt="RCloud Auth">
+								<p>RCloud Data Scientists may obtain a hyperlink (URL) to a notebook they have created or a published notebook created by another Data Scientist by clicking on the downward arrow next to the share icon <img src="../images/header_share.png" alt="HEADER_SHARE"> in the navigation bar.  
+								 to obtain a popup menu:</p></br>
+								<img src="../images/header_sharetype.png" alt="HEADER_SHARETYPE"></br>
+								<p>This allows Data Scientists to select the kind of URL they would like to share with Guests.  The simplest form of sharing is using RCloud notebook UI "view.html"; make the selection using the popup menu and then right click on the share icon to copy the notebook hyperlink. This will create a link that will allow someone to see the notebook code and execute the notebook within the RCloud IDE. </p>
+								<img src="../images/share_viewhtml.png" alt="View HTML Share">
+								<p>Note: This only works if the notebook has also been published.</p> 
+								
+								<p>By default, users who wish to view notebooks must be logged into RCloud. If the Publish Notebook box is checked, <i><strong>any</strong></i> user who has network access to the notebook's URL will be able to view the notebook.</p><img src="../images/publish_share.png" alt="View HTML Share">   
 								<p class="col-md-4">
                     				<a href="#"><div style="width: 100%" id="ytplayer-7"></div></a>
 								</p>
 							</section>
-						<li class="accrdn">Private versus Public RClouds</li>
-							<section class="tutortial-div">
-								<p>Coming soon!</p>
-							</section>
+
                      </ul>
 					</div>                                
 					
-					<h4>Data Analysis Notebooks</h4>
+					<h4>Getting Started</h4>
                     <div> 
 					  <ul class="accdn">
-                    	<li class="accrdn">Creating a Notebook</li>
+                    	<li class="accrdn">Introduction to the RCloud Environment</li>
+							<section class="tutortial-div">
+								<p>After you have logged in as a Data Scientist, you will see the RCloud Integrated Development Environment (IDE).</p>
+								<img src="../images/rcloudenv.png" alt="View HTML Share">
+								<p></p>
+								<p class="col-md-4">
+                					<a href="#"><div style="width: 100%" id="ytplayer-5"></div></a>
+								</p>
+							</section>
+							<li class="accrdn">Creating a Notebook</li>
 							<section class="tutortial-div">
 								<p class="col-md-4">
 									<a  href="http://rcloud.social/edit.html?notebook=927b867ad0fbbb5c64a60c87eba14aed">
@@ -198,7 +265,7 @@
                      </ul>
 					</div>
 					
-					<h4>Creating Dashboards</h4>
+					<h4>Extending Interaction</h4>
                     <div> 
 					  <ul class="accdn">
                     	<li class="accrdn">Using Shiny</li>

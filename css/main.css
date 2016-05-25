@@ -134,7 +134,7 @@ a.plain:hover,
 a.plain:visited, 
 a.plain:focus {
 	outline: 0;
-	border: 0px;
+	border: 0;
 	text-decoration: none;
 	color: #262626;
 }
@@ -177,6 +177,23 @@ nav li.drpdwn {
   	font-weight: bold;
 }
 
+ol > ul {
+    padding: 0 0 0 50px;
+}
+
+ol > li {
+    padding: 0 0 0 10px;
+}
+
+
+ol > li > ul > li  {
+    margin: 0 0 0 20px;
+}
+
+ol > li > ul > li > ul > li {
+    margin: 0 0 0 20px;
+}
+
 /* ==============
     DOCUMENTATION: PANDOC
    ============== */ 
@@ -191,7 +208,7 @@ nav li.drpdwn {
    GALLERY
    ======== */ 
 div, p.gallery-desc {
-		font-size: 13px;
+		font-size: 15px;
 }
 
 h1.gallery-header {
