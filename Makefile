@@ -1,11 +1,20 @@
 # base source directory
-DOC_DIR = ../../../rcloud-docs/rcloud/doc
+# Be careful how this directory is named because it is used as a string match
+# target in the creation of the DST variable below. Don't use a string that
+# will match an existing sub-string in the target path (like 'guidoc','doc' or
+# 'whatsnew' because this confuse the string substitution and generate the
+# wrong output path.
+# DOC_DIR = ../../../rcloud-docs/rcloud/doc
+
+DOC_DIR = ./doc
 
 # base output directory
 OUT_DIR = documentation/doc
 
+
 # Pandoc compile options 
-PANDOC_OPTS= --from=markdown --to=html  --template=pandoc_html.template
+PANDOC_OPTS= --from=markdown --to=html  --template=pandoc_html.template --css=../../../../css/doc.css --toc --toc-depth=4
+
 
 # Get a list of the directories rooted on $(DOC_DIR)
 DIRS  = $(shell find $(DOC_DIR) -type d)
@@ -31,6 +40,11 @@ DST_IMG_DIRS = $(foreach dir,$(SRC_IMG_DIRS), $(subst $(DOC_DIR),$(OUT_DIR),$(di
 # Create a list of output images
 DST_IMG      = $(foreach fn,$(SRC_IMG), $(subst $(DOC_DIR),$(OUT_DIR),$(fn)))
 
+# Build the output tree then process the pandoc files and copy the image files
+all: makedirs $(DST) $(DST_IMG)
+
+.PHONY : all makedirs $(DST_DIRS) clean
+
 define make-goal
 $1: $2  pandoc_html.template
 	@echo $$< " to " $$@
@@ -50,10 +64,6 @@ endef
 $(foreach fn,$(SRC_IMG),$(eval $(call make-goal-img,$(subst $(DOC_DIR),$(OUT_DIR),$(fn)),$(fn))))
 
 
-# Build the output tree then process the pandoc files and copy the image files
-all: makedirs $(DST) $(DST_IMG)
-
-
 # Build the output tree.
 # We need a first step so that we
 # have a single rule to refer to in 'all'.
@@ -68,7 +78,6 @@ $(DST_DIRS):
 clean :
 	rm -f $(DST)
 
-.PHONY : all makedirs clean
 
 
 

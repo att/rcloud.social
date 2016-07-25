@@ -35,6 +35,9 @@
     
   
   <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="../../../../css/doc.css" type="text/css" />
+
+  
 </head>
 <body>
 
@@ -47,7 +50,7 @@
       <li><a href="../../../../tutorials/" title="Tutorials">Tutorials</a></li>                                                
       <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation<b class="caret"></b></a>
         <ul class="dropdown-menu">
-          <li class="drpdwn"><a href="../documentation/">Introduction</a></li>
+          <li class="drpdwn"><a href="../../../../documentation/">Introduction</a></li>
           <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Version 1.5</a>
             <ul class="dropdown-menu">
               <li class="drpdwn"><a href="../../../../documentation/doc/1.5/whatsnew/doc.html">What's New</a></li>
@@ -84,15 +87,105 @@
         </a>
       </div>
     </header>
+
+  <div id="TOC">
+    <div role="main">
+      <ul>
+      <li><a href="#table-of-contents">Table of Contents</a></li>
+      <li><a href="#getting-started">1. Getting Started</a></li>
+      <li><a href="#parts-of-the-gui">2. Parts of the GUI</a><ul>
+      <li><a href="#gui-navigation">GUI Navigation</a><ul>
+      <li><a href="#opening-and-closing-panels">Opening and Closing Panels</a></li>
+      <li><a href="#opening-and-closing-all-panels">Opening and Closing All Panels</a></li>
+      <li><a href="#changing-panel-width">Changing Panel Width</a></li>
+      </ul></li>
+      </ul></li>
+      <li><a href="#the-header-bar">3. The Header Bar</a></li>
+      <li><a href="#cells">4. Cells</a><ul>
+      <li><a href="#prompt-cells">Prompt Cells</a></li>
+      <li><a href="#markdown-cells">Markdown Cells</a><ul>
+      <li><a href="#adding-r-code">Adding R Code</a></li>
+      <li><a href="#markdown">Markdown</a></li>
+      <li><a href="#running-your-code">Running your code</a></li>
+      <li><a href="#editing-and-viewing-results">Editing and Viewing Results</a></li>
+      <li><a href="#adding-and-deleting-markdown-cells">Adding and Deleting Markdown Cells</a></li>
+      </ul></li>
+      <li><a href="#cell-run-state-indicator">Cell Run-State Indicator</a></li>
+      <li><a href="#stopping-cell-execution">Stopping Cell Execution</a></li>
+      <li><a href="#rearranging-cells">Rearranging Cells</a></li>
+      <li><a href="#joining-cells">Joining Cells</a></li>
+      <li><a href="#markdown-versus-rmarkdown-cells">Markdown versus RMarkdown Cells</a></li>
+      </ul></li>
+      <li><a href="#notebooks">5. Notebooks</a><ul>
+      <li><a href="#creating-a-notebook">Creating a Notebook</a></li>
+      <li><a href="#running-a-notebook">Running a Notebook</a></li>
+      <li><a href="#long-running-notebooks">Long-Running Notebooks</a></li>
+      <li><a href="#forking-copying-a-notebook">Forking (Copying) a Notebook</a></li>
+      <li><a href="#saving-your-work">Saving Your Work</a><ul>
+      <li><a href="#manual-saving">Manual Saving</a></li>
+      <li><a href="#versioning">Versioning</a></li>
+      </ul></li>
+      <li><a href="#hidden-notebooks">Hidden Notebooks</a><ul>
+      <li><a href="#toggle-hidden">Toggle Hidden</a></li>
+      <li><a href="#toggle-show">Toggle Show</a></li>
+      </ul></li>
+      <li><a href="#protecting-your-notebooks">Protecting Your Notebooks</a></li>
+      <li><a href="#deleting-notebooks">Deleting Notebooks</a></li>
+      <li><a href="#sharing-your-notebooks">Sharing Your Notebooks</a></li>
+      <li><a href="#who-starred-my-notebook">Who Starred my Notebook?</a></li>
+      <li><a href="#saving-plots">Saving Plots</a></li>
+      <li><a href="#find-and-find-replace">Find and Find Replace</a></li>
+      </ul></li>
+      <li><a href="#data-access">6. Data Access</a><ul>
+      <li><a href="#file-upload">File Upload</a></li>
+      <li><a href="#upload-to-notebook">Upload to Notebook</a></li>
+      </ul></li>
+      <li><a href="#notebook-assets">7. Notebook Assets</a><ul>
+      <li><a href="#data-as-an-asset">Data as an Asset</a></li>
+      <li><a href="#uploading-assets">Uploading Assets</a></li>
+      <li><a href="#assets-links">Assets Links</a></li>
+      <li><a href="#cascading-style-sheets-css">Cascading Style Sheets (CSS)</a></li>
+      <li><a href="#javascript">JavaScript</a></li>
+      <li><a href="#html-mode">HTML Mode</a></li>
+      <li><a href="#renaming-assets">Renaming Assets</a></li>
+      <li><a href="#binary-assets">Binary Assets</a></li>
+      <li><a href="#asset-size">Asset Size</a></li>
+      </ul></li>
+      <li><a href="#notebook.r-urls">8. notebook.R URLs</a></li>
+      <li><a href="#search">9. Search</a><ul>
+      <li><a href="#complex-searches">Complex Searches</a></li>
+      </ul></li>
+      <li><a href="#settings">10. Settings</a><ul>
+      <li><a href="#show-command-prompt">Show Command Prompt</a></li>
+      <li><a href="#show-terse-version-dates">Show Terse Version Dates</a></li>
+      <li><a href="#show-cell-numbers">Show Cell Numbers</a></li>
+      <li><a href="#extensions">Extensions</a></li>
+      <li><a href="#new-notebook-prefixes">New Notebook Prefixes</a></li>
+      </ul></li>
+      <li><a href="#comments">11. Comments</a><ul>
+      <li><a href="#editing-comments">Editing Comments</a></li>
+      <li><a href="#deleting-comments">Deleting Comments</a></li>
+      </ul></li>
+      <li><a href="#help">12. Help</a></li>
+      <li><a href="#workspace">13. Workspace</a></li>
+      <li><a href="#dataframe">14. Dataframe</a></li>
+      <li><a href="#session">15. Session</a></li>
+      <li><a href="#rstudio-shiny-support">16. RStudio Shiny Support</a></li>
+      </ul>
+    </div>
+</div>
+
     
     <!----DOCUMENTATION----->
     <div id="inner-wrapper">
       <div class="container">
         <div class="row">
+
+	  
           <div class="col-lg-12">
 
 
-
+<section id="main">
 
 <p><a name="TOP"></a></p>
 <div class="frmttng">
@@ -904,5 +997,6 @@ rcloud.shinyApp(
         </div><!--/.inner-wrapper-->            
       </div> <!--"wrapper"-->
 
+</section>
 </body>
 </html>

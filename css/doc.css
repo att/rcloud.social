@@ -1,0 +1,47 @@
+
+h1
+{
+    color: #ff00ff
+}
+
+/*
+nav{    
+  width: 150px;
+  float: left;
+  display: inline;
+  margin: 0;
+  padding: 0;
+  margin-right: 10px;
+  position: fixed;
+}
+*/
+
+#TOC  {
+    width: 250px;
+    display: block;
+    margin: 0;
+    padding: 0;
+    margin-right: 10px;
+    position: fixed;
+    margin-top: 50px;
+}
+
+#TOC ul {
+      list-style-type: none;
+}
+
+/*
+#TOC li {
+    display: inline;
+}
+*/
+
+section#main{
+  width: 500;
+  float: left;
+  margin: 0;
+  padding: 0;
+  display: inline;
+  position: relative;
+  left: 150px;
+}

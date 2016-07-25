@@ -77,11 +77,28 @@ img {
 	max-width: 60%;
 }
 
+img.blck {
+	display: block;
+	margin-bottom: 15px;
+	margin-top: 10px;
+	box-shadow: 5px 5px 10px #888888;
+}
+
+
+
 a:focus, a:hover {
     color: #fff;
     text-decoration: none;
 }
 
+ol > li > a:hover {
+ color: #333;
+ }
+
+ol > li > ul > li > a:hover {
+ color: #333;
+ }
+ 
 .open > .dropdown-menu {
 	top: 70%;
 	display: block;
@@ -139,10 +156,15 @@ a.plain:focus {
 	color: #262626;
 }
 
-a.blk:hover, 
-a.blk:visited, 
-a.blk:focus {
-	color: #333;
+a.blu, a.blu:visited {
+	color: #027ab5;
+	font-weight: bold;
+}
+
+a.blu:active,
+a.blu:hover, 
+a.blu:focus {
+	color: #FFA500;
 }
 
 
@@ -165,6 +187,8 @@ nav li.drpdwn {
 .docheader2 {
   	color: #000;
   	padding-top: 10px;
+  	padding-bottom: 0;
+  	font-weight: bold;
 }
 
 .docdiv2 {
@@ -220,10 +244,9 @@ h2.gallery-header {
 	padding-bottom: 9px;
   	border-bottom: 1px solid #eee;
   	font-family: 'Omnes_Medium', 'Omnes_Regular';
-    padding: 15px 50px 12px 0;
-    font-size: 18px;
+    font-size: 21px;
     color: #44c8f5;
-    margin: 0;
+    margin: 0 0 10px 0;
 }
    
 h3.gallery-header {
@@ -233,10 +256,15 @@ h3.gallery-header {
   	color: #44c8f5;
 }
 
+h3.tryit-header {
+	padding-bottom: 9px;
+  	margin: 5px 0 5px 0;
+  	color: #333;
+}
+
 h3.image-subtitles {
 	text-align: center;
-	font-size: 1.6em;
-	color: #44c8f5;
+	color: #777;
 	    margin: 0.5em 0 0 0;
 	/*color: #44c8f5; #067AB5*/
 }
@@ -249,7 +277,7 @@ div.sprite {
 width: 80%;
 height: 0;
 padding-bottom: 50%;
-background-image: url("../images/tryIt1.png");
+background-image: url("../images/RCloud_NYCTaxiRides.png");
 background-position: 0 0;
 background-size: 200%;
 display:block;
@@ -304,6 +332,38 @@ display:block;
 margin: 0 auto;
 }
 
+a.gallery5 {
+width: 80%;
+height: 0;
+padding-bottom: 45%;
+background-image: url("../images/RCloud_JRDNotebook.png");
+background-position: 0 0;
+background-size: 100%;
+display:block;
+margin: 0 auto;
+}
+
+div.gallery6 {
+width: 80%;
+height: 0;
+padding-bottom: 65%;
+background-image: url("../images/shinyromeo.png");
+background-position: 0 0;
+background-size: 100%;
+display:block;
+margin: 0 auto;
+}
+
+div.gallery7 {
+width: 80%;
+height: 0;
+padding-bottom: 65%;
+background-image: url("../images/RCloud_Data.png");
+background-position: 0 0;
+background-size: 100%;
+display:block;
+margin: 0 auto;
+}
 
 
 /* =========
@@ -469,6 +529,108 @@ padding-right: 10px;
     content:"» ";
 }
    
+.tuttitle {
+	font-size: 18px;
+	color: #44c8f5;
+	}
+
+#tutorial-lessons .tutorials-accordion  h4 {
+	font-family: 'Omnes_Medium', 'Omnes_Regular';
+	border-bottom: 1px solid #d5d5d5;
+	padding: 0 50px 12px 0;
+	cursor: pointer;
+	position: relative;
+	font-size: 18px;
+	color: #44c8f5;
+    margin: 0 0 10px 5px;
+}
+#tutorial-lessons .tutorials-accordion  h4:after {
+	content: " ";
+	background: url('../images/sprite_arrows.png') no-repeat 0 0;
+	overflow: hidden;
+	position: absolute;
+	height: 12px;
+	width: 24px;
+	top: 18px;
+	right: 0px;
+	padding: 10px 0 0 5px;
+}
+#tutorial-lessons .tutorials-accordion  h4.open-tab:after {
+	background-position: 0 100%;
+}
+
+
+}
+#tutorial-lessons .tutorials-accordion ul:first-child li:first-child {
+	border-top: 0px;
+	margin-top: 10px;
+}
+#tutorial-lessons .tutorials-accordion  div {
+	margin-top: 0px;
+	line-height: 1.5;
+	font-size: 15px;
+	color: #c2c2c2;
+	display: none;
+}
+
+#tutorial-lessons .tutorials-accordion  ul {
+	margin-left: 10px;
+}
+
+
+li.accrdn {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    color: #333;
+    padding-left: 5px;
+}
+
+ul.accdn {
+    list-style-type: none;
+    display: block;
+}
+
+li.accrdn:before {
+    content: "• ";
+    color: #c2c2c2; 
+    padding-right: 10px;
+}
+
+/* tried     background-color: #f6f6f6;#e2f6fd #ecf6e9*/
+li.accrdn.active, li.accrdn:hover {
+    font-size: 1.25em;
+
+}
+
+
+section.tutortial-div {
+    padding: 0 18px;
+    margin-left: 15px;
+    display: none;
+    background-color: white;
+    color: #333;
+}
+
+section.tutortial-div.show {
+    display: block !important;
+}
+
+section.tutortial-div.show > ol > li {
+	font-weight: 900;
+	color: #777;
+	font-size: 1em;
+}
+section.tutortial-div.show > ol > li > h3 {
+	font-weight: 900;
+	color: #777;
+	font-size: 1.5em;
+}
+
 
 /* ==============
     FONTS
@@ -619,6 +781,7 @@ body {
 }
 h1, h2, h3, h4, h5, h6 {
 	font-weight: normal;
+	font-family: 'Omnes_Medium', 'Omnes_Regular';
 }
 /*ul, li {
 	list-style-type: none;
@@ -1035,6 +1198,9 @@ section h2 {
 	background-position: 0 0 !important;
 }
 
+.intro {
+	font-weight: bold;
+}
 /* Features & Benefits */
 #features-benefits {
 	background-color: #333;
@@ -1076,135 +1242,6 @@ section h2 {
 	font-size: 15px;
 	color: #c2c2c2;
 	display: none;
-}
-
-
-/* change 
-div.tutorial-accordion {
-    background-color: #eee;
-    color: #444;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-    transition: 0.4s;
-}
-
-div.tutorial-accordion.active, div.tutorial-accordion:hover {
-    background-color: #ddd; 
-}
-
-div.panel {
-    padding: 0 18px;
-    display: none;
-    background-color: red;
-}
-
-div.panel.show {
-    display: block !important;
-}
-
-
-#tutorial-lessons {
-	background-color: #e0e0e0;
-	padding: 25px 0px 15px;
-}
-#tutorial-lessons .tutorials-accordion {
-	margin: 0.5em auto;
-}*/
-#tutorial-lessons .tutorials-accordion  h4 {
-	font-family: 'Omnes_Medium', 'Omnes_Regular';
-	border-bottom: 1px solid #d5d5d5;
-	padding: 15px 50px 12px 0;
-	cursor: pointer;
-	position: relative;
-	font-size: 18px;
-	color: #44c8f5;
-    margin: 0;
-}
-#tutorial-lessons .tutorials-accordion  h4:after {
-	content: " ";
-	background: url('../images/sprite_arrows.png') no-repeat 0 0;
-	overflow: hidden;
-	position: absolute;
-	height: 12px;
-	width: 24px;
-	top: 18px;
-	right: 0px;
-}
-#tutorial-lessons .tutorials-accordion  h4.open-tab:after {
-	background-position: 0 100%;
-}
-#tutorial-lessons .tutorials-accordion ul:first-child li:first-child {
-	border-top: 0px;
-	margin-top: 10px;
-}
-#tutorial-lessons .tutorials-accordion  div {
-	margin-top: 0px;
-	line-height: 1.5;
-	font-size: 15px;
-	color: #c2c2c2;
-	display: none;
-}
-
-#tutorial-lessons .tutorials-accordion  ul {
-	margin-left: 10px;
-}
-
-
-li.accrdn {
-    cursor: pointer;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-    transition: 0.4s;
-    color: #333;
-    padding-left: 5px;
-}
-
-ul.accdn {
-    list-style-type: none;
-}
-
-li.accrdn:before {
-    content: "• ";
-    color: #c2c2c2; 
-    padding-right: 10px;
-}
-
-/* tried     background-color: #f6f6f6;#e2f6fd #ecf6e9*/
-li.accrdn.active, li.accrdn:hover {
-    font-size: 1.25em;
-
-}
-
-
-section.tutortial-div {
-    padding: 0 18px;
-    margin-left: 15px;
-    display: none;
-    background-color: white;
-    color: #333;
-}
-
-section.tutortial-div.show {
-    display: block !important;
-}
-
-section.tutortial-div.show > ol > li {
-	font-weight: 900;
-	color: #777;
-	font-size: 1em;
-}
-section.tutortial-div.show > ol > li > h3 {
-	font-weight: 900;
-	color: #777;
-	font-size: 1.5em;
 }
 
 
@@ -1679,33 +1716,6 @@ footer #footer-wrap ul li a {
 	    display: block !important;
 	}
 	
-	/* changed: added 
-	#tutorial-lessons {
-		padding: 10px 15px;
-	}
-	/*#tutorial-lessons h2 {
-		max-width: 100%;
-		text-align: center;
-	}
-	#tutorial-lessons .tutorials-accordion {
-		text-align: center;
-		margin: 2em auto;
-	}
-	#tutorial-lessons .tutorials-accordion ul {
-		vertical-align: top;
-		display: inline-block;
-		text-align: left;
-		max-width: 460px;
-	}
-	#tutorial-lessons .tutorials-accordion ul:first-child {
-		padding-right: 30px;
-		width: 40%;
-	}
-	#tutorial-lessons .tutorials-accordion ul + ul {
-		border-left: 1px solid #535455;
-		padding-left: 30px;
-		width: 45%;
-	}*/
 
 	#tutorial-lessons .tutorials-accordion  h4 {
 		padding-top: 20px;

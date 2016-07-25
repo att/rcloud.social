@@ -1,0 +1,53 @@
+
+  .container a:visited
+  {
+  color: #027ab5;
+  font-weight: bold;
+  }
+
+  .container a:active { color: #FFA500; }
+  .container a:hover  { color: #FFA500; }
+  .container a:focus  { color: #FFA500; }
+  
+  #intro  img
+  {
+  float: left;
+  margin: 0 10px 10px 0;
+  overflow: auto;
+  max-width: 100%;
+  height: auto;
+  }
+  
+  #comm { background-color: #e0e0e0; }
+
+  #comm figure
+  {
+  float: right;
+  margin: 5px 0 0 10px;
+  overflow: auto;
+  max-width: 70%;
+  height: auto;
+  }
+
+  #comm img { max-width: 100%; }
+
+
+  #comm > h2
+  {
+  color: #44c8f5;
+  padding-top: 10px;
+  }
+
+  #security { background-color: #c1d9ee; }
+
+  #security figure
+  {
+  float: left;
+  margin: 10px 10px 5px 0;    
+  overfloat: auto;
+  max-width: 75%;
+  height:auto;
+  }
+
+  #security img { max-width: 100%; }
+

@@ -60,7 +60,9 @@ $if(math)$
 $endif$
 $for(header-includes)$
   $header-includes$
-$endfor$
+  $endfor$
+
+  
 </head>
 <body>
 $for(include-before)$
@@ -113,20 +115,26 @@ $endfor$
         </a>
       </div>
     </header>
+
+$if(toc)$
+  <div id="$idprefix$TOC">
+    <div role="main">
+      $toc$
+    </div>
+</div>
+$endif$
+
     
     <!----DOCUMENTATION----->
     <div id="inner-wrapper">
       <div class="container">
         <div class="row">
+
+	  
           <div class="col-lg-12">
 
 
-
-$if(toc)$
-<div id="$idprefix$TOC">
-$toc$
-</div>
-$endif$
+<section id="main">
 
 $body$
 
@@ -155,5 +163,6 @@ $body$
 $for(include-after)$
 $include-after$
 $endfor$
+</section>
 </body>
 </html>
