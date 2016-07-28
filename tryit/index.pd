@@ -1,0 +1,103 @@
+Try It : Online or Locally
+==========================
+
+You can test drive the most recent release of __RCloud__ by logging in
+to the public instance as a _Data Scientist_ or you can view and
+interact with shared notebooks as a _Anonymous User_.  Alternatively,
+you may set up a local instance of RCloud so that analyses are only
+shared within an organization; see the <a class="blu"
+href="#dnld">Download</a> section for more details.
+
+
+Public Access: Online
+---------------------
+
+### Anonymous User (Read Only)
+
+Anonymous Users may view and interact with RCloud notebooks without
+having to set up an RClound account.  This "read only" method of
+accessing notebooks allows Data Scientists to share their completed
+work as a web page with non-developers.  Click on an image below or
+visit our [Gallery](../gallery/index.html) for additional examples
+that may be found on the public instance of RCloud.
+
+<DIV class="tryit-btn">
+
+[ ![](../images/binary.png)](http://rcloud.social/view.html?notebook=927b867ad0fbbb5c64a60c87eba14aed)
+
+Reproducible Research
+
+</DIV>
+
+<DIV class="tryit-btn">
+
+[ ![](../images/weather.png)](http://rcloud.social/notebook.R/rclouddocs/Dashboarding/RCloud%20notebook.R/Weather/main)
+
+Intelligent Dashboards
+
+</DIV>
+
+
+<DIV class="tryit-btn">
+
+[ ![](../images/ggplotshiny.png)](http://rcloud.social/shiny.html?notebook=598a1bb35ec3e1bb20fd)
+
+RCloud Shiny
+
+</DIV>
+
+<DIV class="tryit-btn">
+
+[ ![](../images/DC.png)](https://rcloud.social/view.html?notebook=af829ffb418ed0f054d1)
+
+Interactive Plots
+
+</DIV>
+
+### Data Scientist (Read/Write/Execute)
+
+Since RCloud has built-in version control based on
+[authorized Github gists](https://help.github.com/articles/about-gists/),
+Data Scientist access is obtained through your GitHub account.
+							
+Press the 'Log In' button below to access the public instance of RCloud,
+or type ['https:rcloud.social/login.R'](https://rcloud.social/login.R) in your browser;
+for help in setting up a GitHub account and authorizing the RCloud app,
+check out the 'Data Scientist Access' instructions on our Tutorials page.
+
+<DIV class="tryit-btn">
+
+[ ![](../images/RCloud_JRDNotebook.png)](https://rcloud.social/login.R)
+
+Interactive Plots
+
+</DIV>
+
+After logging in, view sample code by clicking on a notebook name
+(e.g.,[RCloud Sample Notebooks/Data Analysis/Maps; NYC Taxi Rides/zips](https://rcloud.social/edit.html?notebook=091a719a584a890279065837dbf121ab) ),
+view sample notebook results by pressing the 'run' button in the navigation bar,
+or create your own notebook using the '+' key in the left windowshade panel and
+begin editing by typing code in a prompt cell.
+
+
+<DIV class="tryit-sprite">
+
+[ ![](../images/RCloud_NYCTaxiRides.png)](https://rcloud.social/login.R)
+
+</DIV>
+
+Learn how to fork, share and extend notebooks using our
+[Documentation](../documentation/) and [Tutorials](../tutorials)
+pages.
+
+Download: Local Installation
+----------------------------
+
+__Local RClouds__ may be created to facilitate collaboration and sharing __within an organization__.
+These local installations also come with Guest and Data Scientist access methods.
+Details on sharing and security may be found in our [Documentation](../documentation).
+Set up a private RCloud by checking out these
+[prerequisites](https://github.com/att/rcloud/blob/develop/doc/INSTALL.md) and
+[installation instructions](https://github.com/att/rcloud/blob/develop/doc/INSTALL.md)
+or walk-through our tutorial [Public Instance versus Local Installation](../tutorials/#PvsP).
+

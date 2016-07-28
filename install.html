@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<h1 id="creating-and-editing-notebooks-on-the-public-rcloud-instance.">Creating and editing notebooks on the public RCloud instance.</h1>
+<p>The public RCloud instance is the perfect place to test drive RCloud. Anyone with a GitHub account can have full user access to this instance.</p>
+<p>If you don't already have a GitHub account you can create one at the <a href="https://github.com">GitHub login page</a>. The first time you login the the public RCloud (after setting up a GitHub account) you will be directed to GitHub to authorize access to RCloud. Click through the authorization process and on future visits to <a href="http://rcloud.social/index.html">rcloud.social</a> you will be automatically logged into your RCloud account.</p>
+<h1 id="installing-a-local-rcloud-server.">Installing a local RCloud server.</h1>
+<p>The RCloud server program can easily be installed locally on any Linux machine or under OSX via MacPorts. A local instance has the advantage of granting you complete control of your notebooks and data. Local instances also affords the oppurtunity to evaluate and experiment with the RCloud infrastructure.</p>
+<p>By default your local RCloud instance will still use GitHub for authentication. Before proceeding with an installation you will need to setup up a new 'OAuth' application in your GitHub profile. Here's how:</p>
+<ol style="list-style-type: decimal">
+<li>Go to your GitHub profile page and select 'Edit Profile'.</li>
+<li>In the personal settings menu select 'OAuth applicatoins'.</li>
+<li>Select the 'Developer applications' tab.</li>
+<li>Press the 'Register a new application' button.</li>
+<li>Assuming that you are testing on your local IP address 127.0.0.1 and the default RCloud port (8080) is available fill in the OAuth application form like this:</li>
+</ol>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left">Application Name:</td>
+<td align="left">My RCloud Instance</td>
+</tr>
+<tr class="even">
+<td align="left">Homepage URL:</td>
+<td align="left">http://127.0.0.1:8080</td>
+</tr>
+<tr class="odd">
+<td align="left">Application Description:</td>
+<td align="left">My very own RCloud instance</td>
+</tr>
+<tr class="even">
+<td align="left">Authorization callback URL:</td>
+<td align="left">http://127.0.0.1:8080/login_successful.R</td>
+</tr>
+</tbody>
+</table>
+<p>RCloud uses GitHub for both authentication and for automatic version control of notebooks via <a href="https://help.github.com/articles/about-gists/">GitHub 'gists'</a>. The 'OAuth' applciation authentication process gives the application owner the ability to grant access to new RCloud users but this still implies that notebook code and assets reside on public GitHub servers. For improved privacy and security you may want to consider using <a href="https://enterprise.github.com/home">GitHub Enterprise</a> rahter with your local RCloud instance.</p>
+<p>Complete detailed instructions for installing a local RCloud instance can be found on the <a href="https://github.com/att/rcloud/blob/develop/doc/INSTALL.md">RCloud Installation Wiki</a></p>
+</body>
+</html>
