@@ -71,7 +71,7 @@ clean :
 
 
 define make-goal
-$1: $2  pandoc_html.template $(GEN_FNS)
+$1: $2  doc_html.template $(GEN_FNS)
 	mkdir -p $$(dir $$@)
 	pandoc \
 	--from=markdown \
