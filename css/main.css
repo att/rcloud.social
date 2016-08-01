@@ -264,7 +264,8 @@ h3.tryit-header {
 
 h3.image-subtitles {
 	text-align: center;
-	color: #777;
+	font-size: 1.6em;
+	color: #44c8f5;
 	    margin: 0.5em 0 0 0;
 	/*color: #44c8f5; #067AB5*/
 }

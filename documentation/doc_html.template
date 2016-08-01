@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html$if(lang)$ lang="$lang$"$endif$$if(dir)$ dir="$dir$"$endif$>
+<head>
+
+$for(header-includes)$
+$header-includes$
+$endfor$
+
+$for(css)$
+  <link rel="stylesheet" href="$css$" type="text/css" />
+$endfor$
+  
+
+</head>
+<body>
+<div id="wrapper">
+
+
+$for(include-before)$
+$include-before$
+$endfor$
+
+$if(toc)$
+    <div id="$idprefix$TOC">
+
+      <ul>
+	<ul>
+	  <li><a href="../../../../documentation/doc/1.3/guidoc/doc.html"  >1.3 RCloud Editor Documentation</a></li>
+	  <li><a href="../../../../documentation/doc/1.3/whatsnew/doc.html">1.3 Release Notes</a></li>
+	</ul>
+	<ul>
+	  <li><a href="../../../../documentation/doc/1.4/guidoc/doc.html"  >1.4 RCloud Editor Documentation</a></li>
+	  <li><a href="../../../../documentation/doc/1.4/whatsnew/doc.html">1.4 Release Notes</a></li>
+	</ul>
+	<ul>
+	  <li><a href="../../../../documentation/doc/1.5/guidoc/doc.html"  >1.5 RCloud Editor Documentation</a></li>
+	  <li><a href="../../../../documentation/doc/1.5/whatsnew/doc.html">1.5 Release Notes</a></li>
+	</ul>
+	<ul>
+	  <li><a href="../../../../documentation/doc/1.6/guidoc/doc.html"  >1.6 RCloud Editor Documentation</a></li>
+	  <li><a href="../../../../documentation/doc/1.6/whatsnew/doc.html">1.6 Release Notes</a></li>
+	</ul>
+      <li><a href="../../../../documentation/doc/1.4/guidoc/doc.html">GUI 1.4</a></li>
+      </ul>
+      
+      <div role="main">
+	$toc$
+      </div>
+</div>
+$endif$
+
+
+<div id="inner-wrapper" >
+  
+  <div class="container">
+  $body$
+
+<div>
+$for(g)$
+  $if(g.section)$
+  </div><div class="row"><h2 class="gallery-header">$g.section$</h2>
+  $else$
+  <div class="col-sm-3">
+    <a href="$g.link$"><img class="img-responsive img-rounded" src="$g.image$" alt=""></a>
+    <h3 class="image-subtitles">$g.caption$</h3>
+    <p class="gallery-desc">$g.desc$</p>
+  </div>
+  $endif$
+$endfor$
+</div>
+
+  </div> <!-- container -->
+
+
+$for(include-after)$
+$include-after$
+$endfor$
+
+</div> <!-- inner-wrapper -->
+
+</div> <!-- wrapper -->
+
+</body>
+</html>
