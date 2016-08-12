@@ -20,6 +20,10 @@ ifndef BASESRC
   BASESRC = ..
 endif
 
+ifndef SIDEBAR
+  SIDEBAR = ""
+endif
+
 # Set the output directory for this topic.
 ifndef DSTDIR
   DSTDIR = $(OUTDIR)/$(FOLDER)
@@ -88,6 +92,7 @@ $(DSTDIR)/index.html :  $(DEPEND) $(GEN_FNS)
 	--template=$(TMPL_FN) \
 	--css=index.css \
 	--variable=basepath:$(BASEPATH) \
+	--variable=sidebar:$(SIDEBAR) \
 	--include-in-header=head.html \
 	--include-before-body=body_top.html \
 	--include-before-body=$(BODY_FN) \

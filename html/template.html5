@@ -10,17 +10,69 @@ $for(css)$
   <link rel="stylesheet" href="$css$" type="text/css" />
 $endfor$
   
+  $if(sidebar)$
+  
+  <style>
 
+#lower{margin-top:50px;}
+
+#sidebar{width:400px; top:50px; bottom:0px; position:fixed;}
+#sidebar,#container,#lower{height:100%}
+#container{margin:50px 400px;overflow:auto;}
+#sidebar{left:0; overflow:auto; background-color:#aaa }
+#sidebar ul { list-style:none; }
+    
+    
+  </style>
+  $endif$
+
+  
 </head>
 <body>
 <div id="wrapper">
 
 
+
+  
 $for(include-before)$
 $include-before$
 $endfor$
 
 <div id="inner-wrapper" >
+  
+  $if(sidebar)$
+  <div id="lower" >
+    <div id="sidebar" >
+  
+      <ul>
+	<ul>
+	  <li><a href="$basepath$/documentation/doc/1.6/guidoc/doc.html"  >Latest (1.6) RCloud Editor Documentation</a></li>
+	  <li><a href="$basepath$/documentation/doc/1.6/whatsnew/doc.html">Latest (1.6) Release Notes</a></li>
+	</ul>
+	<ul>
+	  <li><a href="$basepath$/documentation/doc/1.5/guidoc/doc.html"  >1.5 RCloud Editor Documentation</a></li>
+	  <li><a href="$basepath$/documentation/doc/1.5/whatsnew/doc.html">1.5 Release Notes</a></li>
+	</ul>
+	<ul>
+	  <li><a href="$basepath$/documentation/doc/1.4/guidoc/doc.html"  >1.4 RCloud Editor Documentation</a></li>
+	  <li><a href="$basepath$/documentation/doc/1.4/whatsnew/doc.html">1.4 Release Notes</a></li>
+	</ul>
+	<ul>
+	  <li><a href="$basepath$/documentation/doc/1.3/guidoc/doc.html"  >1.3 RCloud Editor Documentation</a></li>
+	  <li><a href="$basepath$/documentation/doc/1.3/whatsnew/doc.html">1.3 Release Notes</a></li>
+	</ul>
+      </ul>
+
+      $if(toc)$
+      <div id="$idprefix$TOC">
+	  $toc$
+      </div>
+      $endif$
+      
+    </div>
+    $endif$
+
+
   
   <div class="container">
   $body$
@@ -32,7 +84,7 @@ $for(g)$
   $else$
   <div class="col-sm-3">
     <a href="$g.link$"><img class="img-responsive img-rounded" src="$g.image$" alt=""></a>
-    <h3 class="image-subtitles">$g.caption$</h3>
+    <h3 class="image-subtitles"><small>$g.caption$</small></h3>
     <p class="gallery-desc">$g.desc$</p>
   </div>
   $endif$
@@ -41,7 +93,10 @@ $endfor$
 
   </div> <!-- container -->
 
-
+  $if(sidebar)$
+  </div> <!-- lower -->
+  $endif$
+  
 $for(include-after)$
 $include-after$
 $endfor$

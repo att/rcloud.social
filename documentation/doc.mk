@@ -25,7 +25,7 @@ endif
 
 
 # Path from the GUI doc 'doc.html' to the site root.
-DOC_BASEPATH = ../../../$(BASEPATH)
+DOC_BASEPATH = ../../$(BASEPATH)
 
 # Get a list of the directories rooted on $(DOC_DIR)
 DIRS  = $(shell find $(DOC_DIR) -type d)
@@ -61,32 +61,19 @@ GEN_FNS     = $(foreach name,$(GEN_NAMES),doc_$(name).html)
 GEN_TMPLS   = $(foreach name,$(GEN_NAMES),$(HTML)/$(name)_template.html)
 
 
-all :  $(DST) $(DST_IMG_FNS)
+TOC_FNS = $(foreach fn,$(SRC),$(dir $(fn))toc.html)
+
+CTOC_FNS = $(foreach fldr,$(shell find $(DOC_DIR) -maxdepth 1 -mindepth 1 -type d),$(fldr)/toc.html)
+
+OUT_FNS = $(foreach fn,$(CTOC_FNS),$(dir $(subst $(DOC_DIR),$(OUTDOC_DIR),$(fn)))doc.html )
+
+all : $(DST_IMG_FNS) $(GEN_FNS) $(TOC_FNS) $(CTOC_FNS) $(OUT_FNS)
 
 clean-all : clean
 	rm -f $(DST) $(DST_IMG_FNS)
 
 clean :
-	rm -f $(GEN_FNS)
-
-
-define make-goal
-$1: $2  doc_html.template $(GEN_FNS)
-	mkdir -p $$(dir $$@)
-	pandoc \
-	--from=markdown \
-	--to=html5 \
-	--template=doc_html.template \
-	--css=$(DOC_BASEPATH)/css/doc.css  \
-	--include-in-head=doc_head.html \
-	--include-before-body=doc_body_top.html \
-	--include-after-body=doc_body_bottom.html \
-	--toc --toc-depth=4 \
-	-o $$@ $$<
-endef
-
-# Generate a recipe for each documenation markdown file
-$(foreach fn,$(SRC),$(eval $(call make-goal,$(subst .md,.html, $(subst $(DOC_DIR),$(OUTDOC_DIR),$(fn))) ,$(fn))))
+	rm -f $(GEN_FNS) $(TOC_FNS) $(CTOC_FNS) 
 
 # Copy image files to the output tree
 $(DST_IMG_FNS) : $(OUTDOC_DIR)/% : $(DOC_DIR)/%
@@ -113,4 +100,25 @@ $(DST_IMG_FNS) : $(OUTDOC_DIR)/% : $(DOC_DIR)/%
 $(GEN_FNS) : doc_%.html : $(HTML)/%_template.html
 	pandoc --template=$< --variable=basepath:$(DOC_BASEPATH) -o $@ $(EMPTY_PD)
 
+$(TOC_FNS) : $(DOC_DIR)/%/toc.html : $(DOC_DIR)/%/doc.md
+	pandoc --from=markdown --to=html --template=toc.template --toc -o $@ $<
 
+$(CTOC_FNS) : $(DOC_DIR)/%/toc.html : $(DOC_DIR)/%
+	pandoc --from=markdown --to=html --template=toc_cat.template \
+	--include-before=$</guidoc/toc.html \
+	--include-after=$</whatsnew/toc.html \
+	-o $@ $(EMPTY_PD)
+
+$(OUT_FNS) : $(OUTDOC_DIR)/%/doc.html : $(DOC_DIR)/%
+	mkdir -p $(dir $@)
+	pandoc --from=markdown --to=html \
+	--include-in-head=doc_head.html \
+       --include-before=doc_body_top.html \
+	--include-before=$</toc.html \
+	--variable=basepath:$(BASEPATH) \
+	--variable=sidebar:foo \
+	--template=doc_html.template \
+	-o $@ $</guidoc/doc.md $</whatsnew/doc.md
+
+blah :
+	@echo $(OUT_FNS)

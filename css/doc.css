@@ -4,44 +4,12 @@ h1
     color: #ff00ff
 }
 
-/*
-nav{    
-  width: 150px;
-  float: left;
-  display: inline;
-  margin: 0;
-  padding: 0;
-  margin-right: 10px;
-  position: fixed;
-}
-*/
 
-#TOC  {
-    width: 250px;
-    display: block;
-    margin: 0;
-    padding: 0;
-    margin-right: 10px;
-    position: fixed;
-    margin-top: 50px;
-}
+#lower{margin-top:50px;}
 
-#TOC ul {
-      list-style-type: none;
-}
-
-/*
-#TOC li {
-    display: inline;
-}
-*/
-
-section#main{
-  width: 500;
-  float: left;
-  margin: 0;
-  padding: 0;
-  display: inline;
-  position: relative;
-  left: 150px;
-}
+#sidebar{width:400px; top:50px; bottom:0px; position:fixed;}
+#sidebar,.container,#lower{height:100%}
+.container{margin:50px 400px; overflow:auto;}
+#sidebar{left:0; overflow:auto; background-color:#aaa }
+#sidebar ul { list-style:none; }
+.container{width:75%;}
