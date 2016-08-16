@@ -9,8 +9,8 @@ ifndef DOC_DIR
 endif
 
 # Output directory
-ifndef OUTDOC_DIR
-  OUTDOC_DIR = ./out
+ifndef OUT_DIR
+  OUT_DIR = ./out
 endif
 
 # Path from this makefile to the root of the source tree.
@@ -23,9 +23,10 @@ ifndef BASEPATH
   BASEPATH = ..
 endif
 
+DOC_OUT_DIR = $(OUT_DIR)/doc
 
 # Path from the GUI doc 'doc.html' to the site root.
-DOC_BASEPATH = ../../$(BASEPATH)
+DOC_BASEPATH = ../../../$(BASEPATH)
 
 # Get a list of the directories rooted on $(DOC_DIR)
 DIRS  = $(shell find $(DOC_DIR) -type d)
@@ -34,10 +35,10 @@ DIRS  = $(shell find $(DOC_DIR) -type d)
 SRC =  $(foreach DIR,$(DIRS),$(wildcard $(DIR)/*.md))
 
 # Generate an output file name for each src file.
-DST =  $(foreach fn,$(SRC), $(subst .md,.html,$(subst $(DOC_DIR),$(OUTDOC_DIR),$(fn))))
+DST =  $(foreach fn,$(SRC), $(subst .md,.html,$(subst $(DOC_DIR),$(DOC_OUT_DIR),$(fn))))
 
 # Create a list of output directories
-DST_DIRS = $(foreach dir,$(DIRS),$(subst  $(DOC_DIR),$(OUTDOC_DIR),$(dir)))
+DST_DIRS = $(foreach dir,$(DIRS),$(subst  $(DOC_DIR),$(DOC_OUT_DIR),$(dir)))
 
 # Create a list of source image dir's
 SRC_IMG_DIRS = $(foreach src,$(SRC),$(dir $(src))img)
@@ -46,10 +47,10 @@ SRC_IMG_DIRS = $(foreach src,$(SRC),$(dir $(src))img)
 SRC_IMG_FNS  = $(foreach dir,$(SRC_IMG_DIRS),$(wildcard $(dir)/*))
 
 # Create a list of output image dirs
-DST_IMG_DIRS = $(foreach dir,$(SRC_IMG_DIRS), $(subst $(DOC_DIR),$(OUTDOC_DIR),$(dir)))
+DST_IMG_DIRS = $(foreach dir,$(SRC_IMG_DIRS), $(subst $(DOC_DIR),$(DOC_OUT_DIR),$(dir)))
 
 # Create a list of output images
-DST_IMG_FNS = $(foreach fn,$(SRC_IMG_FNS), $(subst $(DOC_DIR),$(OUTDOC_DIR),$(fn)))
+DST_IMG_FNS = $(foreach fn,$(SRC_IMG_FNS), $(subst $(DOC_DIR),$(DOC_OUT_DIR),$(fn)))
 
 # Helpfull abreviations.
 HTML     = $(BASESRC)/html
@@ -60,23 +61,16 @@ GEN_NAMES   = head body_top body_bottom
 GEN_FNS     = $(foreach name,$(GEN_NAMES),doc_$(name).html)
 GEN_TMPLS   = $(foreach name,$(GEN_NAMES),$(HTML)/$(name)_template.html)
 
-
-TOC_FNS = $(foreach fn,$(SRC),$(dir $(fn))toc.html)
-
-CTOC_FNS = $(foreach fldr,$(shell find $(DOC_DIR) -maxdepth 1 -mindepth 1 -type d),$(fldr)/toc.html)
-
-OUT_FNS = $(foreach fn,$(CTOC_FNS),$(dir $(subst $(DOC_DIR),$(OUTDOC_DIR),$(fn)))doc.html )
-
-all : $(DST_IMG_FNS) $(GEN_FNS) $(TOC_FNS) $(CTOC_FNS) $(OUT_FNS)
+all : $(DST_IMG_FNS) $(GEN_FNS) $(INTRO_OUT) $(DST)
 
 clean-all : clean
 	rm -f $(DST) $(DST_IMG_FNS)
 
 clean :
-	rm -f $(GEN_FNS) $(TOC_FNS) $(CTOC_FNS) 
+	rm -f $(GEN_FNS)
 
 # Copy image files to the output tree
-$(DST_IMG_FNS) : $(OUTDOC_DIR)/% : $(DOC_DIR)/%
+$(DST_IMG_FNS) : $(DOC_OUT_DIR)/% : $(DOC_DIR)/%
 	mkdir -p $(dir $@)
 	cp $< $@
 
@@ -98,27 +92,27 @@ $(DST_IMG_FNS) : $(OUTDOC_DIR)/% : $(DOC_DIR)/%
 # the final output file by using the --include-in-header pandoc
 # option.
 $(GEN_FNS) : doc_%.html : $(HTML)/%_template.html
-	pandoc --template=$< --variable=basepath:$(DOC_BASEPATH) -o $@ $(EMPTY_PD)
-
-$(TOC_FNS) : $(DOC_DIR)/%/toc.html : $(DOC_DIR)/%/doc.md
-	pandoc --from=markdown --to=html --template=toc.template --toc -o $@ $<
-
-$(CTOC_FNS) : $(DOC_DIR)/%/toc.html : $(DOC_DIR)/%
-	pandoc --from=markdown --to=html --template=toc_cat.template \
-	--include-before=$</guidoc/toc.html \
-	--include-after=$</whatsnew/toc.html \
+	pandoc --template=$< \
+	--variable=basepath:$(DOC_BASEPATH) \
+	--variable=doc:true \
+	--variable=docpath:"../.." \
+	--variable=docintropath:"../../.." \
+	--variable=bootstrap:"true" \
 	-o $@ $(EMPTY_PD)
 
-$(OUT_FNS) : $(OUTDOC_DIR)/%/doc.html : $(DOC_DIR)/%
+
+$(DST) : $(DOC_OUT_DIR)/%/doc.html : $(DOC_DIR)/%/doc.md doc.template $(GEN_FNS)
 	mkdir -p $(dir $@)
 	pandoc --from=markdown --to=html \
+	--css=$(DOC_BASEPATH)/css/doc.css \
 	--include-in-head=doc_head.html \
        --include-before=doc_body_top.html \
-	--include-before=$</toc.html \
-	--variable=basepath:$(BASEPATH) \
-	--variable=sidebar:foo \
-	--template=doc_html.template \
-	-o $@ $</guidoc/doc.md $</whatsnew/doc.md
+	--include-after=doc_body_bottom.html \
+	 --variable=basepath:$(DOC_BASEPATH) \
+	--variable=docpath:"../.." \
+	--variable=docintropath:"../../.." \
+	--template=doc.template \
+	--toc \
+	-o $@ $<
 
-blah :
-	@echo $(OUT_FNS)
+

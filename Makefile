@@ -30,7 +30,7 @@ clean-all : clean local doc
 
 # Run make on each topic directory
 $(SUBDIRS) :
-	make -C $@ OUTDIR=$(OUTDIR) DOC_DIR=$(DOCDIR)  $(MAKECMDGOALS)
+	make -C $@ OUTDIR=$(OUTDIR) DOC_DIR=$(DOCDIR)  CONTAINER=true INNER_WRAPPER=true BOOTSTRAP=true $(MAKECMDGOALS)
 
 
 # Process files which need to be copied to the output site.
@@ -41,11 +41,11 @@ $(COPY_DST_FNS) : $(OUTDIR)/% : %
 
 # Build the local index.html page.
 local :
-	make -f Makefile.mk OUTDIR=$(OUTDIR)  $(MAKECMDGOALS)
+	make -f Makefile.mk OUTDIR=$(OUTDIR) INNER_WRAPPER=true  $(MAKECMDGOALS)
 
 # Build the documentation pages.
 doc :
-	make -C documentation -f doc.mk OUTDOC_DIR=$(OUTDIR)/documentation/doc DOC_DIR=$(abspath $(DOCDIR))  $(MAKECMDGOALS)
+	make -C documentation -f doc.mk OUT_DIR=$(OUTDIR)/documentation DOC_DIR=$(abspath $(DOCDIR))  $(MAKECMDGOALS)
 
 .PHONY:  $(SUBDIRS) doc local
 

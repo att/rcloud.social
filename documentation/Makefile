@@ -1,9 +1,8 @@
 
-# ALL_TARGETS       = doc-all
-# CLEAN_TARGETS     = doc-clean
-# CLEAN_ALL_TARGETS = doc-clean-all
 
-SIDEBAR = foo
+PANDOC_OPTS =  --variable=doc:true --variable=docintropath:"." --variable=docpath:doc
+
+TMPL_PANDOC_OPTS = $(PANDOC_OPTS)
 
 # Build the documentation overview page (index.html)
 include ../topic.mk

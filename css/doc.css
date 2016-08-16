@@ -1,15 +1,53 @@
 
-h1
-{
-    color: #ff00ff
+body, html {
+    margin: 0;
+    overflow: hidden;
+    height:100%;
+}
+
+#toc {
+    height:inherit;
+    overflow-y: scroll;
+    text-align: left;
 }
 
 
-#lower{margin-top:50px;}
+#contents {
+    height:inherit;
+    overflow-y:scroll;
+    text-align: left;
+    padding-left: 15px;
+}
 
-#sidebar{width:400px; top:50px; bottom:0px; position:fixed;}
-#sidebar,.container,#lower{height:100%}
-.container{margin:50px 400px; overflow:auto;}
-#sidebar{left:0; overflow:auto; background-color:#aaa }
-#sidebar ul { list-style:none; }
-.container{width:75%;}
+/* indent the TOC tree */
+#toc  ul > li {
+    margin-left: 20px;
+    list-style: none;
+}
+
+#stuff {
+    /*height:calc(100% - 60px);*/
+    /*overflow-y:scroll;*/
+    height:100%;
+}
+
+
+
+#doctabs {
+    padding-top:25px;
+}
+
+#doctabs > h1 { margin-bottom: 0px; }
+
+#tbs {
+    height:100%;
+    width:100%;
+    overflow-y:scroll;
+}
+
+.fixd {
+    width: 100%;
+    position: relative;
+    bottom: 0px;
+}
+      
