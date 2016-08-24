@@ -1,0 +1,19 @@
+<<<<<<< HEAD
+<footer >
+=======
+<footer class="fixd">
+>>>>>>> fb5ae60ab8daf7c0b210fa7eda2da7595562c908
+  <div id="footer-wrap">
+    <p class="copyright clearfix"><img src="$basepath$/images/logo_att_globe.png" alt="AT&amp;T" />&copy;Copyright <script>document.write(new Date().getFullYear())</script> RCloud</p>
+    
+    <ul id="footer-nav">
+      <li><a href="$basepath$/index.html" title="RCloud"><img class="ftrhomelogo" src="$basepath$/images/logo_rcloud.png" alt="RCloud"></a></li>
+      <li class="ftr"><a href="$basepath$/gallery/index.html" title="Gallery">Gallery</a></li>
+      <li><a href="$basepath$/tutorials/index.html" title="Tutorials">Tutorials</a></li>
+      <li><a href="#wrapper" title="Documentation">Documentation</a></li>							
+      <li><a href="$basepath$/community/index.html" title="Community">Community</a></li>
+      <li><a href="$basepath$/tryit/index.html" title="Try It" class="blue">Try It</a></li>
+      <li class="ftr"><a class="footr" href="https://github.com/att/rcloud" target="_blank"><img  class="ghlogo" alt="GitHub" src="$basepath$/images/Octocat.png"></a></li>
+    </ul>
+  </div>
+</footer>	
