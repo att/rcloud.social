@@ -1,0 +1,229 @@
+.btn {
+  margin-top: 0;
+  padding: 6px 12px;
+}
+
+.hi-z {
+    background: #fff;
+    margin-top: 40px; 
+}
+
+
+
+    
+.nav-pills > li > a {
+    padding: 5px 5px;
+}
+
+#contents, #contents.affix-bottom {
+ float: right;
+ }
+
+#sidebar, #sidebar.affix-bottom {
+ float: left;
+ margin-right: 5px;
+ }
+
+
+#sidebar {
+	background-color:#cce6ff;
+}
+
+@media screen and (min-width: 320px) {
+
+.btn-primary {
+    margin-bottom: 5px;
+}
+
+.nav > li > a {
+    padding: 3px 3px;
+}
+
+.btn {
+    font-size: 80%;
+    padding: 2px 2px;
+}
+.hi-z {
+    margin-top: 63px;
+    font-size: 80%;
+    width: 100%
+}
+
+.affix-top {
+	position: static;
+}
+
+#sidebar {
+    width: 25%;
+    font-size: 75%;
+}
+.col-md-9 {
+    width: 75%;
+    font-size: 80%;
+}
+
+.col-md-12 {
+    width: 100%;
+    font-size: 80%;
+}
+#sidebar li.active {
+  	border:0 #ddd solid;
+  	border-right-width:4px;
+}
+}
+
+
+@media screen and (min-width: 480px) {
+
+.btn-primary {
+    margin-bottom: 5px;
+}
+
+.nav > li > a {
+    padding: 3px 3px;
+}
+
+.btn {
+    font-size: 80%;
+    padding: 2px 2px;
+}
+
+.hi-z {
+    margin-top: 63px;
+}
+
+.affix-top {
+	position: static;
+}
+
+#sidebar {
+    width: 25%;
+    font-size: 75%;
+}
+.col-md-9 {
+    width: 75%;
+    font-size: 80%;
+}
+
+.col-md-12 {
+    width: 100%;
+    font-size: 80%;
+}
+#sidebar li.active {
+  	border:0 #ddd solid;
+  	border-right-width:4px;
+}
+}
+
+
+@media only screen and (min-width: 768px) {
+
+.btn-primary {
+    margin-bottom: 5px;
+}
+
+.nav > li > a {
+    padding: 3px 3px;
+}
+
+.btn {
+    font-size: 80%;
+    padding: 2px 2px;
+}
+.hi-z {
+    margin-top: 50px;
+    font-size: 80%;
+    width: 100%
+
+}
+
+.affix-top {
+	position: static;
+}
+
+#sidebar {
+    width: 20%;
+    font-size: 75%;
+}
+.col-md-9 {
+    width: 75%;
+    font-size: 80%;
+}
+
+.col-md-12 {
+    width: 100%;
+    font-size: 80%;
+}
+
+#sidebar li.active {
+  	border:0 #ddd solid;
+  	border-right-width:4px;
+}
+}
+
+@media screen and (min-width: 992px) {
+
+.btn {
+    font-size: 100%;
+    padding: 5px 5px;
+}
+
+.hi-z {
+    font-size: 100%;
+}
+
+.nav > li > a {
+    padding: 7px 9px;
+}
+  .affix-top {
+	position: static;
+}
+
+#sidebar {
+    width: 20%;
+    font-size: 100%;
+
+}
+.col-md-9 {
+    width: 75%;
+    font-size: 100%;
+    margin-left: 15px;
+    margin-right: 0px;
+}
+
+.col-md-12 {
+    width: 100%;
+    font-size: 100%;
+    margin-left: 15px;
+    margin-right: 0px;
+}
+
+#sidebar li.active {
+  	border:0 #ddd solid;
+  	border-right-width:4px;
+}
+#sidebar .nav > .active > ul {
+    display: block;
+  }
+
+  #sidebar.affix {
+    position: fixed;
+    top: 160px;
+  }
+  #sidebar.affix-bottom {
+    position: absolute;
+  }
+}
+
+
+@media screen and (min-width: 1300px) {
+
+#sidebar {
+    width: 15%;
+}
+
+.nav > li > a {
+    padding: 10px 15px;
+}
+
+}

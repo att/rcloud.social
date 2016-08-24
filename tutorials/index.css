@@ -1,0 +1,55 @@
+
+html,body{height:100%}
+
+.container{
+    width:100%;
+    height:100%;
+    position:relative
+}
+
+.topmenu{
+    height:50px;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background-color:#efefef
+}
+
+.topmenu li { float:left; padding:0 10px 0 0; }
+.topmenu ul { list-style: none }
+.lower{margin-top:50px;}
+
+.sidebar{width:400px;top: 50px; bottom: 0px;position: fixed;}
+.sidebar,.content,.lower{height:100%}
+.content{margin:50px 400px;overflow:auto;}
+.sidebar{left:0;overflow:auto; background-color:#aaa }
+.sidebar ul { list-style:none; }
+
+
+
+.content h1
+{
+    background-color: #efefef
+}
+
+.content h2
+{
+    background-color: #ffefef;
+}
+
+/* comparison table styling */
+.content .even, th
+{
+    background-color: #efefef
+}
+
+
+/* style an image with an explicit class */
+.tutorial-aimg
+{
+    width: 300px;
+    height: 300px;
+}
+
+

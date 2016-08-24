@@ -1,0 +1,629 @@
+
+The Big Picture
+===============
+
+Why RCloud?
+-----------
+
+### Increase Insights on Big Data Analyses through Collaboration
+
+RCloud enables Data Scientists to find value in data by sharing ideas
+and techniques with each other and results with any user in the
+community.  RCloud employs _notebooks_ composed of _cells_ where
+topics may easily be broken up into concepts and where the
+relationship between the concepts can be easily understood.
+
+![Searching on RCloud](../images/rcloud_search.png)
+
+In this environment, data scientist teams benefit from easier sharing
+of scripts and data feeds, experiments, annotations and automated
+recommendations which are well beyond what traditional individual or
+locally based development environments provide. Since notebooks are
+saved and searchable, rather than spending time "recreating the
+wheel", RCloud Data Scientists may reuse notebooks or parts of
+notebooks for similar projects.
+
+
+### Build Confidence with Reproducible Results
+
+Notebooks are project packages which contain all the components and
+dependencies of an analysis, including code, data, comments and other
+technical documentation, charts and deployment capabilities. This
+means results may be be verified and reproduced by anyone with access
+to the notebook.
+
+### Engage Users with Convenient Web-based Access
+
+As opposed to analysis which are stored locally, web-based content
+allows Data Scientists to collaborate over the Internet without
+concern for the location or syncing of system parameters, code and
+data.  For example, the public instance of RCloud includes all CRAN
+packages.
+
+![](../images/RCloud_WebAccess.png)
+
+Local development environment parameters no
+longer create hurdles for viewing and running analyses since RCloud is
+platform independent and user access and controls remain constant
+which promotes user confidence and engagement.
+
+### Access Big Data Processing Tools and Javascript Libraries using Built-in Features
+
+RCloud supports all R packages including
+[__iotools__](https://cran.r-project.org/web/packages/iotools/index.html) for processing large data files
+and [ ![Spark](../images/spark-logo-trademark.png){class="tutorial-aimg"} ](https://amplab-extras.github.io/SparkR-pkg/)
+- an R frontend for [Apache Spark](http://spark.apache.org/).
+
+An RCloud session runs on both client and server, so it is possible
+for R functions on the server to call JavaScript functions on the
+client, and vice versa.  This means rich web-based content through
+easy integration of custom Javascript user interface (UI) and
+Javascript libraries such as JQuery and D3.
+
+### Insure Privacy with OCAP Implementation and Notebook Encryption
+
+RCloud supports efficient, secure, client/server connections via the
+FastRWeb package and an adopted discipline known as the
+[Object-Capabilities (ocap)](http://www.erights.org/talks/thesis/markm-thesis.pdf).
+
+This means that web browsers never directly instruct the RCloud
+backend to execute arbitrary code which prevents unauthenticated
+clients from making unauthorized calls to the RCloud runtime
+environment; read more about ocap on our
+[Documentation](../documentation) introduction page or see the
+[Wikipedia](https://en.wikipedia.org/wiki/Object-capability_model)
+article. RCloud also maintains an automatic git based trail of code
+modifications which document the development history of an RCloud
+based project and RCloud notebooks may be encrypted for added
+security.  In the notebook product space, authenticated client-server
+channeling and notebook encryption are unique to RCloud.
+
+
+### Transform Knowledge into Assets with Built-in Version Control
+
+Code, widget, dashboard and analysis libraries are an ancillary
+benefit that comes with the creation of every RCloud notebook (on the
+public instance or in private clouds).
+
+![](../images/github_logo.png)
+
+These "knowledge assets" may used on similar projects or to train new
+employees, for example. RCloud notebooks are searchable and forkable
+(sharable), so anyone with access to the notebooks may view and reuse
+a notebook and its content or various parts.
+
+### Minimize Development to Deployment Effort through Notebook Sharing
+
+
+Standard analytic workflows often involve performing a data science
+experiment using one set of tools and deploying the results using
+other tools.
+
+![](../images/header_sharetype.png)
+
+Rather than stitching pipelines together and/or
+dealing with inconsistences between development and production
+environments, every RCloud notebook is named by a URL so analyses may
+easily be transformed from code and technical documenation to markdown
+annotated notebooks or rich web-based dashboards.
+
+### Access Benefits of using Open Source Software
+
+
+RCloud is an ideal environment for research and data analysis
+departments who commonly use R and/or Python to share, publish and
+archive their code and data. RCloud is roughly the same in terms of
+compute efficiency as in memory Business Intelligence (BI) tools like
+Tableau and Qlikview, but unlike these systems, you can add users to
+RCloud without licensing concerns.
+
+Open source software also means access free online help and user
+training through forums like Stackoverflow.
+
+---------------------------------------------------------------------------------------------------
+                       Built-In No-cost User Forking               Muliple   Intregrated Integrated
+System   Collaboration Security Scalability  Versioning Dashboards Languages Reports     Analysis
+-------- ------------- -------- ------------ ---------- ---------- --------- ----------- ----------
+RCloud   X             X        X            X          X          X         X           X
+
+RStudio                         X                                            X           X
+
+JSFiddle                        X            X          X
+
+bl.ocks  X                      X                                            X           X
+
+Shiny                                                   X                    X           X
+
+Jupyter                         X                                  X         X           X
+
+Tableau                X                                X                    X           X
+---------------------------------------------------------------------------------------------------
+
+
+Public Instance versus Local Installation
+-----------------------------------------
+
+### Public Instance
+
+The public RCloud instance is the perfect place to test drive
+RCloud. Anyone with a GitHub account can have full user access to this
+instance. If you don't already have a GitHub account you can create
+one at the [GitHub login page](https://github.com); see the next section
+[Data Scientist Access (or Logging in)](#DSAccess) for details.
+								
+### Local Installation
+
+A local instance has the advantage of granting you complete control of
+your notebooks and data. Local instances also afford the opportunity
+to evaluate and experiment with the RCloud infrastructure. Windows is
+not supported at this time, but the following describes the
+requirements for the OSX download:
+
+| Requirements:
+|   OS X 10.11 (El Capitan)
+|   R 3.3.1
+|   XQuartz 2.7.9
+|   Java 1.8.0
+
+
+### Local Enterprise Installation
+
+Complete detailed instructions for installing a local enterprise
+RCloud instance may be found on GitHub [Installing
+RCloud](https://github.com/att/rcloud/blob/develop/doc/INSTALL.md)
+
+
+Anonymous User versus Data Scientist Access
+--------------------------------------------
+
+Both the public instance of RCloud and any local installation come
+with two methods for accessing notebooks: as an _Anonymous User_ or as
+a _Data Scientist_.
+
+### Anonymous User
+
+Anonymous Users may view and interact with RCloud notebooks without
+having an RCloud account.  This is done by navigating to the RCloud
+notebook web page using a hyperlink. The purpose of Anonymous User
+access is to allow Data Scientists to share their completed work as a
+web page (hyperlink) with non-developers and/or users who do not have
+an RCloud account.
+
+To find out how a Data Scientist may share their work through
+hyperlinks, please refer the the [Sharing
+Notebooks](#sharing-notebooks) tutorial.
+								
+### Data Scientist Access
+
+An RCloud Data Scientist is someone with an RCloud account who can
+create, edit, fork (copy) and share notebooks. Since RCloud provides
+automatic version control by storing notebooks as Github gists,
+creating an RCloud account requires that you have a Github account. If
+you already have a GitHub account, you may skip to Step 3.
+
+1) Press the "Log In" button on the [Try It](../tryit/) page or type __http://rcloud.social/login.R__ in your browser.
+
+![RCloud Log In](../images/RCloud_login.png)
+
+2) If you are not already logged into your GitHub account, you will
+be redirected to GitHub where you can login (Github Sign in). [RCloud
+GitHub Sign In](../images/RCloud_GithubSignIn.png) or you may register
+for an account if you don't already have one (Github Sign up).
+
+![RCloud GitHub Sign Up](../images/RCloud_GithubSignUp.png)
+
+...if this is a new GitHub account, GitHub requires that you verify
+your email address.
+
+!(RCloud GitHub Verify Email Address)[../images/RCloud_GitHubVerify.png]
+
+3) After signing into your Github account, or registering for one as
+ the case may be, the next step is to authorize RCloud to create gists
+ in your Github account by pressing the 'Authorize application'
+ button.
+
+Note: For new GitHub accounts, you will need to navigate back to the
+['Log In'](https://rcloud.social/login.R) page
+to get to the GitHub 'Authorize application' page, or you can find it
+in your GitHub profile settings.
+
+![RCloud GitHub Authorization](../images/RCloud_GithubAuth.png)
+
+4) Once you have authorized the RCloud application, you should be
+ automatically redirected back to the RCloud editing environment where
+ you may begin creating and editing notebooks.
+
+
+						
+This information may also be viewed in our video tutorial
+__'Anonymous User versus Data Scientist (Logging In) Access'__.
+
+
+
+<div class="row">
+<div class="col-md-6">
+<a href="#"><div style="width: 100%" id="ytplayer-7"></div></a>
+</div>
+</div>		
+
+
+Getting Started
+===============
+
+Introduction to the RCloud Environment
+--------------------------------------
+
+As an RCloud Data Scientist, you have the ability to create, fork,
+edit and share notebooks in the RCloud Integrated Development
+Environment (IDE). Only RCloud Data Scientists may creat 'view.html'
+links by clicking on the 'share' icon (square with arrow) in the
+navigation bar.
+
+![View HTML Share](../images/RCloud_sampleN.png)
+
+### RCloud Video Tutorial: Introduction to the RCloud Environment:
+
+<div class="row">
+<div class="col-md-6">
+<a href="#"><div style="width: 100%" id="ytplayer-10"></div></a>
+</div>
+</div>		
+
+
+Creating, Forking (Copying) and Saving Notebooks
+------------------------------------------------
+
+To create an RCloud notebook, you must be logged in as an RCloud Data Scientist.
+Once you are logged in, you may create a notebook using two methods:
+
+Using the '+' key at the top of the left windowpane, or
+
+![RCloud Create Notebook Icon '+'](../images/RCloud_CreateIcon.png)
+
+										
+Fork (copy) an existing notebook using the fork icon in the navigation bar.
+
+![RCloud Fork Notebook Icon](../images/RCloud_ForkIcon.png)
+
+										
+Save notebooks by using the save icon in the navigation bar or by running the notebook.
+
+![RCloud Save Notebook using Save Icon or by Running Notebook using Run Icon](../images/RCloud_SaveRunIcons.png)
+
+For example, to get started fork an existing notebook (you must be logged in to access this notebook):
+
+[ ![](../images/binary.png){class="tutorial-aimg"} ](http://rcloud.social/edit.html?notebook=927b867ad0fbbb5c64a60c87eba14aed)
+
+This information may also be viewed in our video tutorial __'Creating Notebooks'__
+
+<div class="row">
+<div class="col-md-6">
+<a href="#"><div style="width: 100%" id="ytplayer-5"></div></a>
+</div>
+</div>
+
+Markdown and RMarkdown
+----------------------
+
+RCloud supports Markdown and RMarkdown - select the desired markdown
+by changing the cell type in the RCloud editing environment:
+
+![RCloud Markdown Cell](../images/RCloud_MarkdownPrompt.png)
+								
+You may access many [Markdown](http://www.markdowntutorial.com/)
+and [RMarkdown](http://rmarkdown.rstudio.com/)
+Tutorials on the web, or you can login as an [RCloud Data Scientist](#DSAccess)
+to view the code examples:
+
+[ ![RCloud Markdown Sample Notebook 1](../images/RCloud_Markdown1.png){class="tutorial-aimg"} ](https://rcloud.social/view.html?notebook=bf599ab697ac92754cedcdcc8d14952f)
+
+Credit Card Loss Model
+
+
+[ ![RCloud Markdown Sample Notebook 2](../images/RCloud_DragDrop.png){class="tutorial-aimg"} ](https://rcloud.social/view.html?notebook=6b5604c3ee4c823868bcae809ef1cf8a)
+
+RCloud API; Access Data
+
+[ ![RCloud Markdown Sample Notebook 3](../images/RCloud_Markdown3.png){class="tutorial-aimg"} ](https://rcloud.social/view.html?notebook=9a9f96904f9ddd57656f26206b14e401)
+
+Short Time Fourier Transform of an Audio File
+
+Loading and Saving Data
+-----------------------
+
+There are several methods to access data in RCloud including the following: 
+
+### File upload to Data Scientist home directory.
+
+Files may be uploaded to a User's home directory by using the GUI interface found in the right windowshade panel.
+
+![RCloud File Upload Example 1](../images/RCloud_Upload1.png)
+
+Note: In this example, the 'Upload to notebook' box is not ticked.
+
+Since the data is now located in your home directory, you would access
+the path to the data using the following RCloud API
+__'rcloud.home()'__:
+
+~~~~
+# Use RCloud API to read data
+# Data source: http://www2.census.gov/geo/docs/maps-data/data/rel/zcta_county_rel_10.txt'
+fn1 <- read.csv(rcloud.home('zcta_county_rel_10.txt'), sep=',', colClasses="character")
+summary(fn1)
+~~~~
+
+### File upload to RCloud Notebook.
+
+Files may be uploaded directly to a specific RCloud Notebook by using
+the same process as in the first method, but also ticking the 'Upload
+to notebook' box in the GUI.
+
+![RCloud File Upload Example 2](../images/RCloud_Upload2.png)
+
+Note: In this example, the 'Upload to notebook' box is ticked.
+
+Since the data is now an RCloud 'asset', you would access the path to
+the data using the following RCloud API
+__'rcloud.get.asset()'__.
+
+~~~~
+# Use RCloud API to read data
+# Data source: http://archive.ics.uci.edu/ml/datasets/Zoo
+fn2 = rcloud.get.asset('zoo_data.txt', as.file=TRUE)      
+t2 = read.table(fn2,sep=",",header=TRUE) 
+~~~~
+
+### Drag and drop files to RCloud Assets.
+
+Data may also be uploaded to RCloud by dragging and dropping files
+from your local machine to the Asset windowpane; the 'Drop File to
+Asset' GUI will automatically appear as you drag files.
+
+![RCloud Drag and Drop Data as an Asset](../images/RCloud_DragDrop.png)
+
+Note: Using this method, file size is currently limited to 75KB on the public instance of RCloud.
+
+Since the data is now and RCloud asset, it is referenced using the same method as in [above](#file-upload-to-rcloud-notebook).
+
+~~~~
+# Use RCloud API to read data
+# Data source: http://archive.ics.uci.edu/ml/datasets/Zoo
+fn3 = rcloud.get.asset('Wholesale_customers_data.csv', as.file=TRUE);         
+t3 = read.table(fn3,sep=",",header=TRUE)
+~~~~
+
+### Manually create an RCloud Asset by typing in data.
+
+RCloud Data Scientists may also manually enter data as an RCloud
+Asset.  First click on the 'New Asset' tab in the Asset panel:
+
+![RCloud Enter Asset Example 1](../images/RCloud_EnterData1.png)
+
+Type a file name:
+
+![RCloud Enter Asset Example 2](../images/RCloud_EnterData2.png)
+
+Then either type data in the tab or use keyboard shortcut keys to copy and paste (e.g., Ctrl-A, Ctrl-C, Ctrl-V).
+
+![RCloud Enter Asset Example 3](../images/RCloud_EnterData3.png)
+
+Since the data is now an RCloud asset, it is referenced using the same method as [above](#file-upload-to-rcloud-notebook).
+
+~~~~
+# Use RCloud API to read data
+# Data source: http://www.cs.waikato.ac.nz/ml/weka/
+fn4 = rcloud.get.asset('Play_tennis.csv', as.file=TRUE);        
+t4 = read.table(fn4,sep=",",header=TRUE)                  
+~~~~
+
+There are several methods to save data in RCloud including the following:
+
+### Output Data
+
+Save data in your RCloud home directory by specifying the path:
+
+~~~~
+oDir  = rcloud.home()
+outFn = paste(oDir,"/outputTest.txt",sep="")
+
+# Write to file
+write.table(t4, outFn)
+~~~~
+
+### For writing out to binary, the following code would be used instead:
+
+~~~~
+# Create the output file; "wb" = write binary
+# f = file( outFn, "wb")
+#
+# Standard R write binary function
+# writeBin(t4,f); 
+
+### Some useful commands for data processing are:
+1. file.remove(rcloud.upload.path("foo.txt")) 
+2. list.files(rcloud.home()).
+~~~~
+
+Since Unix user directory may or may not coincide with the RCloud home
+ directory depending on the deployment, rcloud.upload.path() may also
+ be used.  For example: 'list.files(rcloud.upload.path())'.
+
+This information may also be viewed in the RCloud Sample Notebook:
+[  Data - Loading and Saving ](https://rcloud.social/view.html?notebook=9a9f96904f9ddd57656f26206b14e401)
+
+								
+Sharing Notebooks
+-----------------
+
+RCloud Data Scientists may obtain a hyperlink (URL) to a notebook they
+have created or a published notebook created by another Data Scientist
+by clicking on the downward arrow next to the share icon 
+![](../images/header_share.png) in the navigation bar.
+
+to obtain a popup menu:
+
+![](../images/header_sharetype.png)
+
+This allows Data Scientists to select the kind of URL they would like
+to share with non-developers.  The simplest form of sharing is using
+RCloud notebook UI "view.html"; make the selection using the popup
+menu and then right click on the share icon to copy the notebook
+hyperlink. Alternatively, after selecting "view.html" with the share
+icon dropdown, click the share icon to launch the "view.html" notebook
+in a new tab, then copy that URL to share with non-RCloud Data
+Scientists.
+
+![](../images/share_viewhtml.png)
+
+Note: This only works if the notebook has also been published.
+
+By default, users who wish to view notebooks must be logged into
+RCloud. However, if the "Publish Notebook" box is checked, __any__
+user who has network access to the notebook's URL will be able to
+_view_ the notebook.
+
+![View HTML Share](../images/publish_share.png)
+
+Notebook Privacy and Security
+-----------------------------
+
+Make a notebook protected (private) by clicking on the "eye" icon next to the notebook name in the left windowpane:
+
+![RCloud Protect Notebook](../images/RCloud_Hide.png)
+
+Protected notebooks are readable only by the owner and (optionally) a
+select group of users and will not show up in search results (although
+previously unprotected versions might).
+
+Use the second tab of the protection dialog to create/rename groups
+and/or assign other users as administrators/members of groups you
+administrate. Alternatively, you can select Manage Groups from the
+Advanced menu item in the navigation bar — note that the Notebook tab
+will be grayed out in that case, as Manage Groups is not notebook
+specific.
+
+![RCloud Group Notebook](../images/RCloud_Private.png)
+
+![RCloud Manage Groups](../images/RCloud_Groups.png)
+
+
+Extending Interaction
+=====================
+
+Using Shiny on RCloud
+---------------------
+
+This tutorial describes how to write and deploy an 
+[R Shiny](http://shiny.rstudio.com/) application on RCloud.
+
+Hosting Shiny applications on RCloud allows you to enjoy the
+convenience of RCloud development and distribution with the elegant
+user interface features of Shiny.
+
+
+This tutorial assumes you are familiar with the basics of Shiny
+application development.  To learn more about constructing Shiny apps
+or for a refresher on the Shiny architecture visit the [RStudio Shiny
+Tutorial](http://shiny.rstudio.com/tutorial/) page.
+
+1) Create a new blank RCloud notebook by clicking on the '+' button in
+ the left windowshade panel. 
+
+![RCloud Create Notebook](../images/RCloud_CreateNotebook.png)
+
+2) Put the notebook in the Shiny share mode by clicking on the
+ downward arrow in the 'share' icon and selecting 'shiny.html'.
+ 
+![RCloud Shiny Tutorial Share Icon](../images/RCloud_ShinyTutorial.png)
+
+3) Enter your Shiny sever and user interface code. Here is a basic example:
+
+~~~~
+  library(rcloud.shiny)
+library(shiny)
+
+# Put code here that will run once when the app is loaded
+
+df = iris
+
+# This is your Shiny User Interface (UI) layout
+ui = fluidPage(
+    titlePanel("My Shiny RCloud Example"),
+    helpText(a("View Source in RCloud UI", target="_blank", href=paste0("/edit.html?notebook=", rcloud.session.notebook.id()))),
+    verticalLayout(
+      sidebarPanel(
+        selectInput("src0","Sepal",c("Length","Width")),
+        selectInput("src1","Petal",c("Length","Width")),
+        hr(),
+        helpText(paste("This data set has",nrow(df),"rows"))
+      ),
+      mainPanel(
+        plotOutput("thePlot")
+      )
+
+    )
+  )
+
+# This is the standard Shiny server function
+server = function(input,output)
+{
+    output$thePlot = renderPlot({
+
+        x = df[[paste0("Petal.",input$src0)]]
+        y = df[[paste0("Sepal.",input$src1)]]
+
+        plot(x,y,xlab=input$src0,ylab=input$src1)
+
+    })
+}
+
+# Start the Shiny app in your browser.
+rcloud.shinyApp(ui=ui,server=server)
+~~~~
+
+4) Notice that the Shiny server and UI functions are written exactly
+as they would in a stand-alone Shiny app except they are not wrapped
+inside shinyUI() and shinyServer() functions. Instead they are simply
+passed to the rcloud.shinyApp() API.
+
+5) To run this app first click the play button. Any R syntax errors
+will be shown in the notebook cell output window.  If no errors occur
+then click the run arrow on the 'share' icon in the editor toolbar.  A
+new tab will open in your browser with the executing Shiny app. Any
+runtime errors will be shown in the browser just as they would in a
+stand-alone Shiny app.
+
+6) Shiny apps may be shared publicaly or privately just like any other
+RCloud notebook.  Read the 'Sharing RCloud Notebooks' tutorial for the
+details.
+
+View __sample Shiny notebooks__ on the public instance, by logging in
+as a Data Scientist and navigating to the __'RCloud Sample
+Notebooks/Dashboarding/RCloud shiny.html'__ directory or click
+on the image below to view a Word Cloud example.
+
+[View Shiny Word Cloud](https://rcloud.social/shiny.html?notebook=8562a731a1c8c22b5d33)
+
+Interactive Web-pages with mini.html
+------------------------------------
+
+[ ![](../images/kmeans.png){class="tutorial-aimg"} ](http://rcloud.social/mini.html?notebook=d56a9c0c3a3790a1a1db3eae36b1ddf3)
+
+
+RCloud Services with notebook.R
+-------------------------------
+
+[ ![](../images/weathersm.png){class="tutorial-aimg"} ](http://rcloud.social/notebook.R/rclouddocs/Dashboarding/RCloud%20notebook.R/Weather/main)
+
+
+Javascript with RCloud
+----------------------
+
+[ ![](../images/rcleaflet.png){class="tutorial-aimg"} ](http://rcloud.social/view.html?notebook=2c43265336e7f438b7d71b8c1ecd6809)
+
+
+Javascript Libraries and User Defined Functions
+-----------------------------------------------
+
+[ ![](../images/rtaa.png){class="tutorial-aimg"} ](http://rcloud.social/edit.html?notebook=37a6ec0b37553f643213fc113bdb540a)
+

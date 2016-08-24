@@ -1,0 +1,110 @@
+---
+g:
+- section: 'Your Web Browser with an R/Python Engine'
+- image:   ../images/irisDC.png
+  caption: Interactive Data Analysis
+  link:    https://rcloud.social/view.html?notebook=af829ffb418ed0f054d1
+  desc:    'Easily create interactive plots with [rcloud.dcplot](https://github.com/att/rcloud.dcplot); based on the [dc.js](https://dc-js.github.io/dc.js/) Javascript library which leverages [D3.org](https://d3js.org/).'
+- image:   ../images/interactive.png
+  caption: New Graphics Capabilities.
+  link:    https://rcloud.social/view.html?notebook=5d0afc25444bae77144f
+  desc:    RCloud has additional native visualization capabilities, including plot interactions, plot resizing and the ability to save plots in multiple formats.
+- image:   ../images/rcleaflet.png
+  caption: Map Integration
+  link:    https://rcloud.social/view.html?notebook=2c43265336e7f438b7d71b8c1ecd6809
+  desc:    For rich, interactive location analytics, take advantage of RCloud's built-in [rcleaflet](https://github.com/s-u/rcleaflet) package; based on the [Leaflet](http://leafletjs.com) Javascript library.
+- image:   ../images/weathersm.png  
+  caption: Intelligent Dashboarding
+  link:    https://rcloud.social/notebook.R/rclouddocs/Dashboarding/RCloud%20notebook.R/Weather/main
+  desc:    Build interactive charts and dashboards using RCloud's unique [notebook.R](../documentation/#notebook.R) API.
+  
+- section: Getting Started
+- image:   ../images/ggplot.png
+  caption: Prompt and Markdown Cells
+  link:    https://rcloud.social/view.html?notebook=f9d7e4df13d98f50004d8e06d442d798
+  desc:    sing RCloud Prompt and Markdown Cells, Data Scientist may create publishable quality reports and data analyses that may be shared with others.
+- image:   ../images/fileupload.png
+  caption: Accessing Data
+  link:    https://rcloud.social/view.html?notebook=9a9f96904f9ddd57656f26206b14e401
+  desc:    Built in functionality to load and access data and packages.
+- image:   ../images/useAsset.png
+  caption: Reading an R Script
+  link:    https://rcloud.social/view.html?notebook=12a270ad3440f6c3d132c56e3a1e1965
+  desc:    Read an R script and create and manipulate an RCloud asset.
+- image:   ../images/DC.png
+  caption: Using JavaScript Packages
+  link:    https://rcloud.social/view.html?notebook=76a629ac2f22466b6dc5
+  desc:    Sample analysis using the popular mtcars dataset progressing from basic R functions to interactive charts with wdcplot.
+  
+- section: Data Analysis
+- image:   ../images/RCloud_Statistics.png
+  caption: Basic Statistics
+  link:    https://rcloud.social/view.html?notebook=f44bb429a837118ed158d29f5680e74a
+  desc:    User created notebook of basic statistical methods.
+- image:   ../images/RCloud_CCDP.png
+  caption: Credit Card Loss
+  link:    https://rcloud.social/view.html?notebook=bf599ab697ac92754cedcdcc8d14952f
+  desc:    RCloud for Comprehensive Capital Analysis and Review (CCAR) modeling and documentation.
+- image:   ../images/RCloud_PSIModel.png 
+  caption: PSI Simulation Model
+  link:    https://rcloud.social/view.html?notebook=465b6b354bc316b86c87d482fe8f81c6
+  desc:    Stochastic simulation commonly used in disease forecasting.
+- image:    ../images/RCloud_NYCTaxi.png
+  caption:  NYC Taxi Rides Analysis
+  link:     https://rcloud.social/view.html?notebook=091a719a584a890279065837dbf121ab
+  desc:     Maps NYC taxi rides using [iotools](https://cran.r-project.org/web/packages/iotools/index.html) for fast file processing.
+  
+- section: Dashboarding
+- image:   ../images/static.png
+  caption: RCloud notebook.R
+  link:    https://rcloud.social/notebook.R/fec8db0dc104324e31086d6065d2a156/example.html
+  desc:    Get started in creating webpages using notebook.R views and HTML.
+- image:   ../images/shinyromeo.png 
+  caption: RCloud shiny.html
+  link:    https://rcloud.social/shiny.html?notebook=8562a731a1c8c22b5d33
+  desc:    Text analysis in the cloud combining RCloud API with Shiny API.
+- image:   ../images/JavaScriptOutputBindingNVD3.png
+  caption: JavaScript Integration
+  link:    https://rcloud.social/shiny.html?notebook=68ac5c4a63e83cfec343
+  desc:    Combine RCloud API, Shiny API and NV D3.org JavaScript library to create interactive analyses.
+- image:   ../images/kmeans.png
+  caption: RCloud mini.html
+  link:    https://rcloud.social/mini.html?notebook=d56a9c0c3a3790a1a1db3eae36b1ddf3
+  desc:    Work with RCloud mini.html to create web pages with custom layouts interactive content.
+  
+- section: Extending Interaction
+- image:   ../images/progressBar.png
+  caption: Call JavaScript from R
+  link:    https://rcloud.social/view.html?notebook=d2583ea914cb4ce78d40510a19727ab3
+  desc:    Create a Progress Bar by calling JavaScript from R.
+- image:   ../images/binarysm.png
+  caption: RCloud API and User Functions
+  link:    https://rcloud.social/view.html?notebook=927b867ad0fbbb5c64a60c87eba14aed
+  desc:    Use RCloud API and user defined functions to read a binary asset.
+- image:    ../images/adder.png
+  caption:  Call R from JavaScript
+  link:     https://rcloud.social/view.html?notebook=ffc44a89811d00a3cc879aa5a782b863
+  desc:     Use a Button to call R from JavaScript to add and multiply.
+- image:    ../images/leaflet.png
+  caption:  Interactive Plots
+  link:     https://rcloud.social/view.html?notebook=5cadc42ec5e6e71d7564
+  desc:     'Draw a map with some basic features, including specifying zoom level, centering and adding points using wplot. RCloud built-in [Leaflet](http://leafletjs.com) integration.'
+  
+- section: HTML Widgets
+- image:   ../images/RCloud_DataTables.png
+  caption: DataTables
+  link:    https://rcloud.social/view.html?notebook=44a8a462e1862160885916cf47243e5f
+  desc:    DataTables displays R matrices or data frames as interactive HTML tables that support filtering, pagination, and sorting.
+- image:   ../images/RCloud_visNetwork.png
+  caption: visNetwork
+  link:    https://rcloud.social/view.html?notebook=f8f202aca4e0c8961cac0e4600a2cdcc
+  desc:    visNetwork provides an interface to the network visualization capabilties of the [vis.js](http://visjs.org/) library.
+- image:   ../images/RCloud_MetricsGraphics.png
+  caption: MetricsGraphics
+  link:    https://rcloud.social/view.html?notebook=1d0edf8d0c1f87c0842e8bfd662413ee
+  desc:    MetricsGraphics enables easy creation of D3 scatterplots, line charts, and histograms.
+- image:   ../images/RCloud_rbokeh.png
+  caption: R Bokeh
+  link:    https://rcloud.social/view.html?notebook=50abd58bbc3116342bf3d8d74a8cc762
+  desc:    '[Bokeh](http://bokeh.pydata.org/en/latest/) is a visualization library that provides a flexible and powerful declarative framework for creating web-based plots.'
+...
