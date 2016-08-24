@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .btn {
   margin-top: 0;
   padding: 6px 12px;
@@ -227,3 +228,58 @@
 }
 
 }
+=======
+
+body, html {
+    margin: 0;
+    overflow: hidden;
+    height:100%;
+}
+
+#toc {
+    height:inherit;
+    overflow-y: scroll;
+    text-align: left;
+}
+
+
+#contents {
+    height:inherit;
+    overflow-y:scroll;
+    text-align: left;
+    padding-left: 15px;
+}
+
+/* indent the TOC tree */
+#toc  ul > li {
+    margin-left: 20px;
+    list-style: none;
+}
+
+#stuff {
+    /*height:calc(100% - 60px);*/
+    /*overflow-y:scroll;*/
+    height:100%;
+}
+
+
+
+#doctabs {
+    padding-top:25px;
+}
+
+#doctabs > h1 { margin-bottom: 0px; }
+
+#tbs {
+    height:100%;
+    width:100%;
+    overflow-y:scroll;
+}
+
+.fixd {
+    width: 100%;
+    position: relative;
+    bottom: 0px;
+}
+      
+>>>>>>> fb5ae60ab8daf7c0b210fa7eda2da7595562c908

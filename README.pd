@@ -137,10 +137,17 @@ Build the site from command line as follows:
 ~~~~
 cd ~/site_src  # Where site_src is the folder with the master Makefile.
 
+<<<<<<< HEAD
 # OUT_DIR  = site output location
 # DOC_DIR  = path to the external documetation folder. This is the
 # folder containing the version folders (e.g. 1.3,1.4, etc)
 make OUT_DIR=~/temp/foo DOC_DIR=path/to/rcloud/doc 
+=======
+# OUTDIR  = site output location
+# DOCDIR  = path to the external documetation folder. This is the
+# folder containing the version folders (e.g. 1.3,1.4, etc)
+make OUTDIR=~/temp/foo DOC_DIR=path/to/rcloud/doc 
+>>>>>>> fb5ae60ab8daf7c0b210fa7eda2da7595562c908
 ~~~~
 
 Remove intermediate files (but not output files).
@@ -153,7 +160,11 @@ make  clean
 Remove intermeditate and output files. Note that this will not delete the
 output tree but will remove all files from it.
 ~~~~
+<<<<<<< HEAD
 make OUT_DIR=~/temp/foo clean-all
+=======
+make OUTDIR=~/temp/foo clean-all
+>>>>>>> fb5ae60ab8daf7c0b210fa7eda2da7595562c908
 ~~~~
 
 

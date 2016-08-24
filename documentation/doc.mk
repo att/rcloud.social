@@ -23,6 +23,8 @@ ifndef BASEPATH
   BASEPATH = ..
 endif
 
+DOC_OUT_DIR = $(OUT_DIR)/doc
+
 # Path from the GUI doc 'doc.html' to the site root.
 DOC_BASEPATH = ../../../$(BASEPATH)
 
@@ -33,10 +35,10 @@ DIRS  = $(shell find $(DOC_DIR) -type d)
 SRC =  $(foreach DIR,$(DIRS),$(wildcard $(DIR)/*.md))
 
 # Generate an output file name for each src file.
-DST =  $(foreach fn,$(SRC), $(subst .md,.html,$(subst $(DOC_DIR),$(OUT_DIR),$(fn))))
+DST =  $(foreach fn,$(SRC), $(subst .md,.html,$(subst $(DOC_DIR),$(DOC_OUT_DIR),$(fn))))
 
 # Create a list of output directories
-DST_DIRS = $(foreach dir,$(DIRS),$(subst  $(DOC_DIR),$(OUT_DIR),$(dir)))
+DST_DIRS = $(foreach dir,$(DIRS),$(subst  $(DOC_DIR),$(DOC_OUT_DIR),$(dir)))
 
 # Create a list of source image dir's
 SRC_IMG_DIRS = $(foreach src,$(SRC),$(dir $(src))img)
@@ -45,10 +47,10 @@ SRC_IMG_DIRS = $(foreach src,$(SRC),$(dir $(src))img)
 SRC_IMG_FNS  = $(foreach dir,$(SRC_IMG_DIRS),$(wildcard $(dir)/*))
 
 # Create a list of output image dirs
-DST_IMG_DIRS = $(foreach dir,$(SRC_IMG_DIRS), $(subst $(DOC_DIR),$(OUT_DIR),$(dir)))
+DST_IMG_DIRS = $(foreach dir,$(SRC_IMG_DIRS), $(subst $(DOC_DIR),$(DOC_OUT_DIR),$(dir)))
 
 # Create a list of output images
-DST_IMG_FNS = $(foreach fn,$(SRC_IMG_FNS), $(subst $(DOC_DIR),$(OUT_DIR),$(fn)))
+DST_IMG_FNS = $(foreach fn,$(SRC_IMG_FNS), $(subst $(DOC_DIR),$(DOC_OUT_DIR),$(fn)))
 
 # Helpfull abreviations.
 HTML     = $(BASESRC)/html
@@ -59,7 +61,7 @@ GEN_NAMES   = head body_top body_bottom
 GEN_FNS     = $(foreach name,$(GEN_NAMES),doc_$(name).html)
 GEN_TMPLS   = $(foreach name,$(GEN_NAMES),$(HTML)/$(name)_template.html)
 
-all : $(DST_IMG_FNS) $(GEN_FNS)  $(DST)
+all : $(DST_IMG_FNS) $(GEN_FNS) $(INTRO_OUT) $(DST)
 
 clean-all : clean
 	rm -f $(DST) $(DST_IMG_FNS)
@@ -67,12 +69,10 @@ clean-all : clean
 clean :
 	rm -f $(GEN_FNS)
 
-.PHONY: all clean-all clean
-
-$(DST_IMG_FNS) : $(OUT_DIR)/% : $(DOC_DIR)/%
+# Copy image files to the output tree
+$(DST_IMG_FNS) : $(DOC_OUT_DIR)/% : $(DOC_DIR)/%
 	mkdir -p $(dir $@)
 	cp $< $@
-
 
 #
 # Use $(BASESRC)/hmtl/*_template.html to generate a include
@@ -84,7 +84,7 @@ $(DST_IMG_FNS) : $(OUT_DIR)/% : $(DOC_DIR)/%
 # files contained in the <style> and <script> tags of the client HTML
 # files will therefore vary depending on their depth in the tree.
 # 'href' attributes in the global page headers have a similar problem.
-# This means the the references must be generated according to thestatic
+# This means the the references must be generated according to the
 # location of the HTML files. We solve this by using a pandoc template
 # file containing the global references (html/head_template.html)
 # and filling in the path to the 'css' and 'js' folders using a
@@ -100,18 +100,19 @@ $(GEN_FNS) : doc_%.html : $(HTML)/%_template.html
 	--variable=bootstrap:"true" \
 	-o $@ $(EMPTY_PD)
 
-$(DST) : $(OUT_DIR)/%/doc.html : $(DOC_DIR)/%/doc.md doc.template  $(GEN_FNS)
+
+$(DST) : $(DOC_OUT_DIR)/%/doc.html : $(DOC_DIR)/%/doc.md doc.template $(GEN_FNS)
 	mkdir -p $(dir $@)
 	pandoc --from=markdown --to=html \
 	--css=$(DOC_BASEPATH)/css/doc.css \
 	--include-in-head=doc_head.html \
        --include-before=doc_body_top.html \
 	--include-after=doc_body_bottom.html \
-	--variable=basepath:$(DOC_BASEPATH) \
+	 --variable=basepath:$(DOC_BASEPATH) \
 	--variable=docpath:"../.." \
 	--variable=docintropath:"../../.." \
-	--variable=doc:true \
-	--template=template.html5 \
-	--toc --toc-depth=3 \
+	--template=doc.template \
+	--toc \
 	-o $@ $<
+
 

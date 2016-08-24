@@ -1,11 +1,23 @@
 
+<<<<<<< HEAD
+=======
+Documentation
+=============
+
+<DIV id="intro" class="col-lg-12">
+>>>>>>> fb5ae60ab8daf7c0b210fa7eda2da7595562c908
 
 Introduction
 ------------
 
+<<<<<<< HEAD
 <DIV id="intro" class="col-lg-12">
 
 <DIV class="row">
+=======
+<DIV class="row">
+![](../images/logo_att_globe.png)
+>>>>>>> fb5ae60ab8daf7c0b210fa7eda2da7595562c908
 
 RCloud is [open-source software](http://github.com/att/rcloud)
 developed primarily by [Simon Urbanek](http://urbanek.info/) and
@@ -41,11 +53,19 @@ in our [RCloud API](https://github.com/att/rcloud/tree/develop/rcloud.packages).
 </DIV>
 </DIV>
 
+<<<<<<< HEAD
 Communication Protocol
 ----------------------
 
 <DIV id="comm" class="col-lg-12">
 
+=======
+<DIV id="comm" class="col-lg-12">
+
+Communication Protocol
+----------------------
+
+>>>>>>> fb5ae60ab8daf7c0b210fa7eda2da7595562c908
 <DIV class="row">
 
 ![RCloud High-Level Architecture](../images/RCloud_About2.png)
@@ -86,12 +106,19 @@ through cross-references on the web.
 </DIV>
 </DIV>
 
+<<<<<<< HEAD
+=======
+<DIV id="security" class="col-lg-12">
+>>>>>>> fb5ae60ab8daf7c0b210fa7eda2da7595562c908
 
 Security
 --------
 
+<<<<<<< HEAD
 <DIV id="security" class="col-lg-12">
 
+=======
+>>>>>>> fb5ae60ab8daf7c0b210fa7eda2da7595562c908
 <DIV class="row">
 
 ![RCloud Modularity for Security](../images/RCloud_ModularitySecurity.png)
@@ -130,9 +157,12 @@ by anyone without permission, even within your GitHub instance.
 </DIV>
 </DIV>
 
+<<<<<<< HEAD
 RCloud API
 ----------
 
+=======
+>>>>>>> fb5ae60ab8daf7c0b210fa7eda2da7595562c908
 <DIV id="notebookR" class="col-lg-12">
 
 RCloud notebooks may also be deployed as a web-service provider via

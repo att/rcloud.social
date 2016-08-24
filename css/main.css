@@ -1730,10 +1730,13 @@ footer #footer-wrap ul li a {
 	    display: block !important;
 	}
 	
+<<<<<<< HEAD
 	#features-benefits .features-accordion li {
 	    list-style: none;
 	}
 	
+=======
+>>>>>>> fb5ae60ab8daf7c0b210fa7eda2da7595562c908
 
 	#tutorial-lessons .tutorials-accordion  h4 {
 		padding-top: 20px;
