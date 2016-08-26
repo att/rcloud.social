@@ -1,4 +1,17 @@
-<<<<<<< HEAD
+/* indent the TOC tree */
+#sidebar > ul > li  {
+    list-style: none;
+}
+
+#sidebar > ul > li  > ul > li {
+    list-style: none;
+}
+
+#sidebar > ul > li > ul > li > ul > li {
+    list-style: disc;
+    color: #337ab7;
+}
+
 .btn {
   margin-top: 0;
   padding: 6px 12px;
@@ -8,8 +21,6 @@
     background: #fff;
     margin-top: 40px; 
 }
-
-
 
     
 .nav-pills > li > a {
@@ -32,6 +43,17 @@
 
 @media screen and (min-width: 320px) {
 
+.nav-tabs > li > a {
+    font-size: 80%;
+}
+    
+#sidebar > ul > li > ul > li {
+    margin-left: 0px;
+}
+#sidebar >  ul > li > ul > li > ul > li {
+    margin-left: 3px;
+}
+
 .btn-primary {
     margin-bottom: 5px;
 }
@@ -45,9 +67,10 @@
     padding: 2px 2px;
 }
 .hi-z {
-    margin-top: 63px;
+    margin-top: 50px;
     font-size: 80%;
-    width: 100%
+    width: 100%;
+    z-index: 150000;
 }
 
 .affix-top {
@@ -55,17 +78,24 @@
 }
 
 #sidebar {
+    margin-top: 135px; 
     width: 25%;
     font-size: 75%;
+    overflow-y: scroll;
+    height: 75%;
 }
 .col-md-9 {
+    margin-top: 125px; 
     width: 75%;
     font-size: 80%;
+    overflow: scroll;
 }
 
 .col-md-12 {
+    margin-top: 125px; 
     width: 100%;
     font-size: 80%;
+    overflow: scroll;
 }
 #sidebar li.active {
   	border:0 #ddd solid;
@@ -76,6 +106,9 @@
 
 @media screen and (min-width: 480px) {
 
+#sidebar > ul > li > ul > li > ul > li {
+    margin-left: 5px;
+}
 .btn-primary {
     margin-bottom: 5px;
 }
@@ -119,6 +152,10 @@
 
 @media only screen and (min-width: 768px) {
 
+#sidebar > ul > li > ul > li > ul > li {
+    margin-left: 10px;
+}
+
 .btn-primary {
     margin-bottom: 5px;
 }
@@ -127,13 +164,17 @@
     padding: 3px 3px;
 }
 
+.nav-tabs>li>a {
+    font-size: 100%;
+}
+   
 .btn {
     font-size: 80%;
     padding: 2px 2px;
 }
 .hi-z {
-    margin-top: 50px;
-    font-size: 80%;
+    margin-top: 35px;
+    font-size: 100%;
     width: 100%
 
 }
@@ -183,9 +224,11 @@
 #sidebar {
     width: 20%;
     font-size: 100%;
+    margin-top: -5px;
 
 }
 .col-md-9 {
+    margin-top: 140px;
     width: 75%;
     font-size: 100%;
     margin-left: 15px;
@@ -193,6 +236,7 @@
 }
 
 .col-md-12 {
+    margin-top: 140px;
     width: 100%;
     font-size: 100%;
     margin-left: 15px;
@@ -219,6 +263,10 @@
 
 @media screen and (min-width: 1300px) {
 
+#sidebar > ul > li > ul > li > ul > li {
+    margin-left: 15px;
+}
+
 #sidebar {
     width: 15%;
 }
@@ -228,58 +276,3 @@
 }
 
 }
-=======
-
-body, html {
-    margin: 0;
-    overflow: hidden;
-    height:100%;
-}
-
-#toc {
-    height:inherit;
-    overflow-y: scroll;
-    text-align: left;
-}
-
-
-#contents {
-    height:inherit;
-    overflow-y:scroll;
-    text-align: left;
-    padding-left: 15px;
-}
-
-/* indent the TOC tree */
-#toc  ul > li {
-    margin-left: 20px;
-    list-style: none;
-}
-
-#stuff {
-    /*height:calc(100% - 60px);*/
-    /*overflow-y:scroll;*/
-    height:100%;
-}
-
-
-
-#doctabs {
-    padding-top:25px;
-}
-
-#doctabs > h1 { margin-bottom: 0px; }
-
-#tbs {
-    height:100%;
-    width:100%;
-    overflow-y:scroll;
-}
-
-.fixd {
-    width: 100%;
-    position: relative;
-    bottom: 0px;
-}
-      
->>>>>>> fb5ae60ab8daf7c0b210fa7eda2da7595562c908

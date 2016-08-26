@@ -235,7 +235,7 @@ ol > li > ul > li > ul > li {
 /* ========
    GALLERY
    ======== */ 
-small {
+h3 small {
     font-size: 75%;
 }
 div, p.gallery-desc {
@@ -305,6 +305,8 @@ background-position: 0 0;
 background-size: 100%;
 display:block;
 margin: 0 auto;
+border: 2px solid #eee;
+border-radius: 5px;
 }
 
 div.gallery2 {
@@ -316,6 +318,8 @@ background-position: 0 0;
 background-size: 100%;
 display:block;
 margin: 0 auto;
+border: 2px solid #eee;
+border-radius: 5px;
 }
 
 div.gallery3 {
@@ -327,6 +331,8 @@ background-position: 0 0;
 background-size: 100%;
 display:block;
 margin: 0 auto;
+border: 2px solid #eee;
+border-radius: 5px;
 }
 
 div.gallery4 {
@@ -338,6 +344,8 @@ background-position: 0 0;
 background-size: 100%;
 display:block;
 margin: 0 auto;
+border: 2px solid #eee;
+border-radius: 5px;
 }
 
 a.gallery5 {
@@ -360,6 +368,8 @@ background-position: 0 0;
 background-size: 100%;
 display:block;
 margin: 0 auto;
+border: 2px solid #eee;
+border-radius: 5px;
 }
 
 div.gallery7 {
@@ -371,6 +381,8 @@ background-position: 0 0;
 background-size: 100%;
 display:block;
 margin: 0 auto;
+border: 2px solid #eee;
+border-radius: 5px;
 }
 
 
@@ -524,7 +536,14 @@ padding-right: 10px;
 .btn-small {
 	font-size: 15px;
 }   
-   
+
+#btn1, #btn2, #btn3, #btn4, #btn5 {
+position: absolute;
+transform: translate(-50%,-50%);
+margin-right: -50%;
+top: 10%;
+left: 50%;
+  } 
    
 /* =========
    TUTORIAL
@@ -961,13 +980,18 @@ nav li a {
 	text-transform: uppercase;
 	padding-left: 15px;
 	font-size: 15px;
-	color: #44c8f5;
+	color: #c2c2c2;
 	display: block;
 	line-height: 50px;
 }
 nav li a:hover, nav li a:focus {
 	color: #fff;
 }
+
+nav.clearfix.open {
+    background-color: #333;
+}
+
 footer li a:hover, nav li a:focus {
 	color: #fff;
 }
@@ -1622,8 +1646,8 @@ footer #footer-wrap ul li a {
 		background: url('../images/divider_nav.png') no-repeat 0 45%;
 		padding: 0px 10px 0px 15px;
 		line-height: 45px;
-		font-size: 15px;
-		color: #fff;
+		font-size: 14px;
+		color: #c2c2c2;
 	}
 	
 	/* changed */
@@ -1730,13 +1754,10 @@ footer #footer-wrap ul li a {
 	    display: block !important;
 	}
 	
-<<<<<<< HEAD
 	#features-benefits .features-accordion li {
 	    list-style: none;
 	}
 	
-=======
->>>>>>> fb5ae60ab8daf7c0b210fa7eda2da7595562c908
 
 	#tutorial-lessons .tutorials-accordion  h4 {
 		padding-top: 20px;
@@ -1840,6 +1861,9 @@ footer #footer-wrap .copyright {
 	}
 	#videos .videos-top .overlay ul li {
 		width: 270px;
+	}
+	nav li a {
+		font-size: 15px;
 	}
 
 }

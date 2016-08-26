@@ -1,13 +1,7 @@
 
-<<<<<<< HEAD
 # Set the site base output directory. (OUT_DIR is usually set by the master Makefile).
 ifndef OUT_DIR
   OUT_DIR = ../out
-=======
-# Set the site base output directory. (OUTDIR is usually set by the master Makefile).
-ifndef OUTDIR
-  OUTDIR = ../out
->>>>>>> fb5ae60ab8daf7c0b210fa7eda2da7595562c908
 endif
 
 # Path from the output HTML file to the site root.
@@ -26,30 +20,17 @@ ifndef BASESRC
   BASESRC = ..
 endif
 
-<<<<<<< HEAD
 
 # Set the output directory for this topic.
 ifndef DSTDIR
   DSTDIR = $(OUT_DIR)/$(FOLDER)
-=======
-ifndef SIDEBAR
-  SIDEBAR = ""
-endif
-
-# Set the output directory for this topic.
-ifndef DSTDIR
-  DSTDIR = $(OUTDIR)/$(FOLDER)
->>>>>>> fb5ae60ab8daf7c0b210fa7eda2da7595562c908
 endif
 
 # Helpfull abreviations.
 HTML     = $(BASESRC)/html
 EMPTY_PD = $(BASESRC)/empty.pd
 SRC_TYPE = markdown
-<<<<<<< HEAD
 BODY_FN  = body.html
-=======
->>>>>>> fb5ae60ab8daf7c0b210fa7eda2da7595562c908
 
 # Form the header/footer template souce and destination names.
 GEN_NAMES   = head body_top body_bottom
@@ -71,16 +52,10 @@ DEPEND += $(TMPL_FN)
 
 # If the local markdown file does not exist
 # then use dummy.pd
-<<<<<<< HEAD
 PD_FN   = index.pd
 ifeq ($(strip $(wildcard $(PD_FN))),)
   PD_FN = $(EMPTY_PD)
   DEPEND += $(BODY_FN)
-=======
-PD_FN = index.pd
-ifeq ($(strip $(wildcard $(PD_FN))),)
-  PD_FN = $(EMPTY_PD)
->>>>>>> fb5ae60ab8daf7c0b210fa7eda2da7595562c908
   ifeq ($(strip $(wildcard $(BODY_FN))),)
   $(warn No index.pd or body.html was specified for the topic $(FOLDER).)
   endif
@@ -96,18 +71,6 @@ endif
 
 DEPEND += $(YAML_FN)
 
-<<<<<<< HEAD
-=======
-# The HTML body file used by topics whose body is not generated
-# from markdown is body.html
-ifneq ($(strip $(wildcard body.html)),)
-  SRC_TYPE = markdown
-  PD_FN    = body.html
-endif
-
-DEPEND += $(BODY_FN)
-
->>>>>>> fb5ae60ab8daf7c0b210fa7eda2da7595562c908
 all : $(DSTDIR)/index.html $(DSTDIR)/index.css
 
 
