@@ -1,40 +1,40 @@
 ---
 g:
-- section: 'Your Web Browser with an R/Python Engine'
-- image:   ../images/irisDC.png
-  caption: Interactive Data Analysis
-  link:    https://rcloud.social/view.html?notebook=af829ffb418ed0f054d1
-  desc:    'Easily create interactive plots with [rcloud.dcplot](https://github.com/att/rcloud.dcplot); based on the [dc.js](https://dc-js.github.io/dc.js/) Javascript library which leverages [D3.org](https://d3js.org/).'
+- section: Your Web Browser with an R/Python Engine
 - image:   ../images/interactive.png
-  caption: New Graphics Capabilities.
+  caption: New Interactive Graphics Capabilities.
   link:    https://rcloud.social/view.html?notebook=5d0afc25444bae77144f
   desc:    RCloud has additional native visualization capabilities, including plot interactions, plot resizing and the ability to save plots in multiple formats.
 - image:   ../images/rcleaflet.png
   caption: Map Integration
   link:    https://rcloud.social/view.html?notebook=2c43265336e7f438b7d71b8c1ecd6809
   desc:    For rich, interactive location analytics, take advantage of RCloud's built-in [rcleaflet](https://github.com/s-u/rcleaflet) package; based on the [Leaflet](http://leafletjs.com) Javascript library.
-- image:   ../images/weathersm.png  
-  caption: Intelligent Dashboarding
+- image:   ../images/irisDC.png
+  caption: Drag and Drop Dashboard Designer
+  link:    https://rcloud.social/view.html?notebook=af829ffb418ed0f054d1
+  desc:    Quickly build RCloud web applications using [RCAP Designer's](../tutorials) library of dashboarding widgets. 
+- image:   ../images/RCAP_OF.png  
+  caption: Low Level Dashboarding Control
   link:    https://rcloud.social/notebook.R/rclouddocs/Dashboarding/RCloud%20notebook.R/Weather/main
-  desc:    Build interactive charts and dashboards using RCloud's unique [notebook.R](../documentation/#notebook.R) API.
+  desc:    Experience developer freedom when using RCloud's unique [notebook.R](../documentation/#notebook.R) assets as the building blocks of any decision support system.
   
 - section: Getting Started
 - image:   ../images/ggplot.png
   caption: Prompt and Markdown Cells
   link:    https://rcloud.social/view.html?notebook=f9d7e4df13d98f50004d8e06d442d798
-  desc:    sing RCloud Prompt and Markdown Cells, Data Scientist may create publishable quality reports and data analyses that may be shared with others.
+  desc:    Using RCloud Prompt and Markdown Cells, Data Scientist may create publishable reproducible reports and data analyses which may be shared with registered and unregistered users.
 - image:   ../images/fileupload.png
-  caption: Accessing Data
+  caption: Access Data
   link:    https://rcloud.social/view.html?notebook=9a9f96904f9ddd57656f26206b14e401
-  desc:    Built in functionality to load and access data and packages.
+  desc:    Built in functionality to load and access data, scripts and packages.
 - image:   ../images/useAsset.png
-  caption: Reading an R Script
+  caption: Read an R Script
   link:    https://rcloud.social/view.html?notebook=12a270ad3440f6c3d132c56e3a1e1965
   desc:    Read an R script and create and manipulate an RCloud asset.
 - image:   ../images/DC.png
-  caption: Using JavaScript Packages
+  caption: Utilize Built-in JavaScript Libraries
   link:    https://rcloud.social/view.html?notebook=76a629ac2f22466b6dc5
-  desc:    Sample analysis using the popular mtcars dataset progressing from basic R functions to interactive charts with wdcplot.
+  desc:    Sample analysis using the popular mtcars dataset progressing from basic R functions to interactive charts with RCloud's [wdcplot](https://github.com/att/rcloud.dcplot); a minimal interface to  [d3.js](https://d3js.org/), [crossfilter](http://square.github.io/crossfilter/), and [dc.js](http://dc-js.github.io/dc.js/).
   
 - section: Data Analysis
 - image:   ../images/RCloud_Statistics.png
@@ -42,7 +42,7 @@ g:
   link:    https://rcloud.social/view.html?notebook=f44bb429a837118ed158d29f5680e74a
   desc:    User created notebook of basic statistical methods.
 - image:   ../images/RCloud_CCDP.png
-  caption: Credit Card Loss
+  caption: Credit Card Loss Default Probability
   link:    https://rcloud.social/view.html?notebook=bf599ab697ac92754cedcdcc8d14952f
   desc:    RCloud for Comprehensive Capital Analysis and Review (CCAR) modeling and documentation.
 - image:   ../images/RCloud_PSIModel.png 
@@ -52,7 +52,7 @@ g:
 - image:    ../images/RCloud_NYCTaxi.png
   caption:  NYC Taxi Rides Analysis
   link:     https://rcloud.social/view.html?notebook=091a719a584a890279065837dbf121ab
-  desc:     Maps NYC taxi rides using [iotools](https://cran.r-project.org/web/packages/iotools/index.html) for fast file processing.
+  desc:     Geographic analysis of NYC taxi rides using [iotools](https://cran.r-project.org/web/packages/iotools/index.html) for fast file processing.
   
 - section: Dashboarding
 - image:   ../images/static.png
@@ -88,7 +88,7 @@ g:
 - image:    ../images/leaflet.png
   caption:  Interactive Plots
   link:     https://rcloud.social/view.html?notebook=5cadc42ec5e6e71d7564
-  desc:     'Draw a map with some basic features, including specifying zoom level, centering and adding points using wplot. RCloud built-in [Leaflet](http://leafletjs.com) integration.'
+  desc:     Draw a map with some basic features, including specifying zoom level, centering and adding points using wplot. RCloud built-in [Leaflet](http://leafletjs.com) integration.
   
 - section: HTML Widgets
 - image:   ../images/RCloud_DataTables.png
@@ -106,5 +106,5 @@ g:
 - image:   ../images/RCloud_rbokeh.png
   caption: R Bokeh
   link:    https://rcloud.social/view.html?notebook=50abd58bbc3116342bf3d8d74a8cc762
-  desc:    '[Bokeh](http://bokeh.pydata.org/en/latest/) is a visualization library that provides a flexible and powerful declarative framework for creating web-based plots.'
+  desc:    [Bokeh](http://bokeh.pydata.org/en/latest/) is a visualization library that provides a flexible and powerful declarative framework for creating web-based plots.
 ...
