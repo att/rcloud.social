@@ -1,5 +1,4 @@
 
-
 This document describes the organization and build process for the RCloud Web-site.
 
 The document dinstinguished between two different types of site-file.
@@ -23,7 +22,7 @@ community                     'Community' topic folder
 
 documentation                 'Documentation' topic folder
 
-documentation/doc.mk          External documentation Makefile.
+documentation/doc.mk          Each version documentation Makefile.
 
 gallery                       'Gallery' topic folder
 
@@ -33,9 +32,9 @@ tutorials                     'Tutorials' topic folder
 
 css                           CSS files used by all topics
 
-images                        Images used by topic pages. 
+images                        Images used by topics 
 
-js                            Global Javascript files used by the global header and footer code.
+js                            Global Javascript files used by the global header and footer code
 
 html                          Common HTML files (header,footer,Pandoc template) used
                               by all of the topic pages.
@@ -120,14 +119,11 @@ The external documenation build process produces a user guide
 (documenation/doc/x.y/whatnew/doc.html) for each release version.
 Where x.y refers to the release version number.
 
-
-Before building the site pull a current copy of the external
-documentation files from the gh-docs branch of the RCloud repository
-at https://github.com/att/rcloud repository.
+Before building the site pull a current copy of this repository (e.g., git pull); the doc
+ directory in this repository contains all the markdown documentation files.
 
 ~~~~
 cd ../path/to/rcloud
-git checkout gh-docs
 git pull
 ~~~~
 

@@ -1,11 +1,11 @@
 #
-# This Makefile is used to generate the external documenation HTML files.
+# This Makefile is used to generate each version documenation HTML files.
 #
 
 # Path to the base of the GUI documentation.
 # This is the folder containing the version folder (e.g. 1.3,1.4,...)
 ifndef DOC_DIR
-  DOC_DIR = ../doc
+  DOC_DIR = ./doc
 endif
 
 # Output directory

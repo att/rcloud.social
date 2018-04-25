@@ -1,7 +1,7 @@
 
 # Set the site base output directory. (OUT_DIR is usually set by the master Makefile).
 ifndef OUT_DIR
-  OUT_DIR = ../out
+  OUT_DIR = /Users/jo/Sites/rcloud_upload
 endif
 
 # Path from the output HTML file to the site root.
@@ -23,7 +23,7 @@ endif
 
 # Set the output directory for this topic.
 ifndef DSTDIR
-  DSTDIR = $(OUT_DIR)/$(FOLDER)
+  DSTDIR = $(OUT_DIR)
 endif
 
 # Helpfull abreviations.

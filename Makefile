@@ -3,7 +3,7 @@
 OUT_DIR       = $(abspath ./out)
 
 # Path to the folder containing documentation versions (e.g. 1.3,1.4,1.5,...)
-DOC_DIR      = doc
+DOC_DIR      = ./doc
 
 # Path from the installed sub-topics (e.g tryit,gallery,tutorials, ...) index.html to the site root directory.
 BASEPATH     = ..
