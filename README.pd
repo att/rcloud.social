@@ -104,9 +104,9 @@ index.yaml	 (Optional) Some topics are simplified by drawing data
                  from a YAML source.  See 'gallery'.
 --------------------------------------------------------------------------------
 
-The site build process is resonsible for generating the site folder tree,
+The site build process is reasonsible for generating the site folder tree,
 converting all of the markdown files to HTML, and populating the output tree
-with the HTML and auxilliary files (CSS,Javascript, images, etc).
+with the HTML and auxiliary files (CSS,Javascript, images, etc).
 
 The build process can be broken into two stages. The first stage
 builds the topic pages and the second state builds the external documenation.
@@ -114,9 +114,9 @@ builds the topic pages and the second state builds the external documenation.
 The topic page build process produces two output files,
 'topic/index.html' and 'topic/index.css', for each topic folder.
 
-The external documenation build process produces a user guide
-(documenation/doc/x.y/guidocs/doc.html) and release notes
-(documenation/doc/x.y/whatnew/doc.html) for each release version.
+The external documentation build process produces a user guide
+(documentation/doc/x.y/guidocs/doc.html) and release notes
+(documentation/doc/x.y/whatnew/doc.html) for each release version.
 Where x.y refers to the release version number.
 
 Before building the site pull a current copy of this repository (e.g., git pull); the doc
@@ -151,7 +151,12 @@ output tree but will remove all files from it.
 ~~~~
 make OUT_DIR=~/temp/foo clean-all
 ~~~~
+Once you run make command it's advisable to try out newly build pages by using any simple web server
+like [https://www.linuxjournal.com/content/tech-tip-really-simple-http-server-python]
+$ cd $OUT_DIR
+$ python -m SimpleHTTPServer
 
+After that type URL [your hostname: 8000] in your browser and RCloud Social web page should show up
 
 Notes
 -----
