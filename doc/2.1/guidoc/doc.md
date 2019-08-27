@@ -71,6 +71,12 @@ The RCloud header bar is located at the top of the browser window and contains s
 
 <img style="margin: 0;float: left;" src="img/header_fork.png" />: Click the fork icon to make a new copy of a notebook for editing.
 
+<img style="margin: 0;float: left;" src="img/header_save.png" />: Whenever you
+run a notebook, RCloud automatically saves a version in GitHub. If you need to
+close your RCloud session immediately without waiting for a lengthy run time,
+click the save icon to save a version immediately. Note that this icon is only
+visible for notebooks you are allowed to save.
+
 <img style="margin: 0;float: left;" src="img/header_play.png" />: Click the play icon to run all [markdown and prompt cells](#cells) in the current notebook. Cells are executed asynchronously. RCloud displays the output as it becomes available.
 
 <img style="margin: 0;float: left;" src="img/stop.png" />: When you run a notebook, you can stop running cells and prevent queued cells from running by pressing the stop button, located in the header at the top of the screen:
@@ -103,19 +109,29 @@ You can create a mini-view of your notebook for the Discover view by creating an
 Cells
 =====
 
-There are two types of cells in RCloud. The first is the **prompt** cell, which allows you to interact with RCloud in more-or-less command-line fashion. Prompt cells are useful for quick, interactive sessions.
+There are two types of cells in RCloud. The first is the **prompt** cell, which
+allows you to interact with RCloud in more-or-less command-line fashion. Prompt
+cells are useful for quick, interactive sessions.
 
-Cells support the languages R, Python 2 and 3, and shell (bash), which you can specify in the pull-down menu to the right of each cell:
+RCloud supports several cell languages: R, Python2 and 3, and Bash (shell),
+which you can specify in the pull-down menu to the right of each cell:
 
 ![Prompt / Markdown Cell Selection](img/python.png)
 
-There may be other languages available on your instance, since any Jupyter kernel is available as an RCloud cell language.
+There may be other languages available on your instance, since any Jupyter
+kernel is available as an RCloud cell language.
 
-The second type is the **markdown** cell. Markdown cells are better suited for cutting and pasting chunks of R code and adding simple formatted documentation. Note that Markdown cells do not currently support Python or Bash.
+The second type is the **markdown** cell. Markdown cells are better suited for
+cutting and pasting chunks of R code and adding simple formatted documentation.
+Note that Markdown cells do not currently support Python or Bash.
 
 We'll get to the difference between Markdown and RMarkdown cells in a moment.
 
-"Data marshalling," or sharing results between cells of different languages, is not supported at this time - the workaround is to write and read files. Also, each "shell" cell represents a separate Unix shell, so environment variables cannot be passed across shell cells. However, R environment variables defined in R cells are inherited by shell cells automatically.
+"Data marshalling," or sharing results between cells of different languages, is
+not supported at this time -- one common workaround is to write and read files.
+Also, each "shell" cell represents a separate Unix shell, so environment
+variables cannot be passed across shell cells. However, R environment variables
+defined in R cells are inherited by shell cells automatically.
 
 Prompt cells
 ------------
@@ -505,6 +521,43 @@ To **find and replace** text within your notebook, type `Ctrl-H` (Win/Linux) or 
 
 ![Find and Replace Text Dialog](img/find_replace.png)
 
+## Merging notebooks
+
+To merge two notebooks, start by loading one. Next, in the Notebooks pane, find
+the notebook you would like to merge with the currently loaded notebook.
+
+Click the "Merge From" icon next to the notebook you would like to merge:
+
+<img class="trunc" src="img/mergefrom.png" />
+
+Alternatively, you can also select "Merge Notebook" from the
+[Advanced](#advanced-notebook-features) header-bar
+menu. This will open a dialog where you can specify the source of the notebook
+to merge. Currently URLs, files, and notebook IDs are supported:
+
+<img class="trunc" src="img/header_advanced_merge.png" />
+
+In either case, RCloud presents a Merge dialog. On the left is the list of
+assets or cells which need to be changed to merge the two notebooks:
+
+<img class="trunc" src="img/mergeleft.png" />
+
+By clicking in that panel, you can choose to accept or not accept the changes
+for that file.
+
+Any cells or assets with the same name in both the source and the destination
+notebooks will appear as yellow in the left pane:
+
+<img class="trunc" src="img/mergeleft_samename.png" />
+
+Choose whether or not to take individual changes to the file in the right pane:
+
+<img class="trunc" src="img/merge_keeporreject.png" />
+
+When you're happy with the changes, click the blue Merge button and all the
+changes will be applied in one commit to the current notebook. (You can always
+Undo and Revert if it didn't work right.)
+
 ## Advanced notebook features
 
 Find more advanced notebook features by clicking the Advanced menu in the header
@@ -512,24 +565,51 @@ bar.
 
 ![Header Bar: Advanced Menu](img/header_advanced_menu.png)
 
--   **Open in GitHub**: Internally, notebooks are stored as GitHub "gists." Depending on your installation, you can view your notebook gist within GitHub directly. This entry is grayed out for installations using the [RCloud Gist Service](https://github.com/att/rcloud-gist-services) because it isn't implemented yet.
--   **Merge Notebook**: \[TBD\]
--   **Load Notebook by ID**: Replace the current notebook with another via URL or gist ID.
--   **Pull and Replace Notebook**: Opens a dialog box where you can tell RCloud to copy the contents of an existing notebook (within the same RCloud instance) via URL, file, or ID and replace the contents of the current notebook.
--   **Import External Notebooks**: Opens a dialog where you can import multiple notebooks stored in another GitHub repository. You'll need the source GitHub repository API URL and a list of notebook IDs, newline separated. In addition, you can supply a prefix that will cause all the imported notebooks to go into a folder. E.g. "myfolder/". Note that a trailing '/' character is required for this to work.
--   **Export Notebook to File**: Your browser will automatically save a copy of the current notebook in JSON format in whatever directory you've designated for downloads. The file name will be the same as your notebook with a `.gist` extension.
--   **Import Notebook from File**: In order to import a notebook, it must be in either `.gist` (see above) or `.R` (see below) format. You can validate the notebook by clicking the word "Validate." To import, click the Import button.
--   **Export Notebook as R Source File**: Your browser will automatically save a copy of the current notebook as an R source text file in whatever directory you've designated for downloads. The file name will be the same as your notebook with a `.R` extension.
--   **Manage Groups**: Opens the Notebook Permissions / Group Management dialog, where you can [manage your groups](#protecting-your-notebooks).
--   **Publish Notebook**: By default, users who wish to view your notebooks must be logged into RCloud. If the Publish Notebook box is checked, *any* user who has network access to the notebook's URL will be able to view the notebook. Editing features will be turned off for these users.
+-   **Open in GitHub**: Internally, notebooks are stored as GitHub "gists."
+    Depending on your installation, you can view your notebook gist within
+    GitHub directly. This entry is grayed out for installations using the
+    [RCloud Gist Service](https://github.com/att/rcloud-gist-services) because
+    it isn't implemented yet.
+-   **Merge Notebook**: Merge changes from another notebook into the currently
+    loaded notebook. Please see the [Merging notebooks](#merging-notebooks) section
+    for more information.
+-   **Load Notebook by ID**: Replace the current notebook with another via URL
+    or gist ID.
+-   **Pull and Replace Notebook**: Opens a dialog box where you can tell RCloud
+    to copy the contents of an existing notebook (within the same RCloud
+    instance) via URL, file, or ID and replace the contents of the current
+    notebook.
+-   **Import External Notebooks**: Opens a dialog where you can import multiple
+    notebooks stored in another GitHub repository. You'll need the source GitHub
+    repository API URL and a list of notebook IDs, newline separated. In
+    addition, you can supply a prefix that will cause all the imported notebooks
+    to go into a folder. E.g. "myfolder/". Note that a trailing '/' character is
+    required for this to work.
+-   **Export Notebook to File**: Your browser will automatically save a copy of
+    the current notebook in JSON format in whatever directory you've designated
+    for downloads. The file name will be the same as your notebook with a
+    `.gist` extension.
+-   **Import Notebook from File**: In order to import a notebook, it must be in
+    either `.gist` (see above) or `.R` (see below) format. You can validate the
+    notebook by clicking the word "Validate." To import, click the Import
+    button.
+-   **Export Notebook as R Source File**: Your browser will automatically save a
+    copy of the current notebook as an R source text file in whatever directory
+    you've designated for downloads. The file name will be the same as your
+    notebook with a `.R` extension.
+-   **Manage Groups**: Opens the Notebook Permissions / Group Management dialog,
+    where you can [manage your groups](#protecting-your-notebooks).
+-   **Publish Notebook**: By default, users who wish to view your notebooks must
+    be logged into RCloud. If the Publish Notebook box is checked, *any* user
+    who has network access to the notebook's URL will be able to view the
+    notebook. Editing features will be turned off for these users.
 -   **Import Rmarkdown File**: Imports Rmarkdown containined in a `.Rmd` file.
--   **Export Rmarkdown File**: Your browser will automatically save a copy of the current notebook as an `Rmd` text file in whatever directory you've designated for downloads. The file name will be the same as your notebook with a `.Rmd` extension.
--   **Import Jupyter Notebook**: Imports a [Jupyter notebook](https://jupyter.org/) from your local file
-    system.
+-   **Export Rmarkdown File**: Your browser will automatically save a copy of
+    the current notebook as an `Rmd` text file in whatever directory you've
+    designated for downloads. The file name will be the same as your notebook
+    with a `.Rmd` extension.
+-   **Import Jupyter Notebook**: Imports a [Jupyter notebook](https://jupyter.org/) from your local file system.
 -   **Export as Jupyter Notebook**: Exports a [Jupyter notebook](https://jupyter.org/) as an `.ipynb` file to your local file system.
-
-## Merging notebooks
-
 
 
 Data access
@@ -736,12 +816,14 @@ Toggles "Cell 1," "Cell 2," etc. in the cells panel.
 Color recent notebooks by modification date
 -------------------------------------------
 
-\[TBD\]
+Recent notebooks are colored according to the modification date, allowing you to
+easily see which notebooks have recent modifications.
 
 Show folder date for date-ordered tree
 --------------------------------------
 
-\[TBD\]
+Displays the most recent notebook modification date next to folders in the
+notebooks pane.
 
 Arrange panels by size
 ----------------------
@@ -761,7 +843,8 @@ In the various export commands available in the Advanced header menu item, only 
 Autoscroll notebook
 -------------------
 
-\[TBD\]
+When a cell generates more output than can be displayed on the screen, RCloud
+will automatically scroll the Cells pane to keep the current output visible.
 
 Extensions
 ----------
