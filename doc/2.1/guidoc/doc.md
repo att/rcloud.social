@@ -286,6 +286,13 @@ Loading a notebook
 
 To load a notebook into the current session, click on the name. After it loads, you can examine the source code or click <img style="margin: 0;float: none;display: inline;" src="img/header_play.png"> in the header bar to execute all the cells on the page.
 
+Recent Notebooks
+----------------
+
+Access your recently opened notebooks via the Recent link in the Notebooks titlebar:
+
+![Recently Opened Notebooks Link](img/recent.png)
+
 Creating a notebook
 -------------------
 
@@ -512,13 +519,6 @@ and make your selection.
 To **find and replace** text within your notebook, type `Ctrl-H` (Win/Linux) or `Cmd-Option-F` (Mac) to open a find and replace dialog at the top of your notebook:
 
 ![Find and Replace Text Dialog](img/find_replace.png)
-
-Recent Notebooks
-----------------
-
-Access your recently opened notebooks via the Recent link in the Notebooks titlebar:
-
-![Recently Opened Notebooks Link](img/recent.png)
 
 Data access
 ===========
