@@ -120,17 +120,19 @@ You can create a mini-view of your notebook for the Discover view by creating an
 Cells
 =====
 
-There are two types of cells in RCloud. The first is the **prompt** cell, which allows you to interact with RCloud in more-or-less command-line fashion. Prompt cells are useful for quick, interactive sessions.
+There are two types of cells in RCloud. The first is the **prompt** cell, which allows you to interact with RCloud in more-or-less command-line fashion. The prompt cell is useful for quick, interactive sessions.
 
-Prompt cells support R, Python 2 and 3, and Bash, which you can specify in the pull-down menu to the right of each cell:
+Cells support the languages R, Python 2 and 3, and shell (bash), which you can specify in the pull-down menu to the right of each cell:
 
 ![Prompt / Markdown Cell Selection](img/python.png)
 
-The second type is the **markdown** cell. Markdown cells are better suited for cutting and pasting chunks of R code and adding simple formatted documentation. Note that Markdown cells do not currently support Python or Bash.
+There may be other languages available on your instance, since any Jupyter kernel is available as an RCloud cell language.
+
+Cells also support *markdown* languages, better suited for mixing chunks of R code with formatted documentation. Note that Markdown cells do not currently support Python or Bash.
 
 We'll get to the difference between Markdown and RMarkdown cells in a moment.
 
-"Data marshalling," or sharing results and variables between cells of different languages, is not supported at this time. Also, each "shell" cell represents a separate Unix shell, so environment variables cannot be passed across shell cells. However, R environment variables defined in R cells are inherited by shell cells automatically. Shell cell commands are executed in Bash.
+"Data marshalling," or sharing results between cells of different languages, is not supported at this time - the workaround is to write and read files. Also, each "shell" cell represents a separate Unix shell, so environment variables cannot be passed across shell cells. However, R environment variables defined in R cells are inherited by shell cells automatically.
 
 Prompt cells
 ------------
@@ -143,7 +145,9 @@ For example, here's the result of pressing `Enter/Return` after typing a command
 
 ![Prompt Cell Result](img/promptcellresult.png)
 
-Note that after executing a command, RCloud presents several icons that allow you to interact with the cell:
+Notebook cells
+--------------
+After executing a command, the code and result become a notebook cell, and RCloud presents several icons that allow you to interact with the cell:
 
 <img style="margin 0;float: left;" src="img/runmarkdown.png" />: Run the code in the cell.
 
@@ -160,9 +164,9 @@ Another way to interact in multi-line mode with prompt cells is to cut and paste
 
 <a href="img/multilinerpromptpaste.png"><img class="trunc" src="img/multilinerpromptpaste.png" /></a>
 
-To execute the code, simply put your cursor at the end of the last line and press `Enter/Return`.
+To execute the code, press `Enter/Return`. The whole block of code is executed, wherever the cursor is.
 
-Note that you cannot insert a prompt cell above an existing prompt cell. The only way to add new prompt cells is by executing the current prompt cell. When you do, a new cell is created under the existing one.
+Note there is always one prompt cell at the end of the notebook. The only way to add new prompt cells is by executing the current prompt cell. When you do, a new cell is created under the existing one.
 
 ### Terminology
 
