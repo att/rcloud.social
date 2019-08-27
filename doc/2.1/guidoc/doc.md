@@ -523,8 +523,8 @@ To **find and replace** text within your notebook, type `Ctrl-H` (Win/Linux) or 
 
 ## Merging notebooks
 
-To merge two notebooks, for example, notebook "B" into notebook "A," when A is
-currently loaded:
+To merge two notebooks, for example, to merge from notebook "B" into the
+currently loaded notebook "A":
 
 Click the "Merge From" icon next to notebook B:
 
