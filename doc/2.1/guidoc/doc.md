@@ -13,9 +13,12 @@ Getting Started
 
 RCloud supports Chrome, Chromium (the open-source version of Chrome), and Firefox web browsers. Download the latest version of any of these to get started.
 
-\[TBD: needs review\] RCloud stores information about users and their RCloud notebooks using GitHub technology. Therefore, new users must either register with their installation's instance of GitHub or create a public GitHub account. Please refer to your installation's documentation about creating a new GitHub user or see our Tutorial, [Anonymous User versus Data Scientist Access](https:/rcloud.social/tutorials/), for information about creating an RCloud/GitHub account on the public RCloud instance.
+RCloud stores user notebooks using either GitHub Gist technology, or using the user accounts on a Unix system.
 
-Since every installation's networking architecture will be different, please refer to your installation's documentation for any relevant environment information.
+ * **For the public instance at rcloud.social:** new users must have a GitHub account for [rcloud.social](https://rcloud.social/login.R). Please see our Tutorial, [Anonymous User versus Data Scientist Access](https:/rcloud.social/tutorials/), for information about creating an GitHub account.
+ * **For a private instance of RCloud:** new users must have a Unix account on the RCloud system. Please refer to your instance's documentation about creating an account.
+
+Since every installation will be different, please refer to your installation's documentation for any relevant environment information.
 
 <a name="partsofthegui"></a>
 
@@ -92,7 +95,7 @@ with more information about the RCloud platform.
 
 ![Header Bar: Advanced Menu](img/header_advanced_menu.png)
 
--   **Open in GitHub**: Internally, notebooks are stored as GitHub "gists." Depending on your installation, you can view your notebook gist within GitHub directly. Some installations, however, will use the [RCloud Gist Service](https://github.com/att/rcloud-gist-services), in which case the menu item will be disabled. Regardless, RCloud stores every revision of your notebooks, so you can retrieve them later, if necessary.
+-   **Open in GitHub**: Internally, notebooks are stored as GitHub "gists." Depending on your installation, you can view your notebook gist within GitHub directly. This entry is grayed out for installations using the [RCloud Gist Service](https://github.com/att/rcloud-gist-services) because it isn't implemented yet.
 -   **Merge Notebook**: \[TBD\]
 -   **Load Notebook by ID**: Replace the current notebook with another via URL or gist ID.
 -   **Pull and Replace Notebook**: Opens a dialog box where you can tell RCloud to copy the contents of an existing notebook (within the same RCloud instance) via URL, file, or ID and replace the contents of the current notebook.
@@ -102,7 +105,6 @@ with more information about the RCloud platform.
 -   **Export Notebook as R Source File**: Your browser will automatically save a copy of the current notebook as an R source text file in whatever directory you've designated for downloads. The file name will be the same as your notebook with a `.R` extension.
 -   **Manage Groups**: Opens the Notebook Permissions / Group Management dialog, where you can [manage your groups](#protecting-your-notebooks).
 -   **Publish Notebook**: By default, users who wish to view your notebooks must be logged into RCloud. If the Publish Notebook box is checked, *any* user who has network access to the notebook's URL will be able to view the notebook. Editing features will be turned off for these users.
--   **RCAP Designer**: \[TBD\]
 -   **Import Rmarkdown File**: Imports Rmarkdown containined in a `.Rmd` file.
 -   **Export Rmarkdown File**: Your browser will automatically save a copy of the current notebook as an `Rmd` text file in whatever directory you've designated for downloads. The file name will be the same as your notebook with a `.Rmd` extension.
 -   **Import Jupyter Notebook**: Imports a [Jupyter notebook](https://jupyter.org/) from your local file
@@ -128,7 +130,7 @@ The second type is the **markdown** cell. Markdown cells are better suited for c
 
 We'll get to the difference between Markdown and RMarkdown cells in a moment.
 
-\[TBD: needs review\] "Data marshalling," or using objects between cells of different languages, is not supported at this time. Also, each "shell" cell represents a separate Unix shell, so environment variables cannot be passed across shell cells. However, R environment variables defined in R cells are inherited by shell cells automatically. Shell cell commands are executed in Bash.
+"Data marshalling," or sharing results and variables between cells of different languages, is not supported at this time. Also, each "shell" cell represents a separate Unix shell, so environment variables cannot be passed across shell cells. However, R environment variables defined in R cells are inherited by shell cells automatically. Shell cell commands are executed in Bash.
 
 Prompt cells
 ------------
@@ -248,9 +250,7 @@ To join cells of the same flavor, click the join icon at the right of the cell. 
 Markdown versus RMarkdown cells
 -------------------------------
 
-\[TBD: needs review\] Behind the scenes, RCloud uses several different R packages to render output. Markdown cells use the [Markdown](http://cran.r-project.org/web/packages/markdown/index.html) and [knitr](http://yihui.name/knitr/) packages directly for output. RMarkdown cells, on the other hand, use [rmarkdown](http://rmarkdown.rstudio.com/) (also known as R Markdown v2).
-
-Currently, RMarkdown support should be considered experimental.
+Behind the scenes, RCloud uses several different R packages to render output. Markdown cells use the [Markdown](http://cran.r-project.org/web/packages/markdown/index.html) and [knitr](http://yihui.name/knitr/) packages directly for output. RMarkdown cells, on the other hand, use [rmarkdown](http://rmarkdown.rstudio.com/) (also known as R Markdown v2).
 
 Saving plots
 ------------
@@ -338,7 +338,7 @@ After forking a notebook, you'll own your own copy and be able to edit it.
 
 The fork icon is always available, which means you can fork your own notebooks. If you are viewing a previous version of a notebook, you can fork a copy of that version.
 
-\[TBD: needs review\] Caution: Currently, when you fork your own notebook, the history is lost; we hope to fix this soon.
+Unfortunately, due to the design of GitHub Gists, when you fork your own notebook, the copy's history is lost. This limitation is not found when using the [rcloud-gist-services](https://github.com/att/rcloud-gist-services) backend.
 
 Saving your work
 ----------------
@@ -447,17 +447,9 @@ This is the simplest method. This will create a link that will allow someone to 
 
 To hide *all* UI elements, add `&quiet=1` to the URL. Note that this works only with `view.html`.
 
-### `rcap.html`
-
-\[TBD\]
-
-### `viewiip.html`
-
-View the notebook as a Slidy Powerpoint-like slideshow. \[TBD: more information needed\]
-
 ### `flexdashboard.html`
 
-View a notebook that uses the flexdashboard package. \[TBD: more information needed\]
+View a notebook containing R Markdown for a [flexdashboard](https://rmarkdown.rstudio.com/flexdashboard/).
 
 ### `notebook.R`
 
@@ -610,8 +602,6 @@ Assets are limited to 2.5MB each.
 Cascading style sheets
 ----------------------
 
-\[TBD: needs review. This doesn't seem to work in 2.1\]
-
 Assets can contain CSS formatting information. This changes the way information is presented when your notebook is executed. For example, here is a bit of CSS that defines a paragraph style:
 
     p.mystyle {
@@ -638,16 +628,12 @@ Note that you must reload your notebook to apply the CSS.
 JavaScript
 ----------
 
-\[TBD: needs review. Syntax highlighting doesn't seem to work in 2.1\]
-
 Assets can also contain JavaScript. When editing JavaScript (files must have the .js extension), RCloud automatically uses a JavaScript editing mode, which has built-in syntax checking.
 
 ![Javascript Files and Syntax Checking](img/jsmode.png)
 
 HTML Mode
 ---------
-
-\[TBD: needs review. Syntax highlighting doesn't seem to work in 2.1\]
 
 When editing HTML (files must have the .html or .htm extension), RCloud automatically uses an HTML editing mode, which has built-in syntax checking and tag completion.
 
@@ -663,15 +649,16 @@ To rename an asset, simply click on the file name on the asset's tab.
 `notebook.R` URLs
 =================
 
-It's possible to construct a URL for a notebook asset by selecting Open in GitHub in the Advanced menu, locating your asset and right-clicking the "View Raw" icon, which looks like &lt;&gt;, next to your asset. The URLs look like this:
+It's possible to construct a URL for a notebook asset accessing the GitHub or rcloud-gist-services backend directly, but this is cumbersome.
 
-\[TBD: needs review\]
+A better and more powerful way to access assets is via the HTTP entry point, `notebook.R`.
 
-`https://github.mydomain.com/gist/rclouddocs/d2b9231aca224bbbb888/raw/efb98239f9acc030f98b2cd1957ce7c9b4b9f2c3/DummyData.csv`
+You can find the URL of the currently open asset by right-clicking the link at the lower left corner of the asset editor.
 
-This is cumbersome, however. A better and more powerful way to access assets is via the HTTP entry point, `notebook.R`.
+![Automatically Generated Link (URL) to RCloud Asset](img/assetlink.png)
 
-`notebook.R` allows you to access your notebook in the following ways:
+
+`notebook.R` allows you to access a notebook in the following ways:
 
     http://rcloud.mydomain.com/notebook.R/<notebook-id>
     http://rcloud.mydomain.com/notebook.R/<notebook-id>/<version-hash>
@@ -685,7 +672,7 @@ URLs ending in "&lt;filename&gt;" will return the given asset (file). To illustr
     http://rcloud.mydomain.com/notebook.R/d2b9231aca224bbbb888/DummyData.csv
     http://rcloud.mydomain.com/notebook.R/rclouddocs/Asset%20API/DummyData.csv
 
-Access to assets isn't the only thing you can do with `notebook.R`. Notice that in the list of ways to access your notebook above, not all methods reference a filename. If you reference a notebook or revision of a notebook, the URL will return the result of the evaluated notebook.
+Access to assets isn't the only thing you can do with `notebook.R`. Notice that in the list of ways to access your notebook above, not all methods reference a filename. If you reference a notebook or revision of a notebook, the URL will return the final result after evaluating the R cells in the notebook.
 
 `notebook.R` is intended to be a general-purpose Remote Procedure Call (RPC) in R. RPCs in RCloud should always contain some [Markdown](#Markdowncells) to document what the RPC does, what the arguments are, etc. This way other users can simply view your notebook in RCloud to understand how to use it. This isn't enforced but is encouraged to promote reuse. The Markdown is only visible when users visit your notebook in RCloud. The Markdown is not output when called remotely.
 
