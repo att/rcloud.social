@@ -817,7 +817,8 @@ Color recent notebooks by modification date
 -------------------------------------------
 
 Recent notebooks are colored according to the modification date, allowing you to
-easily see which notebooks have recent modifications.
+easily see which notebooks have recent modifications. Only folders containing
+more than 38 notebooks will show colored rows.
 
 Show folder date for date-ordered tree
 --------------------------------------
