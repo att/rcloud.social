@@ -523,17 +523,17 @@ To **find and replace** text within your notebook, type `Ctrl-H` (Win/Linux) or 
 
 ## Merging notebooks
 
-To merge two notebooks, start by loading one. Next, in the Notebooks pane, find
-the notebook you would like to merge with the currently loaded notebook.
+To merge two notebooks, for example, notebook "B" into notebook "A," when A is
+currently loaded:
 
-Click the "Merge From" icon next to the notebook you would like to merge:
+Click the "Merge From" icon next to notebook B:
 
 <img class="trunc" src="img/mergefrom.png" />
 
 Alternatively, you can also select "Merge Notebook" from the
-[Advanced](#advanced-notebook-features) header-bar
-menu. This will open a dialog where you can specify the source of the notebook
-to merge. Currently URLs, files, and notebook IDs are supported:
+[Advanced](#advanced-notebook-features) header-bar menu. This will open a dialog
+where you can specify the source of notebook B. Currently URLs, files, and
+notebook IDs are supported:
 
 <img class="trunc" src="img/header_advanced_merge.png" />
 
