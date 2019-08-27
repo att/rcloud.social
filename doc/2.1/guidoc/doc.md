@@ -145,14 +145,6 @@ For example, here's the result of pressing `Enter/Return` after typing a command
 
 Note that after executing a command, RCloud presents several icons that allow you to interact with the cell:
 
-<img style="margin 0;float: left;" src="img/iipwizard.png" />: Shows the IIP
-Slide Wizard dialog:
-
-![IIP Slide Wizard Dialog](img/iipwizard_dialog.png)
-
-Using the IIP Slide Wizared, you can choose a slide type, configure a slide, set
-global IIP options, or insert a slide into a cell.
-
 <img style="margin 0;float: left;" src="img/runmarkdown.png" />: Run the code in the cell.
 
 <img style="margin 0;float: left;" src="img/editmarkdown.png" />: Edit the code in the cell (clicking on your code also enables editing).
