@@ -48,7 +48,7 @@ $endfor$
       <div  class="col-md-3"  id="sidebar">
 
 	<ul id="drilldown" class="nav nav-pills nav-stacked affix-top">
-	  <li><a href="../whatsnew/doc.html"><b>Release Notes</b>: What's new in this version.</a></li>
+	  <li><a href="https://github.com/att/rcloud/blob/develop/NEWS.md"><b>Release Notes</b></a></li>
 	</ul>
 	
 	$toc$
