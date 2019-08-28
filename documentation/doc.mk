@@ -88,6 +88,7 @@ mktechdocs:
 					--user $$(id -u):$$(id -g) \
 					--volume $$(pwd):/project \
 					jsseidel/mktechdocs:latest && \
+				mkdir -p $(DOC_DIR)/$$d/guidoc && \
 				cp -r doc_pages/doc.md doc_pages/img $(DOC_DIR)/$$d/guidoc/. \
 		) \
 	done
