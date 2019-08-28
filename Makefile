@@ -44,9 +44,7 @@ local :
 
 # Build the documentation pages.
 doc :
-	make -C documentation -f doc.mk OUT_DIR=$(OUT_DIR)/documentation/doc DOC_DIR=$(abspath $(DOC_DIR))
-	
-#	make -C documentation -f doc.mk OUT_DIR=$(OUT_DIR)/documentation/doc DOC_DIR=$(abspath $(DOC_DIR))  $(MAKECMDGOALS)
+	make -C documentation -f doc.mk OUT_DIR=$(OUT_DIR)/documentation/doc DOC_DIR=$(abspath $(DOC_DIR))  $(MAKECMDGOALS)
 
 .PHONY:  $(SUBDIRS) doc local all clean clean-all
 
