@@ -409,7 +409,7 @@ Here, you can assign the notebook to any group you are a member of, make it enti
 
 ### Groups
 
-Use the second tab of the protection dialog to create or rename groups. Additionally, you can designate other users as group administrators or members. Alternatively, you can select Manage Groups from the Advanced menu item on [the header bar](#header-bar) — note that the Notebook tab will be grayed out in that case, as Manage Groups is not notebook specific.
+Use the second tab of the protection dialog to create or rename groups. Additionally, you can designate other users as group administrators or members. Alternatively, you can select Manage Groups from the Advanced menu item on [the header bar](#header-bar) -- note that the Notebook tab will be grayed out in that case, as Manage Groups is not notebook specific.
 
 ![Protection Dialog Box: Group Information](img/groupman.png)
 
@@ -767,7 +767,7 @@ Please see [the following](https://github.com/att/rcloud/blob/develop/NEWS.md#rc
 
 Files can be served from user R libraries via `shared.R/<user>/<package>`. Users can develop packages that use `shared.R` in their own development library until it is ready to be released.
 
-Note that users are still responsible for setting the permissions on the library path — default permissions deny access, including to the web server, to user libraries.
+Note that users are still responsible for setting the permissions on the library path -- default permissions deny access, including to the web server, to user libraries.
 
 Search
 ======
