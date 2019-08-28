@@ -49,7 +49,7 @@ $endfor$
 
 	$if(doc)$
 	<ul class="nav nav-pills nav-stacked affix-top">
-	  <li><a href="../whatsnew/doc.html" style="font-size: 110%"><b>Release Notes</b></a></li>
+	  <li><a href="https://github.com/att/rcloud/blob/develop/NEWS.md" style="font-size: 110%"><b>Release Notes</b></a></li>
 	</ul>
 	$endif$
 	
