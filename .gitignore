@@ -1,4 +1,4 @@
 out
 .DS_Store
 doc_pages
-doc/2.1
+doc/[2-9]\.[0-9]
