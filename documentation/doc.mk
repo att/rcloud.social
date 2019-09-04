@@ -59,7 +59,7 @@ GEN_NAMES   = head body_top body_bottom
 GEN_FNS     = $(foreach name,$(GEN_NAMES),doc_$(name).html)
 GEN_TMPLS   = $(foreach name,$(GEN_NAMES),$(HTML)/$(name)_template.html)
 
-all : $(DST_IMG_FNS) $(GEN_FNS)  $(DST)
+all : mktechdocs $(DST_IMG_FNS) $(GEN_FNS)  $(DST)
 
 clean-all : clean
 	rm -f $(DST) $(DST_IMG_FNS)
@@ -67,12 +67,31 @@ clean-all : clean
 clean :
 	rm -f $(GEN_FNS)
 
-.PHONY: all clean-all clean
+.PHONY: all clean-all clean mktechdocs
 
 $(DST_IMG_FNS) : $(OUT_DIR)/% : $(DOC_DIR)/%
 	mkdir -p $(dir $@)
 	cp $< $@
 
+#
+# This will build all the MkTechDocs projects in the documentation
+# directory with docker before the other rules take over as they
+# have previously.
+#
+mktechdocs:
+	ls mktechdocs_projects | while read d ; do \
+		rm -rf $(DOC_DIR)/$$d/guidoc/* && \
+		( \
+			cd mktechdocs_projects/$$d && \
+				docker run \
+					--rm \
+					--user $$(id -u):$$(id -g) \
+					--volume $$(pwd):/project \
+					jsseidel/mktechdocs:latest && \
+				mkdir -p $(DOC_DIR)/$$d/guidoc && \
+				cp -r doc_pages/doc.md doc_pages/img $(DOC_DIR)/$$d/guidoc/. \
+		) \
+	done
 
 #
 # Use $(BASESRC)/hmtl/*_template.html to generate a include
